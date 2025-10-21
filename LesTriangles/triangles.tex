@@ -1,0 +1,623 @@
+\documentclass{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+%%% Comment out to get rid of links at urls in the footnotes 
+\usepackage[hyperfootnotes=false]{hyperref}
+
+
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\bf\large}{\relax}{0em}{}
+
+\usepackage{manyfoot}
+\DeclareNewFootnote{A}
+\DeclareNewFootnote{E}[alph]
+
+\usepackage{xcolor}
+\long\def\gray#1{{\color{gray}{#1}}}
+\long\def\blue#1{{\color{blue}{#1}}}
+\long\def\red#1{{\color{red}{#1}}}
+
+\usepackage{lpic}
+
+\let\d=\undefined
+\DeclareMathOperator{\d}{d}
+
+\newtheorem*{definition}{Definition}
+\newtheorem*{theorem}{Theorem}
+
+
+\begin{document}
+\centerline{\bf Triangles after Euclid, Gauss and Gromov}
+\centerline{A small fragment of Misha Gromov's work}
+\medskip
+\centerline{by \'Etienne Ghys}
+
+\bigskip
+\centerline{\begin{lpic}{h-triangle(0.3)}
+  \end{lpic}
+}
+
+\section{Euclid}
+
+For centuries, geometry was Euclid’s geometry --- the one we learn in
+school, with its right, isosceles and equilateral triangles and its
+theorems of Pythagoras and Thales; the geometry of ``the world in
+which we live.'' Euclid established its foundations in the third
+century BCE in the book --- a landmark for mathematicians, titled \textit{The
+Elements}.%
+\footnoteA{Euclid, \textit{The Elements}}$^{,}$%
+\footnoteE{English translation available
+  for download, for example, at
+  \url{https://archive.org/details/euclid\_heath_2nd_ed/1_euclid_heath_2nd_ed/}
+(Ed.)}
+For more than twenty centuries this book stood at the heart of
+mathematics, so definitive did it seem.
+
+Yet one of Euclid’s axioms --- a statement he asked readers to accept
+at the beginning of his book without proof --- left a lingering unease:
+``Through a point chosen outside a given line, it is possible to draw
+exactly one line parallel to the given one.'' Generations of mathematicians
+tried to deduce it from the other, seemingly more natural,
+axioms. Many believed they had succeeded; many were mistaken.
+
+\section{Non-Euclidean Geometry}
+
+At the beginning of the nineteenth century at least three
+mathematicians had the same idea almost simultaneously: there must
+exist a non-Euclidean geometry. These were Bolyai, Lobachevsky, and
+Gauss. All three broke with a long-held dogma --- they proposed an
+entirely new conception of space. It was a genuine mathematical
+revolution, comparable to the Copernican revolution of the fifteenth
+century.
+
+Of course, it would take very lengthy historical explanations to do
+this justice, but that is not the purpose of this article. One of the
+central questions concerns existence: what does it mean for another
+geometry to exist besides Euclidean? Several geometries? (I note in
+passing that my spell-checker refuses to put the word “geometry” in
+the plural!) After all, we live in only one space, not two\dots{}
+Isn’t the purpose of geometry to describe the relationships between
+distances of points in \textit{our} world?
+
+Indeed, this was one of the first times mathematicians needed the
+courage to assert that one can (and should) work with spaces that may be
+entirely imaginary, with no obvious connection to practical
+problems. The links between mathematics and physics --- which, in
+principle, deals with what happens in our real world --- have always
+been complex.
+
+In any case, at the beginning of the nineteenth century, a few
+visionaries began studying a ``new geometry'' in which Euclid’s
+parallel postulate does not hold. They proved theorems that differ
+from Euclid’s. For example, right triangles still exist, but
+Pythagorean theorem is different\dots{} Let there be no mistake: this
+does not mean that the Pythagorean theorem we learn in school is
+false; it means that it is true in Euclidean space, and that a
+different theorem holds in non-Euclidean space --- there is no
+contradiction here.  This ``new geometry'' is sometimes called
+non-Euclidean, sometimes hyperbolic, and sometimes the
+Bolyai–Lobachevskian geometry\dots{}
+
+But all this still seemed somewhat suspicious, and its very existence
+was called into question. Things gradually became clearer throughout
+the nineteenth century. As always, it took time and the efforts of
+many mathematicians, but eventually it was understood that if one
+accepts Euclidean geometry, one must also accept the other.
+
+Here is one of the models of non-Euclidean geometry used, often
+called the Cayley model. Consider a disk in the Euclidean plane, and
+forget all the points that are not inside this disk --- only the points
+within the disk matter to us. Take two points, $A$ and $B$, connect
+them with a straight line, and mark the points $X$ and $Y$, where this
+line intersects the boundary circle.
+
+Now, define the non-Euclidean distance between the points $A$ and $B$
+by the following magical formula (which is not essential for what
+follows%
+\footnoteE{Note, however, that if one of the points travels toward the
+boundary, the distance increases without bound. (Ed.)}):
+\[
+  \operatorname{distance}_{\textrm{noneucl}}(A,B)
+  =
+  \log\left(\frac{XB\cdot YA}{XA\cdot YB}\right)
+\]
+where $XB$, $YA$ etc., stand for the usual Euclidean distances between the
+corresponding points.
+
+\bigskip
+\begin{lpic}[draft,l(10mm),r(10mm),b(10mm),clean]{cayley(0.2)}
+  \lbl[rb]{0,90;$X$}
+  \lbl[rb]{180,160;$Y$}
+  \lbl[rb]{47,112;$A$}
+  \lbl[rb]{107,138;$B$}
+  \lbl[t]{100,-10; \parbox{0.4\textwidth}{\small Two points, $A$ and
+      $B$, in the Cayley model.}}
+\end{lpic}
+\begin{lpic}[draft,clean,l(10mm),r(10mm),b(10mm)]{cayley-lines(0.2)}
+  \lbl[rb]{57,25;$D$}
+  \lbl[rb]{107,138;$P$}
+  \lbl[t]{100,-10; \parbox{0.4\textwidth}{\small Many lines through
+      point $P$ parallel to line $D$.}}
+\end{lpic}
+
+
+\bigskip
+
+Well then, one can imagine some fictitious inhabitants
+(mathematicians, perhaps?) living inside the disk, who would know
+nothing of the world outside of it, nothing of Euclidean geometry. They
+would teach their children that between any two points there exists a
+certain distance --- which, of course, they would not call
+``non-Euclidean'' since they would have no knowledge of Euclid.
+
+These inhabitants would have a Ministry of Education, which would
+write school curricula containing theorems in complete contradiction
+with those of our Euclidean world!%
+\footnoteA{The ministers of education in our world, on the other
+  hand, tend to write curricula without any theorems at all\dots{} See the
+  post by Valerio Vassallo at \url{
+    https://images-archive.math.cnrs.fr/Requiem-pour-la-Geometrie.html}
+  (in French)}
+Moreover, it would seem obvious to them that through a point taken
+outside a line, one can draw an infinite number of parallels.
+Look at the figure above: the four lines passing through point $P$
+appear parallel to line $D$, don’t they? And if you thought they
+intersect $D$, I would reply that they meet outside the disk --- and
+the outside of the disk simply does not exist in their world.
+Thus, if we accept Euclidean geometry, we are compelled to accept
+non-Euclidean geometry at the same time.
+
+You can learn a little more about this new geometry in the
+article ``Une chambre hyperbolique''.%
+\footnoteE{Jos Leys, \textit{Une chambre hyperbolique},
+  \url{https://images-archive.math.cnrs.fr/Une-chambre-hyperbolique.html}
+(Ed.)}%
+$^{,}$%
+\footnoteE{See also \textit{Hyperbolic geometry: The first 150 years} by
+  John Milnor, available at\\
+  \url{https://projecteuclid.org/journals/%
+    bulletin-of-the-american-mathematical-society-new-series/%
+    volume-6/issue-1/Hyperbolic-geometry-The-first-150-years/%
+    bams/1183548588.full}
+  (Ed.)}
+
+\section{Metric Spaces}
+
+Starting from the beginning of the twentieth century, the concept of a
+metric space appeared. We say that a set $E$ is a metric space (note
+the \textit{indefinite} article, implying that there are many such
+spaces --- obvious today, but a heresy not so long ago) if for each
+pair of elements $x$, $y$ in $E$ (which we naturally call
+\textit{points} of space $E$), there is a number called the distance
+between $x$ and $y$.
+This number must be non-negative (the least one could ask of a
+distance), but it must also satisfy a few additional properties
+(sometimes called axioms, though that word has lost some of its force
+over time\dots{} Should it be ``axiom'' or ``definition''? --- not so clear
+anymore).
+
+\begin{itemize}
+\item $\d_{E}(x,y)=\d_{E}(y,x)$ for all points $x$, $y$.
+  (Feel free to object: sometimes it’s harder to go from one point to
+  another than the other way around --- for example, when climbing up a
+  mountain path. But still, we’ll stick with this
+  assumption/axiom/definition.)
+\item $\d_{E}(x,y)=0$ if and only if $x=y$. (Ah yes, mathematicians
+  can’t resist saying such incantations --- ``if and only if'', which
+  they love to abbreviate as \textit{iff}) We agree: two points at
+  zero distance are, in fact, one and the same point.
+\item $\d_{E}(x,z)\leq\d_{E}(x,y)+\d_{E}(y,z)$ for any three points
+  $x,y,z$ in $E$. This is \textit{the triangle inequality}.  It says
+  that the path from $x$ to $z$ via $y$ is longer than the direct path
+  from $x$ to $z$. Obvious? Perhaps. Yet most mathematicians are
+  amazed at how Misha Gromov managed to make such a seemingly trivial
+  axiom yield profound insights.
+\end{itemize}
+
+\section{How About Examples?}
+Today, it’s almost obvious to most mathematics students that there are
+many metric spaces. Barely two centuries ago only one was known ---
+ours or at least the one Euclid had presented as ours.
+
+So, here are a few examples nonetheless:
+\begin{itemize}
+\item \textbf{The Non-Euclidean Plane.}  We’ve already encountered it:
+  it’s the interior of the disk, with a distance defined by that
+  mysterious formula that seems to have come out of nowhere\dots{}
+
+\item \textbf{The Sphere.}  After all, we live on the surface of
+  Earth. Just as we imagined a nation unaware of the world outside a
+  disk, most of us (myself included) know nothing
+  beyond what lies on Earth. The distance between two points on Earth
+  is the length of the shortest path connecting them, while staying
+  on Earth, of course.
+
+  Anyone who has looked at the routes taken by airplanes crossing the
+  Atlantic will understand that the geometry on Earth is not quite the
+  same as Euclidean geometry.
+
+\item \textbf{The Population of the Earth.}  Let’s think of all the
+  men and women who are alive today, or who have lived in the
+  past. That will be our set $E$. We define the distance between two
+  persons as the length of the shortest path connecting them up in the
+  family tree. The distance between a parent and their child is one
+  unit.
+  In general, the distance between two people is the length of the
+  shortest chain linking them through parent/child connections ---
+  father or mother $\to$ son or daughter.%
+  \footnoteE{In this example we measure distances only through common
+    ancestors, not common children or further descendants. (Ed.)}
+  For example, the distance between my nephew and me is 3, since we
+  must go up to my father, then down to my sister, and finally down to
+  her son.
+
+  This gives us a metric space whose geometry one might very much like
+  to understand.
+
+\item \textbf{The Internet.}  Here, the set $E$ consists of all the
+  web pages on the planet. The distance between two pages is 1 if you
+  can go from one to the other with a single click; it is equal to 2
+  if you must pass through an intermediate page, and so on.  Note that
+  in this case, the distance need not be symmetric: sometimes it’s
+  easy to go from one page to another, but the reverse isn’t true.
+
+  We could imagine many other communication networks as well ---
+  Facebook, for instance, where the distance is the length of the
+  shortest chain of friends connecting two people.
+  
+\item \textbf{French railway network.}  Here, the set $E$ is the
+  French territory. One of its points is called Paris. We define the
+  SNCF-distance%
+  \footnoteE{SNCF (\textbf{S}oci\'et\'e \textbf{n}ationale des
+    \textbf{c}hemins de \textbf{f}er fran\c{c}ais) is France' railway
+    operator. French railway network is indeed almost star-shaped,
+    centered at Paris, so that one is often forced to travel through
+    Paris even if the straight line between the origin and destination
+    doesn't even come close to the city. (Ed.)}
+  between two points $A$ and $B$ as follows: If the straight line
+  $(AB)$ does not pass through Paris, the SNCF-distance between $A$
+  and $B$ is the sum of their usual (Euclidean) distances to Paris.
+  On the other hand, if $(AB)$ does pass through Paris, the
+  SNCF-distance is simply the usual Euclidean distance between $A$ and
+  $B$.
+
+  In short, this models a world where all routes go through Paris --- a
+  playful geometric nod to the structure of the French railway
+  network.
+\end{itemize}
+\medskip
+There’s no need to continue the list --- it could be made endless. The
+geometry of metric spaces became a central theme in mathematics during
+the first half of the twentieth century.
+
+\section{Hyperbolic Spaces}
+
+Let us now turn to Misha Gromov, who was honored with the Abel Prize
+in 2009 (see the special feature%
+\footnoteE{Dossier : Mikha\"il Gromov, g\'eom\`etre,  \url{https://images-archive.math.cnrs.fr/+-Mikhail-Gromov-geometre-+.html}
+  (in French) (Ed.)}
+devoted to him on ``Images des Mathématiques''). Like many
+mathematicians of his generation, he was fascinated by non-Euclidean
+geometry. But what struck him most were the qualitative properties of
+this remarkable geometry. He observed a kind of stability, which
+I’ll try to explain below.
+
+Gradually --- probably beginning in the early 1970s --- Gromov
+observed a number of properties satisfied by non-Euclidean
+geometry. He compared them, sought to understand which were essential
+and which were incidental, and ultimately arrived at a fundamental
+concept: that of \textit{the hyperbolic metric space} (often specified as \textit{in
+the sense of Gromov}, since mathematicians have an unfortunate
+tendency to label almost anything as hyperbolic).
+
+The process was a long one. The text of his lecture%
+\footnoteA{M. Gromov, \textit{Infinite groups as geometric objects},
+  Proc. Int. Congress Math. Warsaw 1983 1 (1984), 385--392.}
+at the International Congress in Warsaw (1983)%
+\footnoteA{The Congress should have taken place in 1982, but was
+  postponed for political reasons. Besides, Gromov was unable to attend
+  it.}
+already contained the major ideas, though still somewhat
+unpolished. In 1987 his book on hyperbolic groups%
+\footnoteA{M. Gromov, \textit{Hyperbolic groups}, in
+\textit{Essays in Group Theory}, S. Gersten ed., MSRI Publications 8 (1987), 75--263
+Springer.}
+was published --- a work that, nearly a quarter of a century later,
+can rightly be called marvelous. And yet, it was not easy to
+read. Some criticized it for a certain lack of detail, but that can be
+forgiven in a book intended as a \textit{qualitative} analysis of
+geometry.
+
+\section{An aside: The Style}
+
+A brief digression is in order. Gromov’s style is unique, inimitable, and
+far removed from mathematical convention. His writing is always
+difficult, even irritating at times, often lacking in precision, yet
+it always goes straight to the essence and possesses an incredible
+density. His proofs are often only sketches; sometimes they are ``a little
+wrong,'' but they always contain wonderful ideas.
+
+Perhaps the best way to illustrate the originality of Gromov’s style
+is simply to quote the opening lines of one of his articles:
+\textit{Spaces and Questions}, GAFA, Geometric and Functional
+Analysis, Special Volume (2000), 118--161.
+
+\begin{quote}\sf
+  Our Euclidean intuition, probably, inherited from ancient primates,
+  might have grown out of the first seeds of space in the motor
+  control systems of early animals who were brought up to sea and then
+  to land by the Cambrian explosion half a billion years
+  ago. Primates’ brain had been lingering for 30--40 million years.
+  Suddenly, in a flash of one million years, it exploded into growth
+  under relentless pressure of the sexual-social competition and
+  sprouted a massive neocortex (70\% neurons in humans) with an
+  inexplicable capability for language, sequential reasoning and
+  generation of mathematical ideas. Then Man came and laid down the
+  space on papyrus in a string of axioms, lemmas and theorems around
+  300 B.C. in Alexandria.  Projected to words, brain’s space began to
+  evolve by dropping, modifying and generalizing its axioms. First
+  fell the Parallel Postulate: Gauss, Schweikart, Lobachevski, Bolyai
+  (who else?) came to the conclusion that there is a unique
+  non-trivial one-parameter deformation of the metric on
+  $\mathbb{R}^{3}$ keeping the space fully homogeneous.
+\end{quote}
+
+\section{A Definition}
+
+It’s time to give some precise definitions. Gromov begins
+from the following remarkable observation:
+
+In a triangle in non-Euclidean geometry, the radius of the inscribed
+circle cannot exceed a certain maximum value. Incredible --- because
+this is, of course, completely false in Euclidean geometry: take a
+large equilateral triangle, then its inscribed circle will also be
+large. In non-Euclidean geometry, even if the sides of a triangle are
+enormous, there exists a point (the center of the inscribed circle)
+that remains close to each of the three sides.
+
+Let’s start with a definition that isn’t actually essential, but will
+allow us to speak about the sides of a triangle.
+
+A metric space $E$ is called geodesic if, any two
+points $x$  and $y$ can be connected by what we might naturally call
+a \textit{segment} $xy$ --- that is, a curve $x(t)$ joining $x$ and $y$,
+parametrized by a parameter $t$ varying between $0$ and the distance
+$\d_{E}(x,y)$, such that the distance between $x(t)$ and $x(s)$
+equals $|s-t|$.
+
+This simply means that $x$ and $y$ are connected by a segment of the
+correct length. Thus, whenever we have three points $x,y,z$, we can
+“draw” the three sides $xy$, $yz$, and $zx$.
+
+\begin{definition}
+Let $\delta\geq0$ be a real number (the Greek letter ``delta'' has
+become the traditional symbol in this context).
+
+A geodesic metric space $E$ is said to be $\delta$-hyperbolic if, for
+every triangle formed by three points $x,y,z$, there exists a point $c$
+that lies at a distance less than $\delta$ from each one of the three
+sides of the triangle $xyz$. 
+
+In other words, every triangle in $E$ is ``thin'' --- there is always a
+point close to all three sides.
+\end{definition}
+
+\centerline{
+  \begin{lpic}[draft,t(0mm),l(5mm),r(5mm),b(5mm),clean]{h-triangle(0.3)}
+  \lbl[]{2.5,12;$\bullet$}
+  \lbl[]{127,2;$\bullet$}
+  \lbl[]{112,111;$\bullet$}
+  \lbl[]{82,57;$\bullet$}
+  \lbl[t]{-5,10;$x$}
+  \lbl[lt]{130,0;$y$}
+  \lbl[bl]{115,115;$z$}
+  \lbl[tl]{73,61;$c$}
+\end{lpic}}
+
+\section{Two Examples and a (Very Small) Theorem of Gromov}
+
+Of course, the whole game would be pointless if the non-Euclidean
+plane of Bolyai–Lobachevsky–Gauss were not $\delta$-hyperbolic (for
+some value of $\delta$). Indeed, it is possible to verify that the
+non-Euclidean plane does possess the $\delta$-hyperbolicity property.
+
+We now turn to another family of $\delta$-hyperbolic (even
+$0$-hyperbolic) spaces, called \textit{trees}.
+
+The left figure below shows a \textit{tree}.
+
+\centerline{
+  \begin{lpic}[l(10mm),r(10mm),b(10mm),t(2mm)]{tree(0.3)}
+    \lbl[t]{50,-10; A tree.}
+  \end{lpic}
+  \begin{lpic}[l(10mm),r(10mm),b(10mm),t(2mm)]{not-tree(0.3)}  
+    \lbl[t]{50,-10; Not a tree.}
+  \end{lpic}}
+
+It contains a certain number of vertices, some of which are connected
+by edges. The term \textit{tree} is reserved for such a network provided it has
+no closed loops.
+For example, the right figure above is not a tree.
+
+For each edge of a tree, we can assign a non-negative length of our choosing. Then
+the tree can be viewed as a geodesic metric space: the distance
+between two points is simply the length of the shortest path
+connecting them. Such a structure is called a \textit{metric tree}.
+
+What do triangles look like in a tree? The figure below shows that in
+a tree, all triangles share a very distinctive property: there is
+always a point common to all three sides! In a sense, one could say
+that the inscribed circle has radius zero.
+
+In any case, it should be clear that trees are 0-hyperbolic metric
+spaces. Instead of a triangle, we more appropriately speak of a
+tripod.
+
+\centerline{
+\begin{lpic}[draft,t(5mm),l(5mm),r(5mm),b(5mm),clean]{t-triangle(0.3)}
+  \lbl[t]{-5,10;$x$}
+  \lbl[lt]{130,0;$y$}
+  \lbl[bl]{115,115;$z$}
+  \lbl[tl]{71,69;$c$}
+\end{lpic}}
+
+The following theorem is certainly not among the most difficult ones
+proved by Gromov --- far from it! Its proof takes only a few lines in
+one of his many books, and I’m sure he himself attaches only moderate
+importance to it. 
+
+Nevertheless, I present it here because it is quite typical of
+Gromov’s qualitative approach to geometry and also because --- who
+knows --- perhaps the readers might even be able to prove it on their
+own?
+
+There are many kinds of theorems. Some have statements that seem
+fairly ordinary, but their difficulty lies in the proof, which
+might not be easy. Others, by contrast, are quite easy to prove, and
+the main challenge for their author was to find the right statement
+--- the one that captures what truly matters.
+
+\begin{theorem}
+  Let $(E,\d_{E})$ be a $\delta$-hyperbolic geodesic metric space,
+  and let $(x_{1},\dots,x_{n})$ be a collection of $n$ points in $E$. Then
+  it is possible to construct a metric tree $A$, with its own distance
+  function $\d_{A}$, and $n$ corresponding points $(y_{1},\dots,y_{n})$ in $A$,
+  such that the distances in $A$ and in $E$ between the corresponding
+  points are almost the same.
+
+  More precisely, this means that for every pair $(i,j)$ the
+  distances satisfy:
+  \[
+    |\d_{E}(x_{i},x_{j})-\d_{A}(y_{i},y_{j})| \leq 100\delta\cdot\log(n).
+  \]
+
+  In other words, any finite collection of points in a $\delta$-hyperbolic
+  space can be approximated by points in a tree, up to a distortion
+  bounded by $100\delta\cdot\log(n)$.
+\end{theorem}
+
+\section{A Few Remarks}
+
+The above tree-approximation theorem is not particularly difficult, but it
+provides a genuine intuition for hyperbolic geometry. If you want to
+understand non-Euclidean geometry, look at trees, and you will at
+least gain a qualitative understanding.
+
+Why ``qualitative''? Because we study distances between points while
+allowing for a certain uncertainty or error --- on the order
+of $100\delta$. The goal is not to obtain precise measurements, but
+rather to grasp the order of magnitude of things.
+
+Gromov himself calls it \textit{coarse geometry}, that is, the geometry
+of rough shapes.
+
+Also note the $100\delta$ in the statement. The theorem is probably
+still true if we replaced $100$ by $99$, but it’s not Gromov’s style
+to chase after the best possible constants.
+
+In his book, one finds here and there truly whimsical constants
+(though rarely incorrect ones) of the kind $10\,000\delta$\dots{} In
+some of his other articles, Gromov did not hesitate to use constants
+whose numerical values are absolutely enormous.
+
+\section{What’s the Point?}
+
+All this would have only moderate interest if the following two
+conditions were not met:
+First of all, we have an excellent understanding of $\delta$-hyperbolic
+spaces. Gromov’s book, several of his later papers, and other works
+have revealed the full richness of these spaces. One can take as much
+pleasure in ``doing geometry'' within these spaces as in our familiar
+``old Euclidean space.'' There were proven many general theorems about
+hyperbolic spaces.
+
+Secondly, and above all, $\delta$-hyperbolic spaces abound, and that
+is what makes them so interesting. We’ve already seen examples such as
+trees (for instance, genealogical trees) and the non-Euclidean
+plane. In a certain sense, one might even think that almost all spaces
+are $\delta$-hyperbolic.
+
+Examples arise from number theory, but also from group theory. As
+early as 1990, Gromov even saw in this framework a possible
+interpretation of certain growth processes in biology. A certain class
+of groups introduced in the 1960s, known as \textit{small cancellation
+  groups}, suddenly became much clearer thanks to this geometric
+perspective --- geometry coming to the rescue of algebra, so to speak.
+
+In this way, Misha Gromov identified a fundamental concept: that of
+the hyperbolic group, whose meaning is above all geometric. But
+of course, combining groups and geometry is hardly a new idea in
+mathematics.
+
+Much more recently, Gromov even introduced probabilistic arguments
+into his geometric approach. He showed that if one picks a group at
+random, there is a high probability that it will be hyperbolic.
+
+On July 12, 1831, Gauss wrote a letter%
+\footnoteE{Carl Friedrich Gauss, \textit{Werke, Band VIII},
+  \url{https://link.springer.com/book/10.1007/978-3-642-92474-3}
+  or
+  \url{https://archive.org/details/briefwechselzwi03schugoog/page/n10/mode/2up}
+  (Ed.)}
+to his friend Schumacher about non-Euclidean geometry. Here is an English
+translation of an excerpt from that letter.
+\begin{quote}\sf
+  \noindent
+  \dots
+
+  \noindent
+  In non-Euclidean geometry, there are no similar figures without
+  equality. For example, the angles of an equilateral triangle are not
+  only dependent on $R$,%
+  \footnoteE{By letter $R$, Gauss denotes the parameter of deformation
+    of the geometry. Nowadays it is called (Gauss) curvature. (Ed.)}
+  but also vary according to the size of the sides; and when
+  the sides increases without limit, the angles can become as small as
+  one wishes. It is therefore inherently contradictory to try to draw
+  such a triangle by means of a scaled-down one --- one can, in
+  essence, only designate it.
+
+  \centerline{
+    \begin{lpic}[b(12mm)]{gauss-triangles(0.5)}
+      \lbl[t]{25,-3;\parbox{0.4\textwidth}{\raggedright
+          Small non-Euclidean triangle.
+          (\small\rm Captions added by the editor)}}          
+      \lbl[t]{130,-3;\parbox{0.4\textwidth}{\raggedright
+          The designation of a large non-Euclidean triangle.
+          }}
+    \end{lpic}
+  }
+  
+  The designation of the infinite triangle in this sense would
+  ultimately be
+
+  \centerline{
+    \begin{lpic}{gauss-t-triangle(0.5)}
+    \end{lpic}
+  }
+  
+  In Euclidean geometry there is nothing absolutely large, but in
+  non-Euclidean geometry there is --- and this is precisely its
+  essential character. Those who do not admit this thereby assume ipso
+  facto the entirety of Euclidean geometry; but, as I have said, in my
+  conviction this is mere self-deception.
+
+  \noindent
+  \dots
+\end{quote}
+
+Incredible! Gauss explains that triangles in non-Euclidean geometry
+look quite different from Euclidean triangles. He even says that, ``in
+the limit'' they become triangles like those found in trees.
+
+So, did Gauss already have a ``qualitative'' approach to geometry ---
+a hundred and fifty years before Gromov? Of course, Gauss did not
+develop a true qualitative theory of geometry as Gromov later did.
+
+I don’t think Gromov ever saw this letter from Gauss, but I am
+convinced that he would be proud to know that his path crossed the one
+of Gauss.
+
+\end{document}
