@@ -1,15 +1,15 @@
 \documentclass{amsart}
 \usepackage[utf8]{inputenc}
 \usepackage{url}
+
 \usepackage{bm}
 \def\1{\bm{1}}
-%%% Comment out to get rid of links at urls in the footnotes 
-\usepackage[hyperfootnotes=false]{hyperref}
 
-
+\usepackage{wrapfig}
 
 \usepackage{titlesec}
 \titleformat{\section}{\normalfont\bf\large}{\thesection. }{0em}{}
+\titleformat{\subsection}{\normalfont\bf}{}{0em}{}
 
 \usepackage{manyfoot}
 \DeclareNewFootnote{A}
@@ -22,14 +22,7 @@
 
 \usepackage{lpic}
 
-% \let\d=\undefined
-% \DeclareMathOperator{\d}{d}
 \def\sltwo{\ensuremath{\mathrm{SL}(n,\mathbb{Z})}}
-
-
-\newtheorem*{definition}{Definition}
-\newtheorem*{theorem}{Theorem}
-
 
 \begin{document}
 \centerline{\bf A Bit of Geometric Group Theory}
@@ -275,8 +268,36 @@ $b$ can then be represented as a path starting from $E$; for example,
 $a^2 b^{-1} a^{-1} b^{-1}$ moves two units to the right, one down, one
 to the left, and one down again.
 
-\centerline{
-  \begin{lpic}[draft,l(11mm),r(11mm),b(21mm),t(2mm),clean]{Pix/z2(0.4)}
+% \centerline{
+  % \begin{lpic}[draft,l(11mm),r(11mm),b(21mm),t(2mm),clean]{Pix/z2(0.4)}
+    % \lbl[b]{60,73;\color{blue}$a$}
+    % \lbl[b]{80,73;\color{blue}$a$}
+    % \lbl[l]{93,60;\color{blue}$b^{-1}$}
+    % \lbl[b]{80,53;\color{blue}$a^{-1}$}
+    % \lbl[l]{73,40;\color{blue}$b^{-1}$}
+    % \lbl[b]{60,33;\color{blue}$a^{-1}$}
+    % \lbl[l]{53,20;\color{blue}$b^{-1}$}
+    % \lbl[t]{43,9;\color{blue}$a^{-1}$}
+    % \lbl[r]{27,20;\color{blue}$b$}
+    % \lbl[b]{23,33;\color{blue}$a^{-1}$}
+    % \lbl[r]{7,40;\color{blue}$b$}
+    % \lbl[b]{40,73;\color{red}$a^{-1}$}
+    % \lbl[b]{20,73;\color{red}$a^{-1}$}
+    % \lbl[r]{9,60;\color{red}$b^{-1}$}
+    % \lbl[tW]{50,64;$E$}
+    % \lbl[lW]{16.5,50;$F$}
+    
+    % \lbl[t]{50,-2;\parbox{0.5\textwidth}{
+        % \centerline{\bf Figure 1.}
+        % \raggedright The words
+        % \blue{$a^2 b^{-1} a^{-1} b^{-1} a^{-1} b^{-1} a^{-1} b a^{-1} b$} and
+        % \red{$a^{-2} b^{-1}$} represent the same element of $\mathbb{Z}^2$:
+        % the corresponding paths have the same endpoint $F$.}}
+  % \end{lpic}
+% }
+
+\begin{wrapfigure}{r}{0mm}
+  \begin{lpic}[draft,l(8mm),r(4mm),b(21mm),t(-5mm),clean]{Pix/z2(0.4)}
     \lbl[b]{60,73;\color{blue}$a$}
     \lbl[b]{80,73;\color{blue}$a$}
     \lbl[l]{93,60;\color{blue}$b^{-1}$}
@@ -294,14 +315,13 @@ to the left, and one down again.
     \lbl[tW]{50,64;$E$}
     \lbl[lW]{16.5,50;$F$}
     
-    \lbl[t]{50,-2;\parbox{0.5\textwidth}{
-        \centerline{\bf Figure 1.}
+    \lbl[t]{50,-2;\parbox{0.4\textwidth}{\sf\small
         \raggedright The words
         \blue{$a^2 b^{-1} a^{-1} b^{-1} a^{-1} b^{-1} a^{-1} b a^{-1} b$} and
         \red{$a^{-2} b^{-1}$} represent the same element of $\mathbb{Z}^2$:
         the corresponding paths have the same endpoint $F$.}}
   \end{lpic}
-}
+\end{wrapfigure}
 
 We note that two words are equivalent if and only if their associated
 paths have the same endpoint; for example,
@@ -358,4 +378,312 @@ representative of the general case, $G_1$ satisfies an exponential
 isoperimetric inequality.
 
 
+\section{The Dehn Function}
+
+Given a finite presentation
+$G = \langle g_1, \dots, g_k \mid r_1, \dots, r_\ell \rangle$, we
+define the Dehn function $\varphi(n)$, whose growth determines the
+isoperimetric inequality satisfied by $G$.  A replacement such as
+$a^{\pm1} b^{\pm1} \mapsto b^{\pm1} a^{\pm1}$ or
+$h t^{\pm1} \mapsto t^{\pm2} h$ amounts to multiplying the word by a
+conjugate of some $(r_j)^{\pm1}$, and a word $W$ is trivial in $G$ if
+and only if, in the free group $F(g_1, \dots, g_k)$, it can be written
+as $W = \prod_{m=1}^{s} u_m (r_{j_m})^{\pm1} u_m^{-1}$.  For each
+trivial word $W$, we consider the smallest possible $s$, and
+$\varphi(n)$ is the maximum of these $s$ for all trivial words of
+length $\le n$.
+
+The Dehn function depends on the presentation, but the manner of its
+growth (quadratic, exponential, etc.) depends only on $G$. We have
+said that $\varphi$ is quadratic for $\mathbb{Z}^2$ and exponential
+for $G_1$; here is an example of a linear $\varphi$.
+
+Let $G_3$ be the group with presentation
+$\langle a, b, c, d \mid d^{-1} d a b a^{-1} b^{-1} c d c^{-1} d^{-1}
+\rangle$ (the fundamental group of the closed orientable surface of
+genus 2).  Given a word $W$ in $a, b, c, d$, we can shorten it if it
+contains more than half of the relation (or its inverse), up to cyclic
+permutation.  For instance, we may replace $aba^{-1}b^{-1}c$ by
+$d c d^{-1}$, or $d^{-1} c^{-1} b a b^{-1}$ by $c^{-1} d^{-1} a$, or
+$d c^{-1} d^{-1} a b$ by $c^{-1} b a$, and so on. We then reduce the
+resulting word (if possible) and repeat the process as long as
+possible.
+
+Dehn showed (around 1910) that in $G_3$, this procedure—called Dehn’s
+algorithm—solves the word problem: $W$ represents 1 if, and more
+importantly only if, the algorithm terminates with the empty
+word. Since the length of the word decreases at each step, the number
+of operations is bounded by the length of the word; thus $G_3$
+satisfies a linear isoperimetric inequality.
+
+Groups in which the word problem can be solved by Dehn’s algorithm
+(shortening the word whenever it contains more than half of a
+relation) have a Dehn function that is at most linear. Conversely, one
+can show that a group with Dehn function at most linear admits a
+presentation for which Dehn’s algorithm applies. These groups are
+precisely the hyperbolic groups defined by Gromov around 1985; we will
+discuss their geometric aspects below.
+
+If $G$ is not hyperbolic, its Dehn function is at least quadratic. On
+the other hand, there is no “gap” beyond the exponent 2: N. Brady and
+M. Bridson have recently shown that the set of exponents $\alpha$ for
+which there exists a group whose Dehn function is equivalent to
+$n^\alpha$ is dense in $[2, +\infty[$ (note that the set of
+isomorphism classes of finitely presented groups is countable, and
+therefore so is the set of these $\alpha$).
+
+Knowing the Dehn function of a finitely presented group explicitly
+allows one to solve the word problem algorithmically in that group: to
+determine whether a word $W$ of length $n$ is trivial, it suffices to
+compare it with all expressions
+$\prod_{m=1}^{s} u_m (r_{j_m})^{\pm1} u_m^{-1}$ with
+$s \le \varphi(n)$, of which there are only finitely many (the lengths
+of the words $u_m$ can be bounded a priori). Conversely, an algorithm
+that solves the word problem makes it possible to compute $\varphi$.
+
+It is known that there exist finitely presented groups in which the
+word problem cannot be solved algorithmically, because the Dehn
+function is non-recursive: it grows so fast that no algorithm can
+compute it. Thus, in complete generality, nothing can be said about a
+group given by generators and relations—not even whether the group is
+trivial or not. However, in most cases, any algebraic or geometric
+information about $G$, even minimal, allows one to analyze it.
+
+
+\section{The Hyperbolic Plane $\mathbb{H}^2$}
+
+Let us look at the group $G_3$ from a geometric point of view (as Dehn
+did). Let us try to construct a graph as we did for
+$\mathbb{Z}^2$. The graph to consider is no longer of degree 4, but of
+degree 8: from each vertex emerge 4 edges labeled $a, b, c, d$, and 4
+edges arrive there. The cells of the grid are octagons, corresponding
+to the relation $a b a^{-1} b^{-1} c d c^{-1} d^{-1}$.
+
+We can try to draw this graph, but we quickly run out of space to fit
+8 edges at each vertex: the Euclidean plane cannot be tiled by regular
+octagons. This graph must actually be drawn not in the Euclidean
+plane, but in the hyperbolic plane $\mathbb{H}^2$.
+
+Imagine a circular swimming pool (more mathematically, the open unit
+disk $D$ in the plane) filled with a viscous fluid that becomes denser
+as one approaches the edge: the viscosity coefficient is proportional
+to $\frac{1}{1 - r^2}$, where $r$ is the Euclidean distance from the
+center of the disk. The (hyperbolic!) distance between two points
+$x, y$ in $D$ is defined as the time it would take a swimmer to go
+from $x$ to $y$.
+
+There always exists a shortest path from $x$ to $y$ (called a
+geodesic), but it does not appear straight to us: it bends toward the
+center of the disk to allow a faster route, just as an airplane climbs
+in altitude to reduce air resistance. The geodesics are in fact arcs
+contained in circles perpendicular to the boundary of $D$, as well as
+the diameters (note that the boundary of $D$ is “at infinity”; it
+cannot be reached in finite time).
+
+Like the Euclidean plane, the hyperbolic plane is a homogeneous metric
+space: any point can be sent to any other by an isometry (in
+particular, the “center” of $D$ plays no special role; any homography
+of the complex plane that maps $D$ onto itself induces an
+isometry). But it has negative curvature, whereas the Euclidean plane
+has zero curvature, and the sphere has positive curvature.
+
+\begin{wrapfigure}{r}{0mm}
+  \begin{lpic}[b(23mm)]{Pix/escher-circle-limit-III(0.8)}
+    \lbl[t]{28,-2; \parbox{0.3\textwidth}{\sf\small M. C. Escher used
+        tilings of $\mathbb{H}^2$; for example, \textit{Circle Limit III}
+        evokes a tiling by regular triangles and quadrilaterals,
+        separated by white geodesic lines.  }}
+  \end{lpic}
+\end{wrapfigure}
+
+To study $G_3$, we tile $\mathbb{H}^2$ with regular octagons whose
+sides are geodesic segments of equal length and whose angles are
+$2\pi / 8$ (that is, $45^\circ$), in such a way that eight octagons
+meet at each vertex. The graph associated with such a tiling is
+precisely the “grid” we were seeking for $G_3$.
+
+The Dehn function of $G_3$ is therefore linear, since $\mathbb{H}^2$
+satisfies a linear isoperimetric inequality: the area bounded by a
+curve can be bounded by a linear function of its length. For example,
+a disk of radius $R$ has area $2\pi \sinh R$, comparable to its
+perimeter $2\pi (\cosh R - 1)$. (It’s better to do jigsaw puzzles in
+the hyperbolic plane: once you’ve placed the border, you’ve already
+set a non-negligible proportion of the pieces.)
+
+Elementary geometry in $\mathbb{H}^2$ holds other surprises. The
+Euclidean parallel postulate is not true, and the sum of the angles of
+a triangle is not equal to $\pi$ (i.e. $180^\circ$): it is equal to
+$\pi$ minus the area of the triangle (in particular, the area of a
+triangle is at most $\pi$).
+
+Another fundamental property of $\mathbb{H}^2$ is the thinness of
+triangles: there exists a constant $\delta$ (equal to
+$\log(2 - \sqrt{2} + 1)$) such that every point on one side of a
+geodesic triangle lies at distance at most $\delta$ from some point on
+one of the other two sides. This property is called
+$\delta$-hyperbolicity, or simply hyperbolicity.
+
+\section{Hyperbolic Groups and Quasi-Isometries}
+
+We have seen that the group $\mathbb{Z}^2$ “resembles” the Euclidean
+plane, while $G_3$ “resembles” the hyperbolic plane. Following
+M. Gromov, we formalize this idea by viewing a group $G$, equipped
+with a finite generating set $S$, as a metric space: the distance
+between two elements $g$ and $h$ of $G$ is the minimal length of a
+word (written with the elements of $S$) representing $g^{-1}h$.
+
+This “discrete” space is more easily visualized as the set of vertices
+of the Cayley graph of $G$: we place an edge between two vertices
+$g, h$ if $h$ is obtained from $g$ by right-multiplication by an
+element of $S$, and we declare that each edge is a segment of length
+1. The distance between two points is then the length of a shortest
+path connecting them (such a path is again called a geodesic).
+
+The Cayley graph of the free group $G_2$ is a tree (it has no
+loops). That of $\mathbb{Z}^2$ is the grid used earlier, with the
+so-called Manhattan (or taxicab) distance (note that in general there
+may be several geodesics between two given points). This distance is
+not the Euclidean one (which corresponds to “as the crow flies”), but
+it is comparable: the ratio of the two distances lies between two
+strictly positive constants (here 1 and $\sqrt{2}$). Similarly, the
+Cayley graph of $G_3$ is formed by the geodesics bounding the octagons
+in the tiling of $\mathbb{H}^2$ mentioned above, with a distance
+comparable to the hyperbolic distance.
+
+A group $G$ is called hyperbolic if there exists a constant $\delta$
+such that its Cayley graph is $\delta$-hyperbolic, meaning that the
+triangles in the Cayley graph, like those in $\mathbb{H}^2$, are
+thin. Thus $G_2$ and $G_3$ are hyperbolic, while $\mathbb{Z}^2$ is not
+(and neither is $G_1$).
+
+In our examples, we have always chosen the most natural, simplest
+generating set. But a finitely generated group has infinitely many
+generating sets, and hence infinitely many distinct Cayley graphs, so
+it is not immediately clear that all of them are hyperbolic if one of
+them is.
+
+In fact, all these graphs resemble one another, just as they resemble
+the discrete space $G$ considered earlier—just as the Cayley graph of
+$\mathbb{Z}^2$ resembles the Euclidean plane and that of $G_3$
+resembles $\mathbb{H}^2$. This resemblance is to be understood in the
+sense of quasi-isometry.
+
+Two metric spaces $X, Y$ are quasi-isometric if there exists a map
+$f : X \to Y$ and a constant $\lambda > 1$ such that $f$ does not
+distort distances too much for sufficiently distant points (the ratio
+between $d_Y(f(x), f(x'))$ and $d_X(x, x')$ lies between
+$\frac{1}{\lambda}$ and $\lambda$ whenever $d_X(x, x') > \lambda$),
+and $f$ is almost surjective (every ball of radius $\lambda$ in $Y$
+contains a point of the image).
+
+Every bounded space is quasi-isometric to a point; quasi-isometry is
+meant to capture asymptotic properties of spaces—that is, properties
+“at infinity.” Two (geodesic) spaces that are quasi-isometric are
+simultaneously hyperbolic or not, which justifies the definition of a
+hyperbolic group given above.
+
+Thus, to every finitely generated group one can associate a
+well-defined metric space, up to quasi-isometry. One can therefore
+speak of groups that are quasi-isometric to each other. Many algebraic
+or geometric properties of groups are invariant under quasi-isometry:
+for example, being finite, finitely presented, containing a
+commutative subgroup of finite index, being hyperbolic, or having a
+Dehn function of a given growth type. In general, one seeks to
+classify groups up to quasi-isometry.
+
+Let us mention a recent rigidity result due to Farb and Mosher. For an
+integer $n \ge 2$, let $H_n$ be the subgroup of
+$\mathrm{Aff}(\mathbb{R})$ generated by $x \mapsto x + 1$ and
+$x \mapsto n x$ (so $H_2$ is the $G_1$ studied above). If $n$ is a
+power of $m$, then $H_n$ is a subgroup of finite index in $H_m$, hence
+quasi-isometric to it. Conversely, Farb and Mosher have shown that
+$H_n$ and $H_m$ are quasi-isometric if and only if $n$ and $m$ are
+powers of the same integer, and (essentially) that any finitely
+generated group quasi-isometric to some $H_n$ contains a finite-index
+subgroup isomorphic to $H_{n^p}$.
+
+\section{Literature}
+\noindent
+\textbf{Steve Gersten}, \textit{Introduction to hyperbolic and automatic groups}, Summer School in Group Theory in Banff, 1996, 45—70, CRM Proc. Lecture Notes, 17, Amer. Math. Soc., Providence, RI, 1999.
+\medskip
+
+\noindent
+\textbf{Mikhail Gromov},  \textit{Hyperbolic groups.} In
+\textit{Essays in group theory} (pp. 75-263). New York, NY: Springer
+New York. (1987) 
+\medskip
+
+\noindent
+\textbf{Etienne Ghys, Pierre de la Harpe} (editors), \textit{Sur les
+  groupes hyperboliques d’apr\`es Mikhael Gromov}, Progress in
+Mathematics 83, Birhäuser.
+\medskip
+
+\noindent
+\textbf{Andrew Glass}, \textit{The ubiquity of free groups},
+Math. Intelligencer 14 (1992), no. 3, 54—57.
+\medskip
+
+\noindent
+\textbf{Alain Valette}, \textit{Quelques coups de projecteurs sur les
+  travaux de Jacques Tits}, Gazette des Mathématiciens No. 61, (1994),
+61—79.
+
+\section{Appendix}
+\subsection{Groups}
+A group is a set in which one can multiply and invert elements. The
+product must be associative: we have $(xy)z = x(yz)$, and we simply
+write $xyz$. However, the product is not necessarily commutative: we
+may have $xy \ne yx$. The inverse of $x$ is denoted $x^{-1}$. It
+satisfies $x x^{-1} = x^{-1} x = 1$, where $1$ denotes the identity
+element, characterized by $1x = x1 = x$.
+
+For example, the set of all permutations of an $n$-element set is a
+finite group, the symmetric group $S_n$; the product of two
+permutations $\sigma$ and $\tau$ is the composed permutation, defined
+by $(\sigma \circ \tau)(i) = \sigma(\tau(i))$. The set of invertible
+$n \times n$ matrices with real entries (that is, with determinant
+$\ne 0$) forms a group under matrix multiplication.
+
+If $X$ is any set endowed with some structure, the invertible
+transformations that preserve this structure form a group (the product
+being, as always, composition—applying the transformations
+successively). For example, if $X$ is the Euclidean plane (with its
+usual distance), we obtain the group of isometries, which includes in
+particular rotations, translations, and orthogonal reflections with
+respect to lines.
+\subsection{Subgroups}
+A subset $A$ of a group $G$ is a subgroup if it is itself a group
+under the product of $G$. This holds if and only if $ab$ and $a^{-1}$
+are in $A$ whenever $a$ and $b$ are in $A$. If $A$ is not a subgroup,
+there exists a smallest subgroup containing $A$; this is the subgroup
+generated by $A$. When the subgroup generated by $A$ is the whole of
+$G$, we say that $A$ generates $G$. The group $G$ is said to be
+finitely generated if it can be generated by a finite subset.
+
+Let us show, for example, that the subgroup $G_1$ generated by
+$t : x \mapsto x + 1$ and $h : x \mapsto 2x$ in the affine group
+$\mathrm{Aff}(\mathbb{R})$ of transformations of $\mathbb{R}$ consists
+of the $\varphi_{mnp}$ of the form $\varphi_{mnp}(x) = 2^m x + n 2^p$,
+with $m, n, p \in \mathbb{Z}$. The formulas
+$(\varphi_{mnp} \varphi_{m'n'p'})(x) =
+\varphi_{mnp}(\varphi_{m'n'p'}(x)) = 2^{m+m'} x + 2^{m+p} n' + 2^{p'}
+n 2^{p+p'} = \varphi_{m''n''p''}(x)$ with $m'' = m + m'$,
+$n'' = 2^{m+p} n' + 2^{p'} n$, $p'' = p + p'$, and
+$\varphi_{mnp}^{-1} = \varphi_{m'n'p'}$ where $m' = -m$, $n' = -n$,
+and $p' = m + p$, show that the set of $\varphi_{mnp}$ is a
+subgroup. It contains $h$ and $t$, and it is the smallest such
+subgroup because $\varphi_{mnp} = h^{-p} t^n h^{m+p}$ is contained in
+every subgroup that contains $h$ and $t$.
+
+If $G$ is a finite group and $A$ is a subgroup, the cardinality of $A$
+divides that of $G$. The quotient is the number of cosets of $G$
+modulo $A$, called the index of $A$. This number is still defined when
+$G$ is infinite, but it may itself be infinite. If there exists an
+integer $N$ such that whenever $g_0, g_1, \dots, g_N \in G$, one can
+find $i \ne j$ with $g_i g_j^{-1} \in A$, then the smallest such
+integer $N$ is the index of $A$. Otherwise, the index of $A$ is
+infinite. For example, the set of integers that are multiples of $d$
+forms a subgroup of $\mathbb{Z}$ that has index $d$ for $d > 0$,
+whereas $A = {0}$ has infinite index.
 \end{document}
