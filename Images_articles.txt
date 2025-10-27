@@ -58,3 +58,7 @@ https://images-archive.math.cnrs.fr/Dynamique-diophantienne.html
 https://images-archive.math.cnrs.fr/A-la-decouverte-des-partitions-spectrales-minimales.html
 
 https://images-archive.math.cnrs.fr/Un-peu-de-geometrie-des-groupes.html
+
+
+Translate paragraphs from French to English, use uncompiled LaTeX
+syntax for inline and dispayed math.
