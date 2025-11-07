@@ -1,11 +1,13 @@
 \documentclass{amsart}
 \usepackage[utf8]{inputenc}
 \usepackage{url}
+\usepackage[colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}]{hyperref}
 
-%%% Comment out to get rid of links at urls in the footnotes 
-\usepackage[hyperfootnotes=false]{hyperref}
-
-
+\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
+\usepackage{url}
 
 \usepackage{titlesec}
 \titleformat{\section}{\normalfont\bf\large}{\relax}{0em}{}

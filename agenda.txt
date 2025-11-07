@@ -1,0 +1,98 @@
+1. Permission from the authors.
+   S: If you think, that it is more proper to ask for the permission
+   beforehand, I agree.
+   Shall we then, after completing the translation, ask for the
+   approval/comments?
+
+   Resolution:
+      Contact the author, obtain permission;
+      translate;
+      ask the author for the final approvement, comments, additions;
+
+2. To git or not to git?
+   I am open to other file sharing platforms. In my experience though
+   a. Resolving conflicting edits becomes hard.
+   b. Reverting the edits is difficult.
+   d. It is not clear, who did what.
+   c. I often work offline.
+   If there is a solution addressing these concerns, I am open to it.
+
+   In any case, it would be good to set some project structure, so
+   that it is clear, where is what.
+
+   Resolution:
+      To git.
+
+3. Task sharing.
+   From my point of view, each translator should be completely
+   responsible for an article, including
+   a. communication with the author,
+   b. translation,
+   c. typesetting,
+   d. commenting,
+   e. pictures,
+   f. communication with one/both of the editors (Sergei+)
+      and addressing his or their concerns.
+
+   If we do it in a pipeline, as Christopher suggests, it will slow
+   the process enormously. We all work at our own pace (e.g. I work on
+   this instead of a morning newspaper ~1h/day, but may skip a week
+   or two) and this will create multiple bottlenecks in the pipeline.
+
+   But, of course, we may seek advice from each other, e.g. about
+   tricky French from Christopher. I have decent knowledge of LaTeX or
+   git, and many mathematical subjects (in the geometry direction), so
+   may provide advice, if necessary.
+
+   Resolution:
+      Work autonomously, collaborate when necessary.
+
+4. Style uniformization. Create LaTeX template?
+
+   S: Some conventions would be good, but we may leave some space for
+      individuality. For example, I feel different about fotnootes,
+      then Christopher, and we may style our translations differently
+      in this respect. Perhaps we should create some short, not too
+      strict, guidelines.
+
+   Resolution:
+
+5. List translator, editor? How, where?
+   S: I like the way Olga did in her translation.
+
+   Resolution:
+   
+6. Should links to French websites be replaced by links to Google
+   translated pages.
+   S: I am mildly in favor of leaving links as is. Also, no need to
+      overuniformize here. Let's ask Editors (Sergei+)
+
+   Resolution:
+   
+
+7. How the work will be copyrighted? How are IdM articles copyrighted?
+   Will translations inherit (c) from IdM? If we are free to choose
+   our own (c), then I suggest CCL (like wikipedia).
+
+   Resolution:
+
+8. Do we collaborate with IdM on translations?
+   S: It seems we target slightly different audiences. Ours is more
+      advanced, e.g. math students, vs theirs general public.
+      In any case, if we do, we should delegate communiation to one of
+      the France residents.
+      
+   Resolution:
+
+9. French sources. html, tex, pdf.
+
+   S: For me it is absolutely irrelevant. I do my own
+      typesetting/formatting, and translate par by par, because I want
+      to look at the ai-results carefully, change the wording, see
+      if the par is relevant for our purposes, see if additional
+      comments are necessary, etc.
+      
+   Resolution:
+
+
+Please add anything on your mind.
