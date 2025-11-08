@@ -80,9 +80,11 @@ in a reasonable way.}
 The brain is a mystery. It was toward the end of the nineteenth
 century that the neuronal dogma was
 accepted.
+\skipthis{
 %%% THE LINK IS INVALID 
 % \footnoteA{The discovery of the neuron.\\ \url{http://scienceblogs.com/
 % neurophilosophy/2007/07/the_discovery_of_the_neuron.php}} %
+  }
 The brain is not a continuous tissue but a network containing roughly
 ten billion neurons connected to each other by axons. A neuron is
 connected to many other neurons --- typically about ten thousand. How
@@ -280,16 +282,16 @@ Here is the method used --- highly debatable, of course --- but can we
 really do better?
 
 The starting point is a database that lists a large number of
-scientific journals (around 7\,000), and that makes it possible, in
+scientific journals (around $7\,000$), and that makes it possible, in
 particular, to count how many articles, published in one journal, cite,
 in their bibliographies, articles from another. The database contains
-about 60\,000\,000 citations from the past decade.
+about $60\,000\,000$ citations from the past decade.
 
-We can view this data as a large table with 7\,000 rows and 7\,000
+We can view this data as a large table with $7\,000$ rows and $7\,000$
 columns. In the $i^{\text{th}}$ row and $j^{\text{th}}$ column, we
 record the number $N(i,j)$ of articles published by journal $i$ that
 are cited in articles published in journal $j$. Alternatively, we can
-think of each journal $i$ as a vector in a 7\,000-dimensional space,
+think of each journal $i$ as a vector in a $7\,000$-dimensional space,
 whose coordinates are $\big(N(i,1),N(i,2),\dots,N(i,7000)\big)$.
 
 The first idea is to consider two journals $i$ and $j$ are considered
@@ -299,6 +301,7 @@ small. Indeed, if two vectors point in almost the same direction, it means
 they assign similar relative importance to all journals --- in other
 words, they are interested in roughly the same topics.
 
+\skipthis{
 % If you remember
 % the dot product of two vectors, you know that one can easily compute
 % the angle between two vectors from their coordinates. The same idea
@@ -306,7 +309,7 @@ words, they are interested in roughly the same topics.
 % High-dimensional geometry should not frighten us. In any case, it is
 % reasonable to accept that, one way or another, we can estimate
 % “distances” between journals.
-
+}
 Next comes a clustering operation --- that is, grouping together
 journals that are very close to one another. There are many ways to do
 this, and they do not all yield the same result.
@@ -542,7 +545,7 @@ them?  No, that would be too much to ask. ``Almost all'' will suffice.
 We require that among the $n^{2}=1\,000\,000$ possible pairs
 $(i,j)$,
 at least $0.99n^{2}$
-(that is, 990\,000)
+(that is, $990\,000$)
 of them are well
 connected.%
 \footnoteE{Stricktly speaking, well-connectedness was only defined for
@@ -553,52 +556,102 @@ connected.%
 \subsection{Szemer\'edi’s Theorem (informal statement)}
 
 Now we can state the theorem — but first, a warning: the following
-statement may not be exactly correct! We’ll need to refine it later.
+statement may not be exactly correct! We’ll need to refine it.
 
 \begin{theorem}[Szemerédi]
   For any graph, no matter how large, it is always possible to find an
-  almost-equipartition into 1,000 parts that is well connected.
+  almost-equipartition into $1000$ parts that is well connected.
 \end{theorem}
-\end{document}
-
-
-
 
 \section{The Significance of the Theorem — and a Few Comments}
 
-Once a well-connected, almost-equipartition is known, we can draw a “reasonable” representation of the graph we are studying.
+Once a well-connected, almost-equipartition is known, we can draw a
+``reasonable'' representation of the graph we are studying.
 
-We imagine drawing 1,000 points on a plane, each representing one of the AiAi​, which we can think of as a “cluster,” a “science,” or perhaps an “organ” of the network — each labeled with its corresponding number ii.
+We imagine drawing $1\,000$ points on a plane, each representing one of
+the $A_{i}$, which we can think of as a ``cluster,'' a ``science,'' or
+perhaps an ``organ'' of the network --- each labeled with its
+corresponding number $i$.
+Then, along the segment joining the points $i$ and $j$, we write the
+number $P_{A_{i}A_{j}}$.
 
-Then, along the segment joining the points ii and jj, we write the number pAi,AjpAi​,Aj​​.
+This simple diagram serves as a genuine map of the graph to within $1\%$
+accuracy! And this remains true even if the original graph contains
+billions upon billions of vertices. Of course, such a map does not
+allow us to reconstruct the entire graph --- but it does tell us, to
+within $1\%$, the number of connections between any two sufficiently
+large parts $X$ and $Y$. It suffices to know how $X$ and $Y$ intersect the
+``clusters'' $A_{i}$
 
-This simple diagram serves as a genuine map of the graph to within 1\% accuracy! And this remains true even if the original graph contains billions upon billions of vertices. Of course, such a map does not allow us to reconstruct the entire graph — but it does tell us, to within 1\%, the number of connections between any two sufficiently large parts XX and YY. It suffices to know how XX and YY intersect the “clusters” AiAi​.
+In short, anyone interested in the global functioning of the graph can
+be quite satisfied with such a map. If we wish, we can even position
+the $1\,000$ points on the plane in such a way that the distances between
+them reflect, as closely as possible, the degree of connectivity: the
+larger $p_{A_{i}A_{j}}$ is, the closer the corresponding points will
+appear.
 
-In short, anyone interested in the global functioning of the graph can be quite satisfied with such a map. If we wish, we can even position the 1,000 points on the plane in such a way that the distances between them reflect, as closely as possible, the degree of connectivity: the larger pAi,AjpAi​,Aj​​ is, the closer the corresponding points will appear.
-Two caveats (that somewhat spoil the theorem’s magic)
+\subsection{Two caveats (that somewhat spoil the theorem’s magic)}
 
-I have saved two comments for the end because they somewhat diminish the theorem’s appeal — though they certainly do not destroy the desire to improve it, and to overcome the two shortcomings I will now highlight.
+I have saved two comments for the end because they somewhat diminish
+the theorem’s appeal --- though they certainly do not destroy the desire
+to improve it, and to overcome the two shortcomings I will now
+highlight.
 
-First, the theorem as stated above is not quite correct. Unfortunately, I cannot guarantee a partition with exactly 1,000 clusters, as I somewhat boldly claimed earlier. The truth is that for each desired precision (say, 1\% in our example), there exists some integer nn that makes the theorem valid.
+First, the theorem as stated above is not quite
+correct. Unfortunately, I cannot guarantee a partition with exactly
+$1\,000$ clusters, as I somewhat boldly claimed earlier. The truth is
+that for each desired precision (say, $1\%$ in our example), there
+exists some integer $n$ that makes the theorem valid.
 
-What is the actual value of nn for a 1\% precision? Is it 1,000, as I suggested? I have no idea. All I know is that such an integer nn exists. The important point is that this nn depends only on the chosen precision — not on the size of the graph itself. If it depended on the size, the theorem would lose all interest.
+What is the actual value of nn for a $1\%$ precision? Is it $1\,000$, as
+I suggested? I have no idea. All I know is that such an integer $n$
+exists. The important point is that this $n$ depends only on the chosen
+precision --- not on the size of the graph itself. If it depended on the
+size, the theorem would lose all appeal.
 
-I would not be surprised if the reader felt frustrated by such a statement — “an integer nn exists, but we don’t know it.” That’s how mathematics often is: we do what we can!
+I would not be surprised if the reader felt frustrated by such a
+statement --- ``an integer $n$ exists, but we don’t know it.'' That’s how
+mathematics often is: we do what we can!
 
-Now, the hunt is on to determine the best possible nn for a given precision. Recent work by T. Gowers suggests that nn grows roughly like the inverse square of the desired precision. That is not very satisfying: for a precision of 1\% (that is, 0.01), this would give n=10,000n=10,000. Researchers are striving to make the theorem effective — to obtain actual, reasonable values of nn for realistic levels of precision. To achieve this, they might slightly adjust the conditions imposed on the partition. The theorem is flexible, and the goal is to make it usable.
-Finding the partition itself
+Now, the hunt is on to determine the best possible nn for a given
+precision. Recent work by T. Gowers suggests that nn grows roughly
+like the inverse square of the desired precision. That is not very
+satisfying: for a precision of $1\%$ (that is, 0.01), this would give
+$n=10\,000$. Researchers are striving to make the theorem
+effective --- to obtain actual, reasonable values of $n$ for realistic
+levels of precision. To achieve this, they might slightly adjust the
+conditions imposed on the partition. The theorem is flexible, and the
+goal is to make it usable.
 
-Along similar lines, it is not enough to assert that there exists a partition with, say, 1,000 clusters. We must also be able to find it if we wish to draw a map!
+\subsection{Finding the partition itself}
 
-This, too, is an area of active research: developing efficient (and not overly time-consuming) computational methods to actually find Szemerédi’s clusters.
+Along similar lines, it is not enough to assert that there exists a
+partition with, say, $1\,000$ clusters. We must also be able to find it
+if we wish to draw a map!
 
-Readers with a solid mathematical background may enjoy reading an engaging preprint on “Very Large Graphs” [9], which delves deeper into these questions.
+This, too, is an area of active research: developing efficient (and
+not overly time-consuming) computational methods to actually find
+Szemer\'edi’s clusters.
+
+Readers with a solid mathematical background may enjoy reading an
+engaging preprint on \href{https://arxiv.org/pdf/0902.0132}{``Very
+  Large Graphs''},%
+\footnoteA{Lov\'asz, L\'aszl\'o. \textit{Very large graphs.} In
+  Current developments in mathematics, 2008, vol. 2008,
+  pp. 67-129. International Press of Boston,
+  2009. \url{https://arxiv.org/pdf/0902.0132}} %
+which delves deeper into these questions.
 
 \section{Other Networks...}
 
-To conclude, here is another network we would like to understand better. It is a graph describing 3,200 interactions among 1,700 human proteins — a work that earned its authors a scientific award in 2005.
+To conclude, here is another network we would like to understand
+better. It is a graph describing $3\,200$ interactions among $1\,700$ human
+proteins --- a work that earned its authors a scientific award in 2005.
 
 This graph is rather complicated! One would certainly like to apply
-Szemerédi’s theorem to it...
+Szemer\'edi’s theorem to it\dots
+\begin{center}
+  \includegraphics[]{Pix/Proteine-df7a8.jpg}
+\end{center}
 
 \end{document}
