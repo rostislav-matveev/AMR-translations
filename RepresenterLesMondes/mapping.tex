@@ -27,6 +27,10 @@
 
 \long\def\skipthis#1{\red{[...]}}
 
+\newtheorem*{theorem}{Theorem}
+
+
+
 \begin{document}
 \centerline{\bf\large Mapping the Worlds II}
 \centerline{\bf The networks}
@@ -492,10 +496,10 @@ That gives us a definition of what it means for $A$ and $B$ to be
 \end{center}
 
 Here is an example where $A$ and $B$ are not well connected. You can
-see that $X_{1},X_{2}$ and $Y_{1},Y_{2}$​ each contain half of the
+see that $X_{1},X_{2}$ and $Y_{1},Y_{2}$ each contain half of the
 vertices of $A$ and $B$, respectively. But there are no connections
-between $X_{2}$​ and $Y_{2}$​, while there are many between $X_{1}$​ and
-$Y_{2}$​. For $A$ and $B$ to be well connected, there should be roughly
+between $X_{2}$ and $Y_{2}$, while there are many between $X_{1}$ and
+$Y_{1}$. For $A$ and $B$ to be well connected, there should be roughly
 the same number of connections in both cases.
 
 
@@ -512,28 +516,53 @@ We encountered such a partition earlier when grouping scientific
 journals into ``clusters'' that we called ``sciences.'' Here, for
 instance, is a partition into 5 parts containing 2, 5, 4, 4, and 2
 vertices.
+
+A partition is called an equipartition if each $A_{i}$ contain the same
+number of vertices. Of course, if we want an equipartition of a graph
+$G$ into $n$ parts, then $n$ must divide the total number $N(G)$ vertices.
+In our enormous graphs,
+it’s completely unrealistic to ask whether $N(G)$ divisible by 3
+or 157!
+
+So we relax the condition slightly.
+We say that the $n$ parts $A_{i}$ form an almost-equipartition if the
+number of vertices in each $A_{i}$ differs from $N(G)/n$ by at most 1:
+\[
+  \left| N(A_{i}) - \frac{N(G)}{n} \right| \leq 1
+\]
+
+Naturally, the smaller the number $n$ of parts, the more useful the
+partition is --- at least compared to the astronomical number of
+vertices in the original graph (which we can barely imagine!). So
+let’s take a reasonable number, say, $n=1000$.
+
+We are looking for almost-equipartitions that are well connected ---
+meaning that the parts $A_{i}$ and $A_{j}$ well connected. All of
+them?  No, that would be too much to ask. ``Almost all'' will suffice.
+We require that among the $n^{2}=1\,000\,000$ possible pairs
+$(i,j)$,
+at least $0.99n^{2}$
+(that is, 990\,000)
+of them are well
+connected.%
+\footnoteE{Stricktly speaking, well-connectedness was only defined for
+  pairs of disjoint subsets of vertices. We should imagine, that the
+  pairs $(A_{i},A_{i})$ are among those that we allow to be ``bad''. (Ed.) }
+
+
+\subsection{Szemer\'edi’s Theorem (informal statement)}
+
+Now we can state the theorem — but first, a warning: the following
+statement may not be exactly correct! We’ll need to refine it later.
+
+\begin{theorem}[Szemerédi]
+  For any graph, no matter how large, it is always possible to find an
+  almost-equipartition into 1,000 parts that is well connected.
+\end{theorem}
 \end{document}
 
 
 
-
-A partition is called an equipartition if all AiAi​ contain the same number of vertices. Of course, if we want an equipartition of a graph GG into nn parts, nn must divide the total number N(G)N(G) of vertices — that is, N(G)/nN(G)/n must be an integer. In our enormous graphs, it’s completely unrealistic to ask whether N(G)N(G) is divisible by 3 or 157!
-
-So we relax the condition slightly.
-
-We say that the nn parts AiAi​ form an almost-equipartition if the number of vertices in each AiAi​ differs from N(G)/nN(G)/n by at most 1:
-∣N(Ai)−N(G)n∣≤1.
-∣N(Ai​)−nN(G)​∣≤1.
-
-Naturally, the smaller the number nn of parts, the more useful the partition — at least compared to the astronomical number of vertices in the original graph (which we can barely imagine!). So let’s take a reasonable number — say, n=1000n=1000.
-
-We are looking for almost-equipartitions that are well connected — meaning that the parts AiAi​ and AjAj​ are well connected. All of them? No, that would be too much to ask. “Almost all” will suffice. We require that among the n2=1,000,000n2=1,000,000 possible pairs (i,j)(i,j), at least 0.99 n20.99n2 (that is, 990,000) of them are well connected.
-Szemerédi’s Theorem (informal statement)
-
-Now we can state the theorem — but first, a warning: the following statement may not be exactly correct! We’ll need to refine it later.
-
-Theorem (Szemerédi).
-For any graph, no matter how large, it is always possible to find an almost-equipartition into 1,000 parts that is well connected.
 
 \section{The Significance of the Theorem — and a Few Comments}
 
