@@ -1,14 +1,7 @@
 \documentclass{amsart}
 \usepackage[utf8]{inputenc}
-\usepackage{url}
-\usepackage[colorlinks,
-    linkcolor={blue!80!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}]{hyperref}
-
-\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
     
-\usepackage{wrapfig}
+% \usepackage{wrapfig}
 
 \usepackage{titlesec}
 \titleformat{\section}{\normalfont\bf\large}{\thesection. }{0em}{}
@@ -25,7 +18,16 @@
 
 \usepackage{lpic}
 
-\long\def\skipthis#1{\red{[...]}}
+% \usepackage{url}
+\usepackage[hyperfootnotes=false,
+    colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}]{hyperref}
+
+\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
+
+\newcommand{\skipthis}[2][\dots]{\red{[#1]}}
 
 \newtheorem*{theorem}{Theorem}
 
@@ -35,7 +37,7 @@
 \centerline{\bf\large Mapping the Worlds II}
 \centerline{\bf The networks}
 \medskip
-\centerline{by   \'Etienne Ghys}
+\centerline{by \'Etienne Ghys}
 
 \begin{center}
   \includegraphics[width=0.5\textwidth]{Pix/02homunc}
@@ -78,19 +80,15 @@ in a reasonable way.}
 \section{The Brain}
 
 The brain is a mystery. It was toward the end of the nineteenth
-century that the neuronal dogma was
-accepted.
-\skipthis{
-%%% THE LINK IS INVALID 
-% \footnoteA{The discovery of the neuron.\\ \url{http://scienceblogs.com/
-% neurophilosophy/2007/07/the_discovery_of_the_neuron.php}} %
-  }
-The brain is not a continuous tissue but a network containing roughly
-ten billion neurons connected to each other by axons. A neuron is
-connected to many other neurons --- typically about ten thousand. How
-can we picture such a structure? Here is one of the earliest sketches,
-dating from 1888:
-
+century that the neuronal dogma was accepted.%
+\skipthis[Broken link]{ \footnoteA{The discovery of the neuron.
+    \url{http://scienceblogs.com/neurophilosophy/2007/07/the_discovery_of_the_neuron.php} %
+  }} %
+The brain is not a continuous tissue but a network containing
+roughly ten billion neurons connected to each other by axons. Each
+neuron is connected to many other neurons --- typically about ten
+thousand. How can we picture such a structure? Below is one of the
+earliest sketches, dating from 1888:
 \begin{center}
   \begin{lpic}[draft,b(15mm),clean]{Pix/cajal-chick-cerebellum(0.5)}
     \lbl[t]{68,-5;\parbox{0.7\textwidth}{\small\centerline{Cajal 1888}
@@ -99,8 +97,9 @@ dating from 1888:
   \end{lpic}
 \end{center}
 
-One of the first “cartographers” of the brain was Penfield.%
-\footnoteA{Wilder Penfield, Neural cartographer;
+One of the first “cartographers” of the brain was Wilder Penfield.%
+\skipthis[Broken link]{
+\footnoteA{Wilder Penfield, Neural cartographer;}
   \url{http://scienceblogs.com/
     neurophilosophy/2008/08/wilder_penfield_neural_cartographer.php.}} %
 In the 1930s, during brain surgeries, he stimulated certain areas of
@@ -109,20 +108,29 @@ photograph below, taken in 1937, shows a series of numbered tags
 marking the locations of the electrodes.
 
 \begin{center}
-  \includegraphics[width=0.4\textwidth]{Pix/numered_tickets}
-\end{center}
-
-
+  \hfill
+  \begin{lpic}[b(10mm),draft,clean]{Pix/numered_tickets(0.3)}
+    \lbl[t]{60,-5;\parbox{0.4\textwidth}{\small\sf The photograph of tags marking
+        the location of electrodes.}}
+  \end{lpic}
+  \hfill\hfill
+  \begin{lpic}[b(10mm),draft,clean]{Pix/02homunc(0.3)}
+    \lbl[t]{75,-5;\parbox{0.4\textwidth}{\small\sf\centerline{The homunculus.}}}
+  \end{lpic}
+  \hfill
+  \rule{0mm}{1mm}
+  \end{center}
 Each number corresponded to a reaction. For example, number 14
 produced a tickling sensation from the knee down to the left
 foot. Number 5 produced numbness on the right side of the tongue, and
-so on. This was the beginning of the homunculus theory, which sought
-to establish a map of the brain corresponding to regions of the body.
+so on. 
 
-Here is the famous homunculus — the “map of the brain”:
-\begin{center}
-  \includegraphics[width=0.4\textwidth]{Pix/02homunc}
-\end{center}
+
+This was the beginning of the \textit{homunculus theory}, which sought
+to establish a map of the brain corresponding to regions of the body.
+The picture on the left is of the famous \textit{homunculus}: the
+``map of the brain'', where particular parts of the brain correspond
+to parts of the body.
 
 It is a kind of map $f:X\to Y$, where the domain is the brain and the
 target is the human body. But how much credence should we give to such
@@ -130,8 +138,8 @@ a ``map''? Penfield was exploring completely uncharted territory!  At
 the very least, one might be surprised not to see any sexual organs
 represented!%
 \footnoteA{See, however, the article by Damien Mascret,
-  \textit{L’homunculus retrouve son pénis (The Homunculus Regains His
-    Penis)} Le Généraliste \textnumero{} 2340, 09.09.2005.} %
+  \textit{L’homunculus retrouve son pénis. (The Homunculus Regains His
+    Penis.)} Le Généraliste \textnumero{} 2340, 09.09.2005.} %
  
 Today, this theory has lost any scientific pretension. Penfield
 himself readily admitted this toward the end of his life, writing:
@@ -141,7 +149,7 @@ memory, no more.''%
 \footnoteA{Penfield, Wilder, and Herbert Jasper. \textit{Epilepsy and
     the functional anatomy of the human brain.} (1954),
   pp. 105-106.} %
-Penfield is regarded as one of the pioneers of modern neurosurgery.
+Wilder Penfield is regarded as one of the pioneers of modern neurosurgery.
 
 Thanks to advances in medical imaging, it is now possible to map the
 brain in great detail --- see, for instance, a modern brain
@@ -160,18 +168,24 @@ a brain. On the other hand, the electrical or chemical impulses that
 travel through axons are much slower than Internet communications.
 
 How can we get an idea of the structure of such a gigantic network?
-Below is an image produced in 1998, reminiscent of the sketch of the
-neural network from 1888 that we saw earlier.
-\begin{center}
-  \includegraphics[]{Pix/internet_map_1_full}
-\end{center}
-
-In this drawing, the points represent web pages, and the lines connect
+Below are the images produced in 1998 and 2005, reminiscent of the
+sketch of the neural network from 1888 that we saw earlier.
+In this drawings, the points represent web pages, and the lines connect
 pages that reference each other through hyperlinks.
 
-Here is another image, computed in 2005, from the Opte Project:
 \begin{center}
-  \includegraphics[width=0.5\textwidth]{Pix/Internet2005}
+  \hfill
+  \begin{lpic}[b(10mm),draft,clean]{Pix/internet_map_1_full(1.1)}
+    \lbl[t]{25,-1.5;\parbox{0.4\textwidth}{\small\sf\centerline{The
+          image of internet from 1998.}}}
+  \end{lpic}
+  \hfill
+  \begin{lpic}[b(10mm),draft,clean]{Pix/Internet2005(0.3)}
+    \lbl[t]{75,-5;\parbox{0.4\textwidth}{\small\sf{The
+          image computed in 2005, from the Opte Project}}}
+  \end{lpic}
+  \hfill
+  \rule{0mm}{1mm}
 \end{center}
 
 Just as with a detailed image of the brain, these pictures don’t help
@@ -265,14 +279,15 @@ Naturally, at the very top of Comte’s pyramid stood... mathematics!
 
 Today, the interactions between disciplines are more complex than
 ever. Many scientists are interested in mapping the relations between
-different branches of the sciences.  Here is a map of the scientific
-world, taken from%
+different branches of the sciences.  Below is a map of the scientific
+world, taken from %
 \foothref{http://www.eigenfactor.org/projects/mappingScience/}{Ranking
   and Mapping Scientific Knowledge.}
+\begin{figure}
 \begin{center}
   \includegraphics[width=0.5\textwidth]{Pix/Sci2004}
 \end{center}
-
+\end{figure}
 
 The mathematician may perhaps regret no longer occupying the top of the pyramid.
 
@@ -294,12 +309,12 @@ are cited in articles published in journal $j$. Alternatively, we can
 think of each journal $i$ as a vector in a $7\,000$-dimensional space,
 whose coordinates are $\big(N(i,1),N(i,2),\dots,N(i,7000)\big)$.
 
-The first idea is to consider two journals $i$ and $j$ are considered
-to be thematically
-close if the angle between their corresponding vectors is
-small. Indeed, if two vectors point in almost the same direction, it means
-they assign similar relative importance to all journals --- in other
-words, they are interested in roughly the same topics.
+The first idea is to take two journals, $i$ and $j$. They are
+considered to be thematically close if the angle between their
+corresponding vectors is small. Indeed, if two vectors point in almost
+the same direction, it means they assign similar relative importance
+to all other journals --- in other words, they are interested in roughly the
+same topics.
 
 \skipthis{
 % If you remember
