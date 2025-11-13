@@ -12,7 +12,7 @@
 \DeclareNewFootnote{E}[alph]
 
 \usepackage{xcolor}
-\long\def\gray#1{{\color{gray}{#1}}}
+\long\def\gray#1{{\color{gray}{#1}}}\let\grey=\gray
 \long\def\blue#1{{\color{blue}{#1}}}
 \long\def\red#1{{\color{red}{#1}}}
 
@@ -27,8 +27,8 @@
 
 \def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
 
-\newcommand{\skipthis}[2][\dots]{\red{[#1]}}
-
+% \newcommand{\skipthis}[2][\dots]{\red{[#1]}}
+\newcommand{\skipthis}[2][\dots]{\red{[#1]}\gray{#2}}
 \newtheorem*{theorem}{Theorem}
 
 
@@ -81,7 +81,8 @@ in a reasonable way.}
 
 The brain is a mystery. It was toward the end of the nineteenth
 century that the neuronal dogma was accepted.%
-\skipthis[Broken link]{ \footnoteA{The discovery of the neuron.
+\skipthis[Broken link]{%
+  \footnoteA{The discovery of the neuron.
     \url{http://scienceblogs.com/neurophilosophy/2007/07/the_discovery_of_the_neuron.php} %
   }} %
 The brain is not a continuous tissue but a network containing
@@ -98,10 +99,10 @@ earliest sketches, dating from 1888:
 \end{center}
 
 One of the first “cartographers” of the brain was Wilder Penfield.%
-\skipthis[Broken link]{
-\footnoteA{Wilder Penfield, Neural cartographer;}
+\skipthis[Broken link]{%
+\footnoteA{Wilder Penfield, Neural cartographer;
   \url{http://scienceblogs.com/
-    neurophilosophy/2008/08/wilder_penfield_neural_cartographer.php.}} %
+    neurophilosophy/2008/08/wilder_penfield_neural_cartographer.php.}}} %
 In the 1930s, during brain surgeries, he stimulated certain areas of
 the brain with electrodes and recorded the patient’s reactions. The
 photograph below, taken in 1937, shows a series of numbered tags
@@ -143,8 +144,8 @@ represented!%
  
 Today, this theory has lost any scientific pretension. Penfield
 himself readily admitted this toward the end of his life, writing:
-``The figurines [\dots] have the defects, and the virtues, of cartoons
-in that they are inaccurate anatomically. [\dots] They are aids to
+``The figurines [\,\dots] have the defects, and the virtues, of cartoons
+in that they are inaccurate anatomically. [\,\dots] They are aids to
 memory, no more.''%
 \footnoteA{Penfield, Wilder, and Herbert Jasper. \textit{Epilepsy and
     the functional anatomy of the human brain.} (1954),
@@ -316,7 +317,7 @@ the same direction, it means they assign similar relative importance
 to all other journals --- in other words, they are interested in roughly the
 same topics.
 
-\skipthis{
+\skipthis[removed par]{
 % If you remember
 % the dot product of two vectors, you know that one can easily compute
 % the angle between two vectors from their coordinates. The same idea
@@ -350,13 +351,13 @@ example, by a minimization method such as those described in the
 previous article%
 \footnoteE{\href{https://images-des-maths.pages.math.cnrs.fr/freeze/Representer-les-mondes.html}
   {Repr\'esenter les Mondes} by \'Etienne Ghys,\\
-  \url{https://images-des-maths.pages.math.cnrs.fr/freeze/Representer-les-mondes.html}. English
-  translation: \href{???}{Mapping the Worlds I}, \url{???}} %
---- though, again, many other approaches could be used.
-The result is the map shown above.%
+  \url{https://images-des-maths.pages.math.cnrs.fr/freeze/Representer-les-mondes.html}.
+  English translation: \href{???}{Mapping the Worlds I}, \url{???}} %
+--- though, again, many other approaches could be used.  The result is
+the map shown above.%
 \footnoteE{The thickness of the graph edges indicates citation traffic
   between the ``sciences'', with only significant links shown. See the
-original publication for more detailed explanation. (Ed.)}
+  original publication for more detailed explanation. (Ed.)}
 
 I leave it to the reader to judge the interest and relevance of such
 constructions. But let us not forget the lessons of Penfield’s
@@ -393,7 +394,7 @@ between two web pages, a citation from one journal to another, or a
 When the number of vertices and edges is small, we can easily draw
 such a graph on a sheet of paper.%
 \footnoteE{Even relatively small graphs, e.g. with five vertices, may
-  not fit on a paper in an embedded way, that is, some edges must
+  not fit on a paper in an embedded way, that is, some edges may have to
   intersect in their interiors. (Ed.)} %
 For example, here is a graph with 6 vertices and 7 edges:
 \begin{center}
@@ -408,7 +409,7 @@ billions of vertices.
 
 The Web graph can be treated as a physical object of study, one that
 can be measured experimentally --- for example, assessing the speed at
-which information circulates, somewhat like a electrical engineer
+which information circulates, somewhat like an electrical engineer
 might study the flow of electricity through a network.
 But the Web graph can also be viewed as a mathematical object.
 
@@ -478,9 +479,13 @@ and $Y$, respectively, we can think of the ratio
 as representing the connection probability between $X$ and $Y$.
 
 A priori, this probability depends on the specific choice of $X$ and
-$Y$. We shall say that $A$ and $B$ are \textit{well connected} (to within
-1\%) if this probability does not depend too much on the choice of
-subsets $X\subset A$ and $Y\subset B$.
+$Y$. We shall say that $A$ and $B$ are \textit{well connected} (to
+within 1\%) if this probability does not depend too much on the choice
+of subsets $X\subset A$ and $Y\subset B$.%
+\footnoteE{Well-connectedness essentially says, that the bipartite
+  subgraph spanned by the sets of vertices $A$ and $B$ has no easily
+  detectable structure and it looks like a typical random graph at a
+  first glance.}
 
 More precisely, we require that there exists a number
 $p_{A,B}\in[0,1]$ such that, for all  $X\subset A$ and $Y\subset B$
@@ -493,9 +498,9 @@ holds
   1.01p_{A,B}
 \]
 
-\red{[Remove this par]} Readers should not be intimidated by
+\skipthis[Removed par]{ Readers should not be intimidated by
 this formula --- it simply means that $\frac{N(X,Y)}{N(X)\cdot N(Y)}$
-and $p_{A,B}$ are equal to within 1\%.
+and $p_{A,B}$ are equal to within 1\%.}
 
 However, this definition doesn’t quite work. If $X$ and $Y$ each
 contain only one vertex, then the ratio
@@ -512,6 +517,7 @@ That gives us a definition of what it means for $A$ and $B$ to be
 \begin{center}
   \includegraphics[width=0.3\textwidth]{Pix/graphepart-4a3f6.png}
 \end{center}
+\medskip
 
 Here is an example where $A$ and $B$ are not well connected. You can
 see that $X_{1},X_{2}$ and $Y_{1},Y_{2}$ each contain half of the
@@ -522,25 +528,26 @@ the same number of connections in both cases.
 
 
 
-We will need anther definition.
-We say that we have a partition of a graph when we have divided its
-vertex set into subsets $A_{1},A_{2},\dots,A_{n},$ such that every
-vertex of the graph belongs to exactly one of them.
+We will need yet another definition.  We say that we have a partition
+of a graph when we have divided its vertex set into subsets
+$A_{1},A_{2},\dots,A_{n},$ such that every vertex of the graph belongs
+to exactly one of them.
 
 \begin{center}
   \includegraphics[width=0.3\textwidth]{Pix/partition-88053.png}
 \end{center}
-We encountered such a partition earlier when grouping scientific
-journals into ``clusters'' that we called ``sciences.'' Here, for
-instance, is a partition into 5 parts containing 2, 5, 4, 4, and 2
-vertices.
+\medskip
 
-A partition is called an equipartition if each $A_{i}$ contain the same
-number of vertices. Of course, if we want an equipartition of a graph
-$G$ into $n$ parts, then $n$ must divide the total number $N(G)$ vertices.
-In our enormous graphs,
-it’s completely unrealistic to ask whether $N(G)$ divisible by 3
-or 157!
+We encountered such a partition earlier when grouping scientific
+journals into ``clusters'' that we called ``sciences.'' An example of
+a partition of a graph into 5 parts containing 2, 5, 4, 4, and 2
+vertices each is pictured above.
+
+A partition is called an equipartition if each $A_{i}$ contains the
+same number of vertices. Of course, if we want an equipartition of a
+graph $G$ into $n$ parts, then $n$ must divide the total number $N(G)$
+vertices.  In our enormous graphs, it’s completely unrealistic to expect
+that $N(G)$ will be divisible by 3 or 157!
 
 So we relax the condition slightly.
 We say that the $n$ parts $A_{i}$ form an almost-equipartition if the
@@ -578,17 +585,59 @@ statement may not be exactly correct! We’ll need to refine it.
   almost-equipartition into $1000$ parts that is well connected.
 \end{theorem}
 
-\section{The Significance of the Theorem — and a Few Comments}
+\subsection{Szemer\'edi’s Theorem%
+\protect\footnoteE{This section was added by the
+  editor/translator. (Ed.)}}
+
+There are several versions of Szemer\'edi's Theorem, which is also
+known in the literature as Szemer\'edi's Regularity Lemma. Here we
+give the original version. For a fixed precision level $\epsilon>0$
+the \textit{$\epsilon$-regular partition} of a graph $G$ is a
+partition of the vertex set of $G$ into $k$ parts
+$(A_{1},\dots,A_{k})$, such that among the pairs of distinct $A_{i}$'s
+there are at most $\epsilon k^{2}$ ``bad'' pairs, about which we can not
+say anything. The rest of the pairs of distinct $A_{i}$'s are
+$\epsilon$-well-connected.  One may or may not require the partition
+to be an almost equipartition. The theorem holds in both setups,
+however the known bounds on the size of the partition will be
+different.
+
+Now we are ready to state the theorem.  The placement of quantifiers
+is somewhat tricky. First we choose the required precision level
+$\epsilon$ ($1\%$ in the text above) and a minimal number of parts in
+the partition. The theorem asserts that there is a maximum number of
+parts such that for all sufficiently large graphs there is an
+$\epsilon$-regular partition with number of parts squeezed between the
+given minimum and maximum. The maximum number of parts and the
+threshold of ``largness'' depend on the chosen precision level and
+minimal number of parts.
+\begin{theorem}[Szemer\'edi's Regularity Lemma]
+  For any $\epsilon>0$ (precision level) and $m>0$ (minimal number of
+  parts), there is $M>m$ (maximal number of parts) such that for every
+  sufficiently large graph $G$ there exist an $\epsilon$-regular
+  partition of $G$ with the number of parts in the interval $[m,M]$.
+\end{theorem}
+The known bounds on $M$ are just astounding, they are of the form of
+exponential towers (repeated exponentiation) of the height
+proportional to $\epsilon^{-2}$.%
+\footnoteE{W.T. Gowers, \textit{Quasirandomness, counting and
+    regularity for 3-uniform hypergraphs}, Combin. Probab. Comput. 15
+  (2006), 143–184.} %
+It has also been shown that there are graphs for which $M=M(\epsilon)$
+is indeed about that big. We may still hope that such synthetic
+examples are rare and there are large classes of graphs for which
+Szemer\'edi Regularity Lemma with some reasonable $M$ holds.
+
+\section{The Significance of the Theorem and a Few Comments}
 
 Once a well-connected, almost-equipartition is known, we can draw a
 ``reasonable'' representation of the graph we are studying.
 
-We imagine drawing $1\,000$ points on a plane, each representing one of
-the $A_{i}$, which we can think of as a ``cluster,'' a ``science,'' or
-perhaps an ``organ'' of the network --- each labeled with its
-corresponding number $i$.
-Then, along the segment joining the points $i$ and $j$, we write the
-number $P_{A_{i}A_{j}}$.
+We imagine drawing $1\,000$ points on a plane, each representing one
+of the $A_{i}$, which we can think of as a ``cluster,'' a ``science,''
+or perhaps an ``organ'' of the network --- each labeled with its
+corresponding number $i$.  Then, along the segment joining the points
+$i$ and $j$, we write the number $P_{A_{i}A_{j}}$.
 
 This simple diagram serves as a genuine map of the graph to within $1\%$
 accuracy! And this remains true even if the original graph contains
@@ -618,7 +667,7 @@ $1\,000$ clusters, as I somewhat boldly claimed earlier. The truth is
 that for each desired precision (say, $1\%$ in our example), there
 exists some integer $n$ that makes the theorem valid.
 
-What is the actual value of nn for a $1\%$ precision? Is it $1\,000$, as
+What is the actual value of $n$ for a $1\%$ precision? Is it $1\,000$, as
 I suggested? I have no idea. All I know is that such an integer $n$
 exists. The important point is that this $n$ depends only on the chosen
 precision --- not on the size of the graph itself. If it depended on the
@@ -628,15 +677,16 @@ I would not be surprised if the reader felt frustrated by such a
 statement --- ``an integer $n$ exists, but we don’t know it.'' That’s how
 mathematics often is: we do what we can!
 
-Now, the hunt is on to determine the best possible nn for a given
-precision. Recent work by T. Gowers suggests that nn grows roughly
-like the inverse square of the desired precision. That is not very
-satisfying: for a precision of $1\%$ (that is, 0.01), this would give
-$n=10\,000$. Researchers are striving to make the theorem
-effective --- to obtain actual, reasonable values of $n$ for realistic
-levels of precision. To achieve this, they might slightly adjust the
-conditions imposed on the partition. The theorem is flexible, and the
-goal is to make it usable.
+Now, the hunt is on to determine the best possible $n$ for a given
+precision. \skipthis[Removed sentences. The result of Gowers says that
+$M$ is an exponential tower of height $1/\epsilon^{2}$]{Recent work by
+  T. Gowers suggests that $n$ grows roughly like the inverse square of
+  the desired precision. That is not very satisfying: for a precision
+  of $1\%$ (that is, $0.01$), this would give $n=10\,000$.}
+Researchers are striving to make the theorem effective --- to obtain
+actual, reasonable values of $n$ for realistic levels of precision. To
+achieve this, they might slightly adjust the conditions imposed on the
+partition. The theorem is flexible, and the goal is to make it usable.
 
 \subsection{Finding the partition itself}
 
