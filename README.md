@@ -10,7 +10,8 @@ Translation of articles for amr
   - [x] Edits/comments
   - [x] Editor comments
   - [x] Comments/approval by the author
-
+  - [ ] Final
+  
 * **Un peu de geometrie des groupes**
   https://images-archive.math.cnrs.fr/Un-peu-de-geometrie-des-groupes
   - [x] Contact author
@@ -18,6 +19,7 @@ Translation of articles for amr
   - [x] Edits/comments
   - [x] Editor comments
   - [x] Comments/approval by the author
+  - [ ] Final
 
 * **Representer les mondes II**
   https://images-archive.math.cnrs.fr/Representer-les-mondes-II.html
@@ -26,6 +28,7 @@ Translation of articles for amr
   - [x] Edits/comments
   - [ ] Editor comments
   - [ ] Comments/approval by the author
+  - [ ] Final
 
 * **Representer les mondes**
   https://images-archive.math.cnrs.fr/Representer-les-mondes.html
@@ -34,3 +37,4 @@ Translation of articles for amr
   - [ ] Edits/comments
   - [ ] Editor comments
   - [ ] Comments/approval by the author
+  - [ ] Final
