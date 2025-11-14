@@ -317,15 +317,13 @@ the same direction, it means they assign similar relative importance
 to all other journals --- in other words, they are interested in roughly the
 same topics.
 
-\skipthis[removed par]{
-% If you remember
-% the dot product of two vectors, you know that one can easily compute
-% the angle between two vectors from their coordinates. The same idea
-% applies whether we are in two or three dimensions — or in 7,000!
-% High-dimensional geometry should not frighten us. In any case, it is
-% reasonable to accept that, one way or another, we can estimate
-% “distances” between journals.
-}
+\skipthis[removed par]{ If you remember the dot product of two
+  vectors, you know that one can easily compute the angle between two
+  vectors from their coordinates. The same idea applies whether we are
+  in two or three dimensions — or in 7,000!  High-dimensional geometry
+  should not frighten us. In any case, it is reasonable to accept
+  that, one way or another, we can estimate “distances” between
+  journals.  }%
 Next comes a clustering operation --- that is, grouping together
 journals that are very close to one another. There are many ways to do
 this, and they do not all yield the same result.
@@ -585,49 +583,53 @@ statement may not be exactly correct! We’ll need to refine it.
   almost-equipartition into $1000$ parts that is well connected.
 \end{theorem}
 
-\subsection{Szemer\'edi’s Theorem%
+\blue{\subsection{Szemer\'edi’s Theorem%
 \protect\footnoteE{This section was added by the
   editor/translator. (Ed.)}}
-
+}
+\blue{
 There are several versions of Szemer\'edi's Theorem, which is also
-known in the literature as Szemer\'edi's Regularity Lemma. Here we
-give the original version. For a fixed precision level $\epsilon>0$
+known in the literature as Szemer\'edi's Regularity Lemma. One of the
+statements is given below. To make it simpler we first introduce
+another definition. 
+For a fixed precision level $\epsilon>0$
 the \textit{$\epsilon$-regular partition} of a graph $G$ is a
 partition of the vertex set of $G$ into $k$ parts
 $(A_{1},\dots,A_{k})$, such that among the pairs of distinct $A_{i}$'s
 there are at most $\epsilon k^{2}$ ``bad'' pairs, about which we can not
 say anything. The rest of the pairs of distinct $A_{i}$'s are
-$\epsilon$-well-connected.  One may or may not require the partition
+$\epsilon$-well-connected. One may or may not require the partition
 to be an almost equipartition. The theorem holds in both setups,
 however the known bounds on the size of the partition will be
 different.
-
-Now we are ready to state the theorem.  The placement of quantifiers
-is somewhat tricky. First we choose the required precision level
-$\epsilon$ ($1\%$ in the text above) and a minimal number of parts in
-the partition. The theorem asserts that there is a maximum number of
-parts such that for all sufficiently large graphs there is an
-$\epsilon$-regular partition with number of parts squeezed between the
-given minimum and maximum. The maximum number of parts and the
-threshold of ``largness'' depend on the chosen precision level and
-minimal number of parts.
+}
+\blue{
+Now we are ready to state the theorem.  For any precision level
+$\epsilon$ ($1\%$ in the text above) the theorem provides the upper
+bound $M$ on the size of the $\epsilon$-regular partition, for any
+sufficiently large graph.
 \begin{theorem}[Szemer\'edi's Regularity Lemma]
-  For any $\epsilon>0$ (precision level) and $m>0$ (minimal number of
-  parts), there is $M>m$ (maximal number of parts) such that for every
-  sufficiently large graph $G$ there exist an $\epsilon$-regular
-  partition of $G$ with the number of parts in the interval $[m,M]$.
+  For any $\epsilon>0$ (precision level) there exist $M>0$ (maximal
+  number of parts) such that for every graph $G$ with at least $M$
+  vertices there exist an $\epsilon$-regular
+  partition of $G$ with the number of parts not exceeding $M$.
 \end{theorem}
-The known bounds on $M$ are just astounding, they are of the form of
-exponential towers (repeated exponentiation) of the height
-proportional to $\epsilon^{-2}$.%
+}
+
+\blue{
+The known bounds on $M$ are just astounding,%
 \footnoteE{W.T. Gowers, \textit{Quasirandomness, counting and
     regularity for 3-uniform hypergraphs}, Combin. Probab. Comput. 15
   (2006), 143–184.} %
-It has also been shown that there are graphs for which $M=M(\epsilon)$
-is indeed about that big. We may still hope that such synthetic
-examples are rare and there are large classes of graphs for which
-Szemer\'edi Regularity Lemma with some reasonable $M$ holds.
-
+they are in the form of exponential towers (repeated exponentiation)
+of the height proportional to $\epsilon^{-2}$.  There is no saying,
+how large this number for $\epsilon=0.01$ is. It has also been shown
+that there are families of graphs for which $M=M(\epsilon)$ is indeed
+about that big, so that the bound can not be improved by much. We may
+still hope that such synthetic examples are rare and there are large
+classes of graphs for which Szemer\'edi Regularity Lemma with some
+reasonable $M$ holds.
+}
 \section{The Significance of the Theorem and a Few Comments}
 
 Once a well-connected, almost-equipartition is known, we can draw a
@@ -684,9 +686,12 @@ $M$ is an exponential tower of height $1/\epsilon^{2}$]{Recent work by
   the desired precision. That is not very satisfying: for a precision
   of $1\%$ (that is, $0.01$), this would give $n=10\,000$.}
 Researchers are striving to make the theorem effective --- to obtain
-actual, reasonable values of $n$ for realistic levels of precision. To
+actual, reasonable values of $n$ for realistic levels of precision
+\blue{at least for some large classes of graphs or a slightly modified
+conditions imposed on the partition}.\skipthis[Removed sentence. See blue
+sentences above]{To
 achieve this, they might slightly adjust the conditions imposed on the
-partition. The theorem is flexible, and the goal is to make it usable.
+partition.} The theorem is flexible, and the goal is to make it usable.
 
 \subsection{Finding the partition itself}
 
