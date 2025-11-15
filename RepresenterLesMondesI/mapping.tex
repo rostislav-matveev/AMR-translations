@@ -4,7 +4,7 @@
 % \usepackage{wrapfig}
 
 \usepackage{titlesec}
-\titleformat{\section}{\normalfont\bf\large}{\thesection. }{0em}{}
+\titleformat{\section}{\normalfont\bf\large}{}{0em}{}
 \titleformat{\subsection}{\normalfont\bf}{}{0em}{}
 
 \usepackage{manyfoot}
@@ -30,7 +30,7 @@
 \newcommand{\skipthis}[2][\dots]{\red{[#1]}\gray{#2}}
 \newtheorem*{theorem}{Theorem}
 
-
+\DeclareMathOperator\distance{\mathit{distance}}
 
 \begin{document}
 \centerline{\bf\large Mapping the Worlds I}
@@ -38,8 +38,98 @@
 \centerline{by \'Etienne Ghys}
 
 \begin{center}
-  \includegraphics[width=0.5\textwidth]{Pix/02homunc}
+  \includegraphics[width=\textwidth]{Pix/TypusOrbisTerrarum}
 \end{center}
+
+Cartography has accompanied mathematics since its very beginnings%
+\footnoteE{This is evident from the name of the vast area of
+  mathematics --- ``Geometry'', that is ``measuring the Earth''} %
+and continually renews its set of problems. Originally, it was a
+matter of drawing maps as accurately as possible of continents that
+were more or less well known. Above is a map dating from 1570, in
+which to the south we see a ``Terra Australis Incognita'' --- which
+does not exist.
+Today, this mission of the cartographer remains relevant, but there
+are other new worlds we would like to represent in atlases. Cyberspace
+and the brain are only two examples of these modern-day terra
+incognita.
+
+In this series of articles, I would like to present a few selected
+pieces of this interaction between cartography and mathematics. The
+subject is broad, and I will only touch upon it briefly, but I hope to
+show through these examples how the two disciplines mutually enrich
+one another.
+
+\section{What is a map?}
+Here are two maps.
+
+The one on the left is a reconstruction of Anaximander’s map (around
+550 BCE). Described by Herodotus, it is one of the oldest maps
+representing the world as a whole. The map on the right is the famous
+``Carte du Tendre,'' dating from the 17th century, which depicts the
+most mysterious land: that of romantic emotions.
+\begin{center}
+  \includegraphics[width=0.4\textwidth]{Pix/Anaximandre}%
+  \includegraphics[width=0.6\textwidth]{Pix/Carte_du_tendre}
+\end{center}
+
+\skipthis[Next par is reduced]
+A map is an image. It is a representation of a continent, a country, a
+region, etc., on a medium --- most often a sheet of paper --- which
+one can, for example, slip into one’s pocket when traveling through
+the country in question.
+If we denote by $X$ the country and by $Y$ the sheet of paper, the map
+is a mapping
+\[
+  f:X\rightarrow Y
+\]
+
+\section{What do we expect from a map?}
+
+\skipthis[Section is reduced]{}
+That it be faithful, of course! We hope to gather enough information
+in $Y$ to find our way around in $X$. We will see later --- though the
+reader can already imagine --- that if it is a matter of making a map of
+the New York subway, a sheet of paper will do perfectly well, but if we
+want to represent the network of connections among the billions of
+neurons that make up our brain, we will probably have to look for
+another medium!
+
+Faithfulness in our language means injectivity of a mapping $f$.
+
+\section{Distances}
+
+We also expect a map to be accurate. In general, there is so much
+information in $X$ that we would like to represent in $Y$, but $Y$ is
+only a small sheet of paper and choices have to be made. Here, I will
+focus on a single aspect: that the map preserves \blue{relative}
+distances, though there would be many other possibilities.
+
+In ordinary cartography, $X$ is a country on Earth, so two points
+$x_1$ and $x_2$ of $X$ are separated by a distance that I will denote
+$\distance_{X}(x_{1},x_{2})$.  When $Y$ is a sheet of paper, two
+of its points $y_{1}$ and $y_{2}$ are likewise separated by a distance
+$\distance_{Y}(y_{1},y_{2})$.
+
+An ideal map would be such that the distance between two points at the
+source, in $X$, is exactly the same as the one we measure on the map,
+in the target. That is
+\[
+  \distance_{Y}\big(f(x_{1}),f(x_{2})\big)
+  =
+  \distance_{X}(x_{1},x_{2})
+\]
+That said, such a map of France would have to be a thousand kilometers
+across, which is not very practical. Of course, we use maps at a
+certain scale. For example, if we want one centimeter on the map to
+represent one kilometer ``in real life,'' that means that distances are
+multiplied in the target (on paper) by $k = 0.00001 = 1/100000$. Thus,
+for an ideal map at scale $k$ we would instead require:
+\[
+  \distance_{Y}\big(f(x_{1}),f(x_{2})\big)
+  =
+  k\cdot\distance_{X}(x_{1},x_{2})
+\]
 
 
 
