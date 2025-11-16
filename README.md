@@ -26,7 +26,7 @@ Translation of articles for amr
   - [x] Contact author
   - [x] Translation
   - [x] Edits/comments
-  - [ ] Editor comments
+  - [x] Editor comments
   - [ ] Comments/approval by the author
   - [ ] Final
 
