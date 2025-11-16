@@ -4,7 +4,7 @@
 % \usepackage{wrapfig}
 
 \usepackage{titlesec}
-\titleformat{\section}{\normalfont\bf\large}{\thesection. }{0em}{}
+\titleformat{\section}{\normalfont\bf\large}{}{0em}{}
 \titleformat{\subsection}{\normalfont\bf}{}{0em}{}
 
 \usepackage{manyfoot}
@@ -34,10 +34,13 @@
 
 
 \begin{document}
-\centerline{\bf\large Mapping the Worlds II}
-\centerline{\bf The networks}
-\medskip
-\centerline{by \'Etienne Ghys}
+\centerline{\bf\large Charting the Worlds II%
+  \footnoteE{English translation of \textit{Representer des Mondes II}, by
+    \'Etienne Ghys, (2010),\\
+    \url{https://images-archive.math.cnrs.fr/Representer-les-mondes-II.html}.\\
+    Translation by Rostislav Matveev.}}%
+  \centerline{\bf The networks} \medskip
+  \centerline{by \'Etienne Ghys}
 
 \begin{center}
   \includegraphics[width=0.5\textwidth]{Pix/02homunc}
@@ -83,8 +86,8 @@ The brain is a mystery. It was toward the end of the nineteenth
 century that the neuronal dogma was accepted.%
 \skipthis[Broken link]{%
   \footnoteA{The discovery of the neuron.
-    \url{http://scienceblogs.com/neurophilosophy/2007/07/the_discovery_of_the_neuron.php} %
-  }} %
+    \url{http://scienceblogs.com/neurophilosophy/2007/07/%
+      the_discovery_of_the_neuron.php}}} %
 The brain is not a continuous tissue but a network containing
 roughly ten billion neurons connected to each other by axons. Each
 neuron is connected to many other neurons --- typically about ten
@@ -129,7 +132,7 @@ so on.
 
 This was the beginning of the \textit{homunculus theory}, which sought
 to establish a map of the brain corresponding to regions of the body.
-The picture on the left is of the famous \textit{homunculus}: the
+The picture on the right is of the famous \textit{homunculus}: the
 ``map of the brain'', where particular parts of the brain correspond
 to parts of the body.
 
@@ -350,7 +353,7 @@ previous article%
 \footnoteE{\href{https://images-des-maths.pages.math.cnrs.fr/freeze/Representer-les-mondes.html}
   {Repr\'esenter les Mondes} by \'Etienne Ghys,\\
   \url{https://images-des-maths.pages.math.cnrs.fr/freeze/Representer-les-mondes.html}.
-  English translation: \href{???}{Mapping the Worlds I}, \url{???}} %
+  English translation: \href{URL}{Mapping the Worlds I}, \red{URL}\url{???}} %
 --- though, again, many other approaches could be used.  The result is
 the map shown above.%
 \footnoteE{The thickness of the graph edges indicates citation traffic
@@ -401,7 +404,7 @@ For example, here is a graph with 6 vertices and 7 edges:
 
 Graph theory is a fairly old branch of mathematics, but in recent
 years it has faced new challenges. The focus now lies on graphs whose
-number of vertices so big that it defies imagination. Earlier, we saw
+number of vertices is so big that it defies imagination. Earlier, we saw
 some attempts to draw representations of the Web graph, with its
 billions of vertices.
 
@@ -445,7 +448,7 @@ undergraduate level), I recommend Bonato’s book.%
 This theorem was proven in the 1970s --- again, with motivations quite
 different from those we have in mind here.%
 \footnoteA{A recurring theme in the development of mathematics: the
-  same idea can be usefull multiple times, often in unexpected
+  same idea can be useful multiple times, often in unexpected
   ways.}
 
 We wish to say something meaningful about a graph that has a very
@@ -487,7 +490,7 @@ of subsets $X\subset A$ and $Y\subset B$.%
 
 More precisely, we require that there exists a number
 $p_{A,B}\in[0,1]$ such that, for all  $X\subset A$ and $Y\subset B$
-holds
+one has
 \[
   0.99p_{A,B}
   \leq
@@ -580,7 +583,7 @@ statement may not be exactly correct! We’ll need to refine it.
 
 \begin{theorem}[Szemerédi]
   For any graph, no matter how large, it is always possible to find an
-  almost-equipartition into $1000$ parts that is well connected.
+  almost-equipartition into $1000$ parts that are well connected.
 \end{theorem}
 
 \blue{\subsection{Szemer\'edi’s Theorem%
@@ -616,20 +619,20 @@ sufficiently large graph.
 \end{theorem}
 }
 
-\blue{
-The known bounds on $M$ are just astounding,%
-\footnoteE{W.T. Gowers, \textit{Quasirandomness, counting and
-    regularity for 3-uniform hypergraphs}, Combin. Probab. Comput. 15
-  (2006), 143–184.} %
-they are in the form of exponential towers (repeated exponentiation)
-of the height proportional to $\epsilon^{-2}$.  There is no saying,
-how large this number for $\epsilon=0.01$ is. It has also been shown
-that there are families of graphs for which $M=M(\epsilon)$ is indeed
-about that big, so that the bound can not be improved by much. We may
-still hope that such synthetic examples are rare and there are large
-classes of graphs for which Szemer\'edi Regularity Lemma with some
-reasonable $M$ holds.
-}
+\blue{ The known bounds on $M$ are just astounding,%
+  \footnoteE{W.T. Gowers, \textit{Quasirandomness, counting and
+      regularity for 3-uniform hypergraphs},
+    Combin. Probab. Comput. 15 (2006), 143–184.} %
+  they are in the form of exponential towers (repeated exponentiation)
+  of the height proportional to $\epsilon^{-2}$.  There is no saying,
+  how large this number for $\epsilon=0.01$ is, there is nothing in
+  the world to compare it to. It has also been shown that there are
+  families of graphs for which the required number of parts is indeed
+  about that big, so that the bound can not be improved by much. We
+  may still hope that such synthetic examples are rare and there are
+  large classes of graphs for which Szemer\'edi Regularity Lemma with
+  some reasonable $M$ holds.}
+
 \section{The Significance of the Theorem and a Few Comments}
 
 Once a well-connected, almost-equipartition is known, we can draw a
