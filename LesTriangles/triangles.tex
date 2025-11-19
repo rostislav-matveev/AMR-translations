@@ -1,16 +1,16 @@
 \documentclass{amsart}
 \usepackage[utf8]{inputenc}
 
+\usepackage{manyfoot}
+\DeclareNewFootnote{A}
+\DeclareNewFootnote{E}[alph]
+\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
+
 \usepackage[hyperfootnotes=false,
     colorlinks,
     linkcolor={blue!80!black},
     citecolor={blue!50!black},
     urlcolor={blue!80!black}]{hyperref}
-
-\usepackage{manyfoot}
-\DeclareNewFootnote{A}
-\DeclareNewFootnote{E}[alph]
-\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
 
 \usepackage{titlesec}
 \titleformat{\section}{\normalfont\bf\large}{\relax}{0em}{}
@@ -38,8 +38,9 @@
 \centerline{\bf Triangles after Euclid, Gauss and Gromov%
   \footnoteE{English translation by Rostislav Matveev of the article
     \textit{Les triangles d’Euclide, de Gauss et de Gromov}, by
-    \'Etienne Ghys, (2010),
-    \url{https://images-archive.math.cnrs.fr/Les-triangles-d-Euclide-de-Gauss-et-de-Gromov.html}.\\
+    \'Etienne Ghys, (2009),
+    \url{https://images-archive.math.cnrs.fr/%
+      Les-triangles-d-Euclide-de-Gauss-et-de-Gromov.html}.\\
   }}%
 \centerline{A small fragment of Misha Gromov's work}
 \medskip
