@@ -1,27 +1,31 @@
 \documentclass{amsart}
 \usepackage[utf8]{inputenc}
-\usepackage{url}
-\usepackage[colorlinks,
+
+\usepackage[hyperfootnotes=false,
+    colorlinks,
     linkcolor={blue!80!black},
     citecolor={blue!50!black},
     urlcolor={blue!80!black}]{hyperref}
 
-\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
-\usepackage{url}
-
-\usepackage{titlesec}
-\titleformat{\section}{\normalfont\bf\large}{\relax}{0em}{}
-
 \usepackage{manyfoot}
 \DeclareNewFootnote{A}
 \DeclareNewFootnote{E}[alph]
+\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\bf\large}{\relax}{0em}{}
 
 \usepackage{xcolor}
 \long\def\gray#1{{\color{gray}{#1}}}
 \long\def\blue#1{{\color{blue}{#1}}}
 \long\def\red#1{{\color{red}{#1}}}
 
+
+\usepackage{wrapfig}
 \usepackage{lpic}
+
+\usepackage{enumitem}
+\usepackage{quoting}
 
 \let\d=\undefined
 \DeclareMathOperator{\d}{d}
@@ -31,7 +35,12 @@
 
 
 \begin{document}
-\centerline{\bf Triangles after Euclid, Gauss and Gromov}
+\centerline{\bf Triangles after Euclid, Gauss and Gromov%
+  \footnoteE{English translation by Rostislav Matveev of the article
+    \textit{Les triangles d’Euclide, de Gauss et de Gromov}, by
+    \'Etienne Ghys, (2010),
+    \url{https://images-archive.math.cnrs.fr/Les-triangles-d-Euclide-de-Gauss-et-de-Gromov.html}.\\
+  }}%
 \centerline{A small fragment of Misha Gromov's work}
 \medskip
 \centerline{by \'Etienne Ghys}
@@ -200,7 +209,7 @@ distance), but it must also satisfy a few additional properties
 over time\dots{} Should it be ``axiom'' or ``definition''? --- not so clear
 anymore).
 
-\begin{itemize}
+\begin{itemize}[left=0pt]
 \item $\d_{E}(x,y)=\d_{E}(y,x)$ for all points $x$, $y$.
   (Feel free to object: sometimes it’s harder to go from one point to
   another than the other way around --- for example, when climbing up a
@@ -224,7 +233,7 @@ many metric spaces. Barely two centuries ago only one was known ---
 ours or at least the one Euclid had presented as ours.
 
 So, here are a few examples nonetheless:
-\begin{itemize}
+\begin{itemize}[left=0pt]
 \item \textbf{The Non-Euclidean Plane.}  We’ve already encountered it:
   it’s the interior of the disk, with a distance defined by that
   mysterious formula that seems to have come out of nowhere\dots{}
@@ -346,7 +355,7 @@ is simply to quote the opening lines of one of his articles:
 \textit{Spaces and Questions}, GAFA, Geometric and Functional
 Analysis, Special Volume (2000), 118--161.
 
-\begin{quote}\sf
+\begin{quoting}[leftmargin=5mm,rightmargin=5mm]\sf
   Our Euclidean intuition, probably, inherited from ancient primates,
   might have grown out of the first seeds of space in the motor
   control systems of early animals who were brought up to sea and then
@@ -364,7 +373,7 @@ Analysis, Special Volume (2000), 118--161.
   (who else?) came to the conclusion that there is a unique
   non-trivial one-parameter deformation of the metric on
   $\mathbb{R}^{3}$ keeping the space fully homogeneous.
-\end{quote}
+\end{quoting}
 
 \section{A Definition}
 
@@ -389,10 +398,21 @@ parametrized by a parameter $t$ varying between $0$ and the distance
 $\d_{E}(x,y)$, such that the distance between $x(t)$ and $x(s)$
 equals $|s-t|$.
 
-This simply means that $x$ and $y$ are connected by a segment of the
-correct length. Thus, whenever we have three points $x,y,z$, we can
-“draw” the three sides $xy$, $yz$, and $zx$.
-
+This simply means that $x$ and $y$ are connected by a segment of the correct length. 
+Thus, whenever we have three points $x,y,z$, we can
+``draw'' the three sides $xy$, $yz$, and $zx$.\\
+\begin{wrapfigure}{r}{0mm}
+  \begin{lpic}[draft,t(5mm),l(5mm),r(5mm),b(-5mm),clean]{Pix/h-triangle(0.3)}
+  \lbl[]{2.5,12;$\bullet$}
+  \lbl[]{127,2;$\bullet$}
+  \lbl[]{112,111;$\bullet$}
+  \lbl[]{82,57;$\bullet$}
+  \lbl[t]{-5,10;$x$}
+  \lbl[lt]{130,0;$y$}
+  \lbl[bl]{115,115;$z$}
+  \lbl[tl]{73,61;$c$}
+\end{lpic}
+\end{wrapfigure}
 \begin{definition}
 Let $\delta\geq0$ be a real number (the Greek letter ``delta'' has
 become the traditional symbol in this context).
@@ -406,18 +426,6 @@ In other words, every triangle in $E$ is ``thin'' --- there is always a
 point close to all three sides.
 \end{definition}
 
-\centerline{
-  \begin{lpic}[draft,t(0mm),l(5mm),r(5mm),b(5mm),clean]{Pix/h-triangle(0.3)}
-  \lbl[]{2.5,12;$\bullet$}
-  \lbl[]{127,2;$\bullet$}
-  \lbl[]{112,111;$\bullet$}
-  \lbl[]{82,57;$\bullet$}
-  \lbl[t]{-5,10;$x$}
-  \lbl[lt]{130,0;$y$}
-  \lbl[bl]{115,115;$z$}
-  \lbl[tl]{73,61;$c$}
-\end{lpic}}
-
 \section{Two Examples and a (Very Small) Theorem of Gromov}
 
 Of course, the whole game would be pointless if the non-Euclidean
@@ -426,21 +434,21 @@ some value of $\delta$). Indeed, it is possible to verify that the
 non-Euclidean plane does possess the $\delta$-hyperbolicity property.
 
 We now turn to another family of $\delta$-hyperbolic (even
-$0$-hyperbolic) spaces, called \textit{trees}.
+$0$-hyperbolic) spaces, called \textit{trees}. The left figure below
+shows a \textit{tree}. It contains a certain number of vertices, some
+of which are connected by edges. The term \textit{tree} is reserved
+for such a network provided it has no closed loops.
 
-The left figure below shows a \textit{tree}.
 
-\centerline{
+\begin{figure}
   \begin{lpic}[l(10mm),r(10mm),b(10mm),t(2mm)]{Pix/tree(0.3)}
     \lbl[t]{50,-10; A tree.}
   \end{lpic}
   \begin{lpic}[l(10mm),r(10mm),b(10mm),t(2mm)]{Pix/not-tree(0.3)}  
     \lbl[t]{50,-10; Not a tree.}
-  \end{lpic}}
+  \end{lpic}
+\end{figure}
 
-It contains a certain number of vertices, some of which are connected
-by edges. The term \textit{tree} is reserved for such a network provided it has
-no closed loops.
 For example, the right figure above is not a tree.
 
 For each edge of a tree, we can assign a non-negative length of our choosing. Then
@@ -448,22 +456,22 @@ the tree can be viewed as a geodesic metric space: the distance
 between two points is simply the length of the shortest path
 connecting them. Such a structure is called a \textit{metric tree}.
 
+\begin{wrapfigure}{r}{0pt}
+  \begin{lpic}[draft,t(5mm),l(5mm),r(5mm),b(5mm),clean]{Pix/t-triangle(0.3)}
+    \lbl[t]{-5,10;$x$}
+    \lbl[lt]{130,0;$y$}
+    \lbl[bl]{115,115;$z$}
+    \lbl[tl]{71,69;$c$}
+  \end{lpic}
+\end{wrapfigure}
 What do triangles look like in a tree? The figure below shows that in
 a tree, all triangles share a very distinctive property: there is
 always a point common to all three sides! In a sense, one could say
 that the inscribed circle has radius zero.
-
 In any case, it should be clear that trees are 0-hyperbolic metric
 spaces. Instead of a triangle, we more appropriately speak of a
 tripod.
 
-\centerline{
-\begin{lpic}[draft,t(5mm),l(5mm),r(5mm),b(5mm),clean]{Pix/t-triangle(0.3)}
-  \lbl[t]{-5,10;$x$}
-  \lbl[lt]{130,0;$y$}
-  \lbl[bl]{115,115;$z$}
-  \lbl[tl]{71,69;$c$}
-\end{lpic}}
 
 The following theorem is certainly not among the most difficult ones
 proved by Gromov --- far from it! Its proof takes only a few lines in
@@ -565,7 +573,7 @@ On July 12, 1831, Gauss wrote a letter%
   (Ed.)}
 to his friend Schumacher about non-Euclidean geometry. Here is an English
 translation of an excerpt from that letter.
-\begin{quote}\sf
+\begin{quoting}[leftmargin=5mm,rightmargin=5mm]\sf
   \noindent
   \dots
 
@@ -608,7 +616,7 @@ translation of an excerpt from that letter.
 
   \noindent
   \dots
-\end{quote}
+\end{quoting}
 
 Incredible! Gauss explains that triangles in non-Euclidean geometry
 look quite different from Euclidean triangles. He even says that, ``in
