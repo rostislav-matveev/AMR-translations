@@ -5,6 +5,9 @@
 \titleformat{\section}{\normalfont\bf\large}{\relax}{0em}{}
 \titleformat{\subsection}{\normalfont\bf}{\relax}{0em}{}
 
+\usepackage{enumitem}
+\usepackage{quoting}
+
 \usepackage{xcolor}
 \long\def\gray#1{{\color{gray}{#1}}}\let\grey=\gray
 \long\def\blue#1{{\color{blue}{#1}}}
@@ -25,12 +28,21 @@
 
 \newcommand{\skipthis}[2][\dots]{\red{[#1]}\gray{#2}}
 \newtheorem*{theorem}{Theorem}
+\newtheorem{exercise}{Exercise}
 
-\DeclareMathOperator\distance{\mathit{distance}}
+\DeclareMathOperator\distance{\mathsf{distance}}
 
 \begin{document}
-\centerline{\bf\large Charting the Worlds I}
+\centerline{\bf\large Charting the Worlds I%
+  \footnoteE{English translation by Rostislav Matveev of the article
+    \textit{Repr\'esenter des Mondes}, by
+    \'Etienne Ghys, (\red[YEAR?]),
+    \url{https://images-des-maths.pages.math.cnrs.fr/%
+      freeze/Representer-les-mondes.html}.\\
+  }}%
+
 \medskip
+
 \centerline{by \'Etienne Ghys}
 
 \begin{center}
@@ -44,11 +56,10 @@ and continually renews its set of problems. Originally, it was a
 matter of drawing maps as accurately as possible of continents that
 were more or less well known. Above is a map dating from 1570, in
 which to the south we see a ``Terra Australis Incognita'' --- which
-does not exist.
-Today, this mission of the cartographer remains relevant, but there
-are other new worlds we would like to represent in atlases. Cyberspace
-and the brain are only two examples of these modern-day terra
-incognita.
+does not exist.  Today, this mission of the cartographer remains
+relevant, but there are other new worlds we would like to represent in
+atlases. Cyberspace and the brain are only two examples of these
+modern-day terra incognita.
 
 In this series of articles, I would like to present a few selected
 pieces of this interaction between cartography and mathematics. The
@@ -126,6 +137,96 @@ for an ideal map at scale $k$ we would instead require:
   =
   k\cdot\distance_{X}(x_{1},x_{2})
 \]
+
+\section{The ideal does not exist!}
+
+I claim that there is no map of Europe, for instance, that preserves distances exactly.
+
+To prove this, I consider four cities: Athens, Madrid, Paris, and
+Oslo. Here is a table giving the distances between them.%
+\footnoteA{I had intended to compute these distances myself from the
+  latitudes and longitudes of the cities, but I discovered a website
+  that does it for me in just a few clicks\dots The calculations
+  assume that the Earth is perfectly spherical, which it is not
+  quite\dots, but this does not change anything in the argument.}
+\medskip
+
+\begin{center}
+  \begin{tabular}{|c||c|c|c|c|}
+    \hline
+    \mbox{}& Athens & Madrid & Paris & Oslo\\
+    \hline\hline
+    Athens & 0km & 1743km & 2414km & 2612km \\
+    \hline
+    Madrid & 1743km & 0km & 936.6km & 2224km \\
+    \hline
+    Paris  & 2414km & 936.6km & 0km & 1351km \\
+    \hline
+    Oslo   & 2612km & 2224km & 1351km & 0km \\
+    \hline
+  \end{tabular}
+\end{center}
+\medskip
+
+Let us try to construct an exact map of Europe, say at scale
+$k = 1/100000$ (one centimeter equals one kilometer). To do this, we
+must first mark the (image of a) first city, say Athens. This is the
+point $A$. Next, we place a second city, say Madrid: the point $M$
+must be 17.43 centimetres from $A$. No problem so far\dots We can place $M$ at
+any point on a circle, but in any case all these positions are
+equivalent, up to rotating the sheet of paper around $A$.
+
+Next, we place Oslo. We must place a point $O$ at 26.12 cm from $A$
+and 22.24 cm from $M$. So we must construct two circles, centered at
+$A$ and $M$, with radii 26.12 cm and 22.24 cm, and place $O$ at their
+intersection. There are two intersection points, and we may choose
+either one, since the other is obtained from the first by
+symmetry. Let us therefore choose the one that respects the
+orientation we are used to, that is ``to the North''. So far so good.
+
+\begin{center}
+  \hfill
+  \includegraphics[width=0.4\textwidth]{Pix/dessin1}
+  \hfill
+  \includegraphics[width=0.4\textwidth]{Pix/dessin}
+  \hfill\rule{0mm}{1mm}
+\end{center}
+
+It remains to place Paris on the map.
+\begin{itemize}[leftmargin=4mm,rightmargin=0mm]
+\item We know the distance from Paris to Oslo and to Athens: this
+  gives us only two possibilities for placing Paris, at $P_1$ or
+  $P_1'$.
+\item We know the distance from Paris to Oslo and to Madrid: this also
+  gives us only two possibilities for placing Paris, at $P_2$ or
+  $P_2'$.
+\item We know the distance from Paris to Athens and to Madrid: this
+  gives us only two possibilities for placing Paris, at $P_3$ or
+  $P_3'$.
+\end{itemize}
+
+The problem is that these possibilities are not consistent: the points
+$P_1$ and $P_1'$ do not coincide with $P_2$ and $P_2'$\dots They are not
+very far from one another, but they do not coincide\dots
+\medskip
+
+\textbf{It is impossible to draw an exact map of Europe!}
+\medskip
+\begin{exercise}
+  Could one find four cities that, unlike the ones that we considered
+  above, can be represented in the plane in such a way as to respect
+  the distances exactly (up to a scale)? Can you find all the
+  situations in which this is possible?
+\end{exercise}
+
+\begin{exercise}[Difficult]
+  Given six positive numbers $d_{1,2}$, $d_{1,3}$, $d_{1,4}$,
+  $d_{2,3}$, $d_{2,4}$ and $d_{3,4}$, under what
+  condition is it possible to find four points in the plane
+  $P_1$, $P_2$, $P_3$, $P_4$ such that the pairwise distances
+  $\distance(P_{i}, P_{j})$ between them are exactly $d_{i,j}$?
+\end{exercise}
+
 
 
 
