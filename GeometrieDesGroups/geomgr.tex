@@ -2,11 +2,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{url}
 
-\usepackage{bm}
-\def\1{\bm{1}}
-
-\usepackage{wrapfig}
-
 \usepackage{titlesec}
 \titleformat{\section}{\normalfont\bf\large}{\thesection. }{0em}{}
 \titleformat{\subsection}{\normalfont\bf}{}{0em}{}
@@ -15,19 +10,35 @@
 \DeclareNewFootnote{A}
 \DeclareNewFootnote{E}[alph]
 
+\usepackage[hyperfootnotes=false,
+    colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}]{hyperref}
+
 \usepackage{xcolor}
 \long\def\gray#1{{\color{gray}{#1}}}
 \long\def\blue#1{{\color{blue}{#1}}}
 \long\def\red#1{{\color{red}{#1}}}
 
+\usepackage{wrapfig}
 \usepackage{lpic}
 
 \def\sltwo{\ensuremath{\mathrm{SL}(n,\mathbb{Z})}}
 \let\phi=\varphi
+\usepackage{bm}
+\def\1{\bm{1}}
+
 
 
 \begin{document}
-\centerline{\bf A Bit of Geometric Group Theory}
+\centerline{\bf A Bit of Geometric Group Theory%
+  \footnoteE{English translation by Rostislav Matveev of the article
+    \textit{Un peu de g\'eom\'etrie des groupes}, by
+     Gilbert Levitt\, (2004),
+    \url{https://images-archive.math.cnrs.fr/%
+      Un-peu-de-geometrie-des-groupes.html}.\\
+}}
 \medskip
 \centerline{by  Gilbert Levitt}
 
@@ -59,13 +70,17 @@ look at a few examples.
 \item The \textit{free Abelian group} $\mathbb{Z}^2$, also written as
   $\mathbb{Z} \times \mathbb{Z}$, or $\mathbb{Z} \oplus \mathbb{Z}$,
   is the set of pairs of integers $(m, n)$, with addition defined by
-  $(m, n) + (m', n') = (m + m', n + n')$.  To write it
-  multiplicatively, let $a:=(1,0)$, $b:=(0,1)$, and view
+  \[
+    (m, n) + (m', n') = (m + m', n + n')
+  \]
+  To write it multiplicatively, let $a:=(1,0)$, $b:=(0,1)$, and view
   $\mathbb{Z}^2$ as the set of elements $a^m b^n$, equipped with the
   multiplication rule
-  $(a^m b^n)(a^{m'} b^{n'}) = a^{m + m'} b^{n + n'}$.  The neutral
-  element $a^0 b^0$ is denoted $\1$, and the inverse of $a^m b^n$ is
-  $a^{-m} b^{-n}$.
+  \[
+    (a^m b^n)(a^{m'} b^{n'}) = a^{m + m'} b^{n + n'}
+  \]
+  The neutral element $a^0 b^0$ is denoted $\1$, and the inverse of
+  $a^m b^n$ is $a^{-m} b^{-n}$.
 \item Let us consider the group $\mathrm{Aff}(\mathbb{R})$ acting on the real
   line $\mathbb{R}$ by homotheties and translations --- that is,
   transformations of the form $x \mapsto a\cdot x + b$ with
@@ -74,18 +89,26 @@ look at a few examples.
 
   This is a ``continuous'' group (a Lie group), but we can consider
   finitely generated subgroups, for example, the group $G_1$ generated
-  by $t : x \mapsto x + 1$ and $h : x \mapsto 2x$.  One can deduce
-  that $G_1$ is the set of transformations $f_{mnp}$ of the form%
+  by
+  \[
+    t : x \mapsto x + 1
+    \quad\text{and}\quad
+    h : x \mapsto 2x
+  \]
+  One can deduce that $G_1$ is the set of transformations $f_{mnp}$ of
+  the form%
   \footnoteE{Such a transformation does not determine the triple
     $m,n,p$ uniquely, e.g. if $n'=2n$ and $p'=p+1$ then
     $f_{mnp}=f_{mn'p'}$. (Ed.)} %
-  $f_{mnp}(x) = 2^m x + n/2^p$, with $m, n, p \in \mathbb{Z}$. Indeed
-  the identities
-  \begin{align*}
+  \[
+    f_{mnp}(x) = 2^m x + n/2^p
+  \]
+  with $m, n, p \in \mathbb{Z}$. Indeed the identities
+  \[
     (f_{mnp} \circ f_{m'n'p'})(x)
-    &=
-      2^{m+m'} x + \frac{n'\cdot2^{m+p} + n\cdot 2^{p'}}{2^{p+p'}}= f_{m''n''p''}(x)
-  \end{align*}
+    =
+    2^{m+m'} x + \frac{n'\cdot2^{m+p} + n\cdot 2^{p'}}{2^{p+p'}}= f_{m''n''p''}(x)
+  \]
   with $m'' = m + m'$, $n'' = n'\cdot 2^{m+p} + n\cdot 2^{p'}$,
   $p'' = p + p'$, and $f_{mnp}^{-1} = f_{m'n'p'}$ where $m' = -m$,
   $n' = -n$, and $p' = m + p$, show that the set

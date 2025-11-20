@@ -58,7 +58,12 @@
    Resolution:
 
 5. List translator, editor? How, where?
-   S: I like the way Olga did in her translation.
+   S: Since I add comments of my own, the authorship should be noted
+      somewhere, so they are not blamed on the author.
+      I like the way Olga did in her translation.
+      Another possibility would be a footnote at the title,
+      "translation of the orininal article available at..., by..."
+      or something of the sort.
 
    Resolution:
    

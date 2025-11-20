@@ -1,0 +1,3 @@
+Changed the front pic
+Reduced sections "What is map?", "distances"
+
