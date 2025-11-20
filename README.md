@@ -40,7 +40,7 @@ Translation of articles for amr
   - [ ] Final
 
 
-## The List
+# The List
 
   - [ ] http://images-archive.math.cnrs.fr/Le-Brazuca-le-ballon-cubique-de-la-Coupe-du-monde.html?lang=fr
 
@@ -48,7 +48,7 @@ Translation of articles for amr
 
   - [ ] http://images-archive.math.cnrs.fr/Gaspard-Monge.html?lang=fr
 
-  - [ ] http://images-archive.math.cnrs.fr/Representer-les-mondes-II.html?lang=fr
+  - [x] http://images-archive.math.cnrs.fr/Representer-les-mondes-II.html?lang=fr
 
   - [ ] http://images-archive.math.cnrs.fr/Bonne-annee-anomalistique.html?lang=fr
 
@@ -60,7 +60,7 @@ Translation of articles for amr
 
   - [ ] http://images-archive.math.cnrs.fr/Le-prix-de-l-anarchie.html?lang=fr
 
-  - [ ] http://images-archive.math.cnrs.fr/Les-triangles-d-Euclide-de-Gauss-et-de-Gromov.html?lang=fr
+  - [x] http://images-archive.math.cnrs.fr/Les-triangles-d-Euclide-de-Gauss-et-de-Gromov.html?lang=fr
 
   - [ ] http://images-archive.math.cnrs.fr/Sidereus-Nuncius-aujourd-hui.html?lang=fr
 
@@ -102,5 +102,5 @@ Translation of articles for amr
 
   - [ ] http://images-archive.math.cnrs.fr/A-la-decouverte-des-partitions-spectrales-minimales.html
 
-  - [ ] http://images-archive.math.cnrs.fr/Un-peu-de-geometrie-des-groupes.html
+  - [x] http://images-archive.math.cnrs.fr/Un-peu-de-geometrie-des-groupes.html
 
