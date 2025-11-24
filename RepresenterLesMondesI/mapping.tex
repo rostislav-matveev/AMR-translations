@@ -61,8 +61,9 @@
 \end{center}
 
 Cartography has accompanied mathematics since its very beginnings%
-\footnoteE{This is evident from the name of the vast area of
-  mathematics --- ``Geometry'', that is ``measuring the Earth''} %
+\footnoteE{This is also evident from the name of the vast and possibly
+  most ancient area of mathematics --- ``geometry'', that is
+  ``measuring the Earth.''  (Ed.)} %
 and continually renews its set of problems. Originally, it was a
 matter of drawing maps as accurately as possible of continents that
 were more or less well known. Above is a map dating from 1570, in
@@ -79,21 +80,19 @@ show through these examples how the two disciplines mutually enrich
 one another.
 
 \section{What is a map?}
-Here are two maps.
-
-The one on the left is a reconstruction of Anaximander’s map (around
-550 BCE). Described by Herodotus, it is one of the oldest maps
-representing the world as a whole. The map on the right is the famous
-``Carte du Tendre,'' dating from the 17th century, which depicts the
-most mysterious land: that of romantic emotions.
+Here are two maps.  The one on the left is a reconstruction of
+Anaximander’s map (around 550 BCE). Described by Herodotus, it is one
+of the oldest maps representing the world as a whole. The map on the
+right is the famous ``Carte du Tendre,'' dating from the 17th century,
+which depicts the most mysterious land: that of romantic emotions.
 \begin{center}
   \includegraphics[width=0.4\textwidth]{Pix/Anaximandre}%
   \includegraphics[width=0.6\textwidth]{Pix/Carte_du_tendre}
 \end{center}
 
-\skipthis[Next par is reduced]
+\skipthis[Next par is reduced]{}
 A map is an image. It is a representation of a continent, a country, a
-region, etc., on a medium --- most often a sheet of paper --- which
+region, and so on, on a medium --- most often a sheet of paper --- which
 one can, for example, slip into one’s pocket when traveling through
 the country in question.
 If we denote by $X$ the country and by $Y$ the sheet of paper, the map
@@ -228,10 +227,10 @@ very far from one another, but they do not coincide\dots
 \medskip
 
 \begin{exercise}
-  Could one find four cities that, unlike the ones that we considered
-  above, can be represented in the plane in such a way as to respect
-  the distances exactly (up to a scale)? Can you find all the
-  situations in which this is possible?
+  Find four cities that, unlike the ones that we considered above, can
+  be represented in the plane in such a way as to respect the
+  distances exactly (up to a scale). Can you find all the situations
+  in which this is possible?
 \end{exercise}
 
 \begin{exercise}[Difficult]
@@ -276,24 +275,23 @@ These two formulas express the fact that the map works in both directions:
   and $f(x_{2})$ on the map I have to divide by the scale the result
   will be at most $\epsilon$ percentage off.
 \end{itemize}
-
 Of course, we strive for maps for which $\epsilon$ is as small as possible.
 
 The search for accurate maps began as soon as precise measurements of
 latitudes, and especially of longitudes, became possible. One anecdote
 illustrates the imperfection of maps in the 17th century.
 \begin{quoting}[vskip=1ex,leftmargin=5mm,rightmargin=5mm]\sf
-  In a map from the early memoirs of the Acad\'emie des Sciences,
-  vol. VII, p. 430, one of the first in which longitudes were
-  counted from the Paris Observatory, the shaded boundaries are those
-  that result from the astronomical observations made, under the
-  orders of Louis XIV, by various members of the Acad\'emie des
-  Sciences; the boundaries in simple outline, with the names in
+  In a map published in the early Mémoires of the Acad\'emie des
+  Sciences, vol. VII, p. 430 --- one of the first in which longitudes were
+  counted from the Paris Observatory --- the shaded boundaries represent
+  those established from astronomical observations carried out, under
+  the orders of Louis XIV, by various members of the Acad\'emie des
+  Sciences. The boundaries shown in simple outline, with names in
   italics, reproduce the map of the famous Sanson, drawn up in 1679
   and far superior to those that had preceded it. One sees that in
   Sanson’s map the errors were generally considerable, and that
-  Brittany was shifted more than 100 kilometers to the west. Thus
-  Louis XIV, on seeing this map, complained to the academicians that
+  Brittany was displaced more than 100 kilometers to the west. Thus,
+  when Louis XIV saw this map, he complained to the academicians that
   they had considerably reduced the extent of his dominions.%
   \footnoteA{Bigourdan, \textit{La carte de France,} Annales de
     G\'eographie (1899) Volume 8 Num\'ero 42, pp. 427-437, Download:
@@ -317,7 +315,7 @@ which still, up until today, has no solution.
 
 This result is an example of what we call a ``compactness theorem''.%
 \footnoteA{Indeed, the result follows quite easily from
-  Arzel\`a--Ascoli theorem} %
+  Arzel\`a--Ascoli Theorem} %
 But it is also a typical example of an existence theorem in
 mathematics, which is extremely frustrating for at least two reasons.
 
@@ -336,8 +334,8 @@ we have merely rotated the sheet of paper. Only mathematicians would
 consider them different!
 
 \begin{question}
-  Aside from this operations of rotating the sheet of paper, shifting
-  and rescaling a map, is there a unique optimal map?
+  Up to these operations of rotating the sheet of paper, shifting
+  and rescaling, is there a unique optimal map?
 \end{question}
 
 If that were the case, how could one construct it, what would it look
@@ -373,8 +371,8 @@ Nevertheless\dots
   \hfill
   \rule{0pt}{1ex}
 \end{figure}
-The left figure above is a spherical cap $X$, centered for instance at the North Pole.
-
+The left figure above is a spherical cap $X$, centered for instance at
+the North Pole.
 On the right figure the tangent plane $Y$ at the North Pole is shown,
 on which we are going to draw the map of $X$. Each point $x$ of $X$
 lies on a meridian starting from the North Pole. We then consider the
@@ -382,22 +380,24 @@ ray in $Y$ that is tangent to this meridian at the North Pole, and we
 place $f(x)$ on this ray, at the same distance from the origin as $x$
 is from the North Pole.
 
+\begin{wrapfigure}{r}{0mm}
+  \begin{lpic}[t(-4ex),b(-1ex)]{Pix/AzEqHN(0.2)}
+  \end{lpic}
+\end{wrapfigure}
+
 I stress an important point: in $X$, the distances are
 \textit{intrinsic distances} the sphere --- that is, the length of
 shortest path drawn on the sphere from one point to another, without
 cutting through the interior of the Earth to go faster\dots The
 distance in $X$ between $x$ and the North Pole is therefore the length
 of the meridian arc from $x$ to the North Pole.
-Here is the resulting map.
-\begin{center}
-  \includegraphics[width=0.7\textwidth]{Pix/AzEqHN}
-\end{center}
+The resulting map is shown on the figure.
+
 In cartography, this map is called the \textit{azimuthal equidistant
   projection}%
-\footnoteE{Check the flag of the UN, for an example. (Ed.)} %
-(attributed to Guillaume Postel), while mathematically
-speaking, this map  is called the (inverse of)
-\textit{exponential map}.
+\footnoteE{See, for example, the flag of the UN. (Ed.)} %
+(attributed to Guillaume Postel), while in mathematical terms, it is
+known as the (inverse) \textit{exponential map}.
 \begin{theorem} The azimuthal equidistant projection is the only map
   of a spherical cap that has the best possible precision.
 \end{theorem}
@@ -405,7 +405,7 @@ speaking, this map  is called the (inverse of)
 \section{Milnor Conjecture}
 
 It is not difficult to compute the distortion $\epsilon$ of the azimuthal
-equidistant map. The result is a horrible formula:
+equidistant map. The result is a formula:
 \[
   \epsilon = \sqrt{\frac{a}{\sin(a)}}-1
 \]
@@ -515,8 +515,8 @@ a map!
 
 Here is a temporal map of France for the SNCF.%
 \footnoteE{SNCF (\textbf{S}oci\'et\'e \textbf{n}ationale des
-  \textbf{c}hemins de \textbf{f}er fran\c{c}ais) is French railway
-  operator.} %
+  \textbf{c}hemins de \textbf{f}er fran\c{c}ais) is the French railway
+  operator. (Ed.)} %
 
 \begin{center}
   \includegraphics[width=0.5\textwidth]{Pix/SNCF}
@@ -571,11 +571,11 @@ how to solve it! Cartography is also a matter of ``cookbook recipes.''
 There are many other things one would like to represent on a
 map. Distances, even temporal ones, are only one example. Here I would
 like to speak about \textit{cartograms}.%
-\footnoteE{Cartogram is a map where the area of geographic regions on
-  the map is distorted to represent a specific quantity, such as
+\footnoteE{A cartogram is a map distorted so that the areas of geographic
+  regions on the map represents a specific quantity, such as
   population or GDP, instead of their actual land area. Of course,
   such maps are not suitable for navigation, but serve as
-  visualization of other features, but distances.} %
+  visualization of other features other than distances. (Ed.)} %
 Here are some cartograms%
 \footnoteA{Images are taken from a very interesting site
   (\url{https://worldmapper.org/}) that offers many other kinds of
@@ -605,24 +605,74 @@ for every country $P$ in $X$, we would like to have the relation
 \[
   \area\big(f(P)\big)=\population(P)
 \]
-Here again, the existence of such a map is anything but obvious. It
-follows from two theorems, due to Oxtoby–Ulam and Moser (in rather
-different settings, but explaining that would require a bit of
-mathematical background). I unfortunately cannot give a precise
-statement here, but the general idea is as follows.
+\skipthis[The next paragraphs are heavily edited]{}
+\blue{
+Here again, the existence of such a map is anything but obvious; it
+follows from the theorem, due to Oxtoby and Ulam.
 
-We are given a “measure” $m$ on $X$, which might represent a density
-of population, of cars, of wealth, etc. Each subset $P$ of $X$ thus
-has a certain measure $m(P)$, which is the number of inhabitants in
-$P$, the number of cars, the total wealth of the inhabitants of $P$,
-etc. We make almost no assumptions about this measure, and the theorem
-asserts that there exists a map $f:X \to Y$ such that
-$m(P) = \operatorname{area}(f(P))$ for every subset $P$.
+We will not state the theorem in full generality, but only a corollary
+sufficient for our purposes. We are given a ``measure'' $m$ on $X$,
+which may represent a density of population, of cars, of wealth,
+etc. Each subset%
+\footnoteE{Not quite every subset is measurable, there are ``exotic''
+  subsets, that can not be assigned a measure. However, this
+  phenomenon is essentially ``invisible'' in applications and can
+  safely be ignored. (Ed.)} %
+$P$ of $X$ thus has a certain measure $m(P)$, which may represent the
+number of inhabitants in $P$, the number of cars, the total wealth of
+the inhabitants of $P$, yearly rainfall at $P$, and so on. We choose
+the units of measurement in such a way, that measure of the whole $X$
+is equal to 1. Not every measure is suitable for our purposes. We
+assume that measure $m$ of some region is zero if and only if its area
+is zero. In particular, only two-dimensional regions (not points or
+curves) can have positive measure and conversely, the measure of any
+``country'' must be positive. Theorem of Oxtoby--Ulam%
+\footnoteE{An additional assumption about region $X$ is necessary,
+  namely that $X$ is connected (consists of one piece) and
+  simply-connected (has no holes inside). (Ed.)} %
+implies that there is a \textit{homeomorphism}%
+\footnoteE{A continous one-to-one map. (Ed.)} %
+from $X$ to the square $f:X\to[0,1]^{2}$ such that
+\[
+  \area\big(f(P)\big)=m(P)
+\]
+for all subsets $P$ of $X$. In other words, one can deform the image
+of $X$ to a square in such a way, that area of each distorted
+region in $X$ will be equal to the measure assigned to it.
 
-Better yet, these theorems are “constructive,” meaning that one can
-program a computer to draw the map, as in the examples above.
+The good news is that the theorem is \textit{constructive}, meaning
+that one can program a computer to draw the map, as in the examples
+above.
 
+A couple of remarks are in order here:
+\begin{itemize}
+\item The cartogram is not at all unique. One can exploit this
+  flexibility to try to impose additional constraints on the map, such
+  as best preserving ``something else.'' \textit{Optimal transport theory},%
+  \footnoteE{Optimal transport theory (in the Monge formulation)
+    concerns, roughly speaking, of finding \textit{optimal way} to
+    move one pile of send of a certain shape to another pile of send
+    of a different shape but the same volume. Different optimality
+    criteria lead to different optimal transportation plans. (Ed.)} %
+  which has been growing rapidly in recent years,
+  offers an approach that has already been discussed in the archives
+  of \textit{Images des maths} and to which we will probably return.
 
-
-
+\item Moser’s theorem%
+  \footnoteE{The difference between theorems of Moser and of
+    Oxtoby--Ulam is that Moser assumes that the density of measure $m$
+    is infinitely differentiable. In return, the map garanteed by
+    Moser is also infinitely differentiable and also easily
+    constructible. (Ed.)} %
+  and the practical method it provides --- easy to program on a
+  computer --- went completely unnoticed among
+  cartographers. Admittedly, Moser himself was likely not particularly
+  interested in cartography. It was only recently, in 2004, that
+  the theorem was rediscovered by cartographers.%
+  \footnoteA{Michael T. Gastner, M. E. J. Newman,
+    \textit{Diffusion-based method for producing density equalizing
+      maps}, \url{https://arxiv.org/pdf/physics/0401102v1}} %
+  Good ideas are often born more then once.
+\end{itemize}
+}
 \end{document}
