@@ -33,7 +33,7 @@ Translation of articles for amr
 * **Representer les mondes**
   https://images-archive.math.cnrs.fr/Representer-les-mondes.html
   - [x] Contact the author
-  - [ ] Translation
+  - [x] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
   - [ ] Comments/approval by the author
