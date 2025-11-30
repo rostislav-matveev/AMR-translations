@@ -21,6 +21,15 @@ Translation of articles for amr
   - [x] Comments/approval by the author
   - [ ] Final
 
+* **Representer les mondes I**
+  https://images-archive.math.cnrs.fr/Representer-les-mondes.html
+  - [x] Contact the author
+  - [x] Translation
+  - [x] Edits/comments
+  - [x] Editor comments
+  - [ ] Comments/approval by the author
+  - [ ] Final
+
 * **Representer les mondes II**
   https://images-archive.math.cnrs.fr/Representer-les-mondes-II.html
   - [x] Contact author
@@ -30,15 +39,12 @@ Translation of articles for amr
   - [ ] Comments/approval by the author
   - [ ] Final
 
-* **Representer les mondes**
-  https://images-archive.math.cnrs.fr/Representer-les-mondes.html
-  - [x] Contact the author
-  - [x] Translation
-  - [x] Edits/comments
+* Unified **Representer les mondes I + II**
+  - [ ] Unified two articles
+  - [ ] Edits/comments
   - [ ] Editor comments
   - [ ] Comments/approval by the author
   - [ ] Final
-
 
 # The List
 
@@ -49,6 +55,8 @@ Translation of articles for amr
   - [ ] http://images-archive.math.cnrs.fr/Gaspard-Monge.html?lang=fr
 
   - [x] http://images-archive.math.cnrs.fr/Representer-les-mondes-II.html?lang=fr
+
+  - [x] https://images-archive.math.cnrs.fr/Representer-les-mondes.html
 
   - [ ] http://images-archive.math.cnrs.fr/Bonne-annee-anomalistique.html?lang=fr
 
