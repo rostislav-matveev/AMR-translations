@@ -184,7 +184,7 @@ $k = 1/100000$ (one centimeter equals one kilometer).%
   \url{https://www.geogebra.org/}} %
 To do this, we must first mark the (image of a) first city, say
 Athens. This is the point $A$. Next, we place a second city, say
-Madrid: the point $M$ must be 17.43 centimetres from $A$. No problem
+Madrid: the point $M$ must be 17.43 centimeters from $A$. No problem
 so far\dots We can place $M$ at any point on a circle, but in any case
 all these positions are equivalent, up to rotating the sheet of paper
 around $A$.
@@ -571,7 +571,7 @@ like to speak about \textit{cartograms}.%
   regions on the map represents a specific quantity, such as
   population or GDP, instead of their actual land area. Of course,
   such maps are not suitable for navigation, but serve as
-  visualization of other features other than distances. (Ed.)} %
+  visualization of features other than distances. (Ed.)} %
 Here are some cartograms representing the world population.%
 \footnoteA{Images are taken from a very interesting site
   (\url{https://worldmapper.org/}) that offers many other kinds of
@@ -606,14 +606,14 @@ Here again, the existence of such a map is anything but obvious; it
 follows from the theorem, due to Oxtoby and Ulam.
 
 We will not state the theorem in full generality, but only a corollary
-sufficient for our purposes. We are given a ``measure'' $m$ on $X$,
+sufficient for our purposes. We are given a \textit{measure} $m$ on $X$,
 which may represent a density of population, of cars, of wealth,
-etc. Each subset%
+etc. Each subset $P$ of $X$ thus has a certain measure%
 \footnoteE{Not quite every subset is measurable, there are ``exotic''
   subsets, that can not be assigned a measure. However, this
   phenomenon is essentially ``invisible'' in applications and can
   safely be ignored. (Ed.)} %
-$P$ of $X$ thus has a certain measure $m(P)$, which may represent the
+$m(P)$, which may represent the
 number of inhabitants in $P$, the number of cars, the total wealth of
 the inhabitants of $P$, yearly rainfall at $P$, and so on. We choose
 the units of measurement in such a way, that measure of the whole $X$
@@ -633,7 +633,7 @@ from $X$ to the square $f:X\to[0,1]^{2}$ such that
 \]
 for all subsets $P$ of $X$. In other words, one can deform the image
 of $X$ to a square in such a way, that area of each distorted
-region in $X$ will be equal to the measure assigned to it.
+region will be equal to the measure assigned to it.
 
 The good news is that the theorem is \textit{constructive}, meaning
 that one can program a computer to draw the map, as in the examples
@@ -643,15 +643,18 @@ A couple of remarks are in order here:
 \begin{itemize}
 \item The cartogram is not at all unique. One can exploit this
   flexibility to try to impose additional constraints on the map, such
-  as best preserving ``something else.'' \textit{Optimal transport theory},%
-  \footnoteE{Optimal transport theory (in the Monge formulation)
-    concerns, roughly speaking, of finding \textit{optimal way} to
-    move one pile of send of a certain shape to another pile of send
-    of a different shape but the same volume. Different optimality
-    criteria lead to different optimal transportation plans. (Ed.)} %
-  which has been growing rapidly in recent years,
-  offers an approach that has already been discussed in the archives
-  of \textit{Images des maths} and to which we will probably return.
+  as best preserving ``something else.'' \textit{Optimal transport
+    theory},%
+  \footnoteE{\textit{Optimal transport theory} (in the Monge
+    formulation) concerns, roughly speaking, finding \textit{optimal
+      way} to move one pile of sand of a certain shape to another pile
+    of sand of a different shape but the same volume. Different
+    optimality criteria lead to different \textit{optimal transportation
+    plans}, that is prescriptions, for where each grain from the
+    first pile should be transported in order to fill the second pile. (Ed.)} %
+  which has been growing rapidly in recent years, offers an approach
+  that has already been discussed in the archives of \textit{Images
+    des maths} and to which we will probably return.
 
 \item Moser’s theorem%
   \footnoteE{The difference between theorems of Moser and of
