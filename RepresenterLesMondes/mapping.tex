@@ -1,0 +1,676 @@
+\documentclass{amsart}
+\usepackage[utf8]{inputenc}
+    
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\bf\large}{\relax}{0em}{}
+\titleformat{\subsection}{\normalfont\bf}{\relax}{0em}{}
+
+\usepackage{enumitem}
+\usepackage{quoting}
+
+\usepackage{xcolor}
+\long\def\gray#1{{\color{gray}{#1}}}\let\grey=\gray
+\long\def\blue#1{{\color{blue}{#1}}}
+\long\def\red#1{{\color{red}{#1}}}
+
+\usepackage{wrapfig}
+\usepackage{lpic}
+
+\usepackage{manyfoot}
+\DeclareNewFootnote{A}
+\DeclareNewFootnote{E}[alph]
+\usepackage[hyperfootnotes=false,
+    colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}]{hyperref}
+\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
+
+\newcommand{\skipthis}[2][\dots]{\red{[#1]}\gray{#2}}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{question}{Question}
+\newtheorem*{problem}{Problem}
+\newtheorem{exercise}{Exercise}
+
+\let\dmo=\DeclareMathOperator
+\dmo\distance{\mathsf{distance}}
+\dmo\area{\mathsf{area}}
+\dmo\population{\mathsf{population}}
+\let\time=\undefined
+\dmo\time{\mathsf{time}}
+\let\tmp\epsilon
+\let\epsilon\varepsilon
+\let\varepsilon\tmp
+
+
+\begin{document}
+\centerline{\bf\large Charting the Worlds I%
+  \footnoteE{English translation by Rostislav Matveev of the article
+    \textit{Repr\'esenter des Mondes}, by
+    \'Etienne Ghys, (\red{[YEAR?]}),
+    \url{https://images-des-maths.pages.math.cnrs.fr/%
+      freeze/Representer-les-mondes.html}.\\
+  }}%
+
+\medskip
+
+\centerline{by \'Etienne Ghys}
+
+\begin{center}
+  \includegraphics[width=\textwidth]{Pix/TypusOrbisTerrarum}
+\end{center}
+
+Cartography has accompanied mathematics since its very beginnings%
+\footnoteE{This is also evident from the name of the vast and possibly
+  most ancient area of mathematics --- ``geometry'', that is
+  ``measuring the Earth.''  (Ed.)} %
+and continually renews its set of problems. Originally, it was a
+matter of drawing maps as accurately as possible of continents that
+were more or less well known. Above is a map dating from 1570, in
+which to the south we see a ``Terra Australis Incognita'' --- which
+does not exist.  Today, this mission of the cartographer remains
+relevant, but there are other new worlds we would like to represent in
+atlases. Cyberspace and the brain are only two examples of these
+modern-day terra incognita.
+
+In this series of articles, I would like to present a few selected
+pieces of this interaction between cartography and mathematics. The
+subject is broad, and I will only touch upon it briefly, but I hope to
+show through these examples how the two disciplines mutually enrich
+one another.
+
+\section{What is a map?}
+Below are two maps.  The one on the left is a reconstruction of
+Anaximander’s map (around 550 BCE). Described by Herodotus, it is one
+of the oldest maps representing the world as a whole. The map on the
+right is the famous ``Carte du Tendre,'' dating from the 17th century,
+which depicts the most mysterious land: that of romantic emotions.
+\begin{center}
+  \includegraphics[width=0.4\textwidth]{Pix/Anaximandre}%
+  \includegraphics[width=0.6\textwidth]{Pix/Carte_du_tendre}
+\end{center}
+
+\skipthis[Next par is reduced]{}
+A map is an image. It is a representation of a continent, a country, a
+region, and so on, on a medium --- most often a sheet of paper --- which
+one can, for example, slip into one’s pocket when traveling through
+the country in question.
+If we denote by $X$ the country and by $Y$ the sheet of paper, the map
+is a mapping
+\[
+  f:X\rightarrow Y
+\]
+
+\section{What do we expect from a map?}
+
+\skipthis[Section is reduced]{}
+That it be faithful, of course! We hope to gather enough information
+in $Y$ to find our way around in $X$. We will see later --- though the
+reader can already imagine --- that if it is a matter of making a map of
+the New York subway, a sheet of paper will do perfectly well, but if we
+want to represent the network of connections among the billions of
+neurons that make up our brain, we will probably have to look for
+another medium!
+
+Faithfulness in our language means injectivity of a mapping $f$.
+
+\section{Distances}
+
+We also expect a map to be accurate. In general, there is so much
+information in $X$ that we would like to represent in $Y$, but $Y$ is
+only a small sheet of paper and choices have to be made. Here, I will
+focus on a single aspect: that the map preserves relative distances,
+though there would be many other possibilities.
+
+In ordinary cartography, $X$ is a country on Earth, so two points
+$x_1$ and $x_2$ of $X$ are separated by a distance that I will denote
+$\distance_{X}(x_{1},x_{2})$.  When $Y$ is a sheet of paper, two
+of its points $y_{1}$ and $y_{2}$ are likewise separated by a distance
+$\distance_{Y}(y_{1},y_{2})$.
+
+An ideal map would be such that the distance between two points at the
+source, in $X$, is exactly the same as the one we measure on the map,
+in the target. That is
+\[
+  \distance_{Y}\big(f(x_{1}),f(x_{2})\big)
+  =
+  \distance_{X}(x_{1},x_{2})
+\]
+That said, such a map of France would have to be a thousand kilometers
+across, which is not very practical. Of course, we use maps at a
+certain scale. For example, if we want one centimeter on the map to
+represent one kilometer ``in real life,'' that means that distances are
+multiplied in the target (on paper) by $k = 0.00001 = 1/100000$. Thus,
+for an ideal map at scale $k$ we would instead require:
+\[
+  \distance_{Y}\big(f(x_{1}),f(x_{2})\big)
+  =
+  k\cdot\distance_{X}(x_{1},x_{2})
+\]
+
+\section{The ideal does not exist!}
+
+I claim that there is no map of Europe, for instance, that preserves distances exactly.
+
+To prove this, I consider four cities: Athens, Madrid, Paris, and
+Oslo. Here is a table giving the distances between them.%
+\footnoteA{I had intended to compute these distances myself from the
+  latitudes and longitudes of the cities, but I discovered a website
+  that does it for me in just a few clicks\dots The calculations
+  assume that the Earth is perfectly spherical, which it is not
+  quite\dots, but this does not change anything in the argument.}
+\medskip
+
+\begin{center}
+  \begin{tabular}{|c||c|c|c|c|}
+    \hline
+    \mbox{}& Athens & Madrid & Paris & Oslo\\
+    \hline\hline
+    Athens & 0km & 1743km & 2414km & 2612km \\
+    \hline
+    Madrid & 1743km & 0km & 936.6km & 2224km \\
+    \hline
+    Paris  & 2414km & 936.6km & 0km & 1351km \\
+    \hline
+    Oslo   & 2612km & 2224km & 1351km & 0km \\
+    \hline
+  \end{tabular}
+\end{center}
+\medskip
+
+Let us try to construct an exact map of Europe, say at scale
+$k = 1/100000$ (one centimeter equals one kilometer).%
+\footnoteA{Images are created using the excellent software GeoGebra. %
+  \url{https://www.geogebra.org/}} %
+To do this, we must first mark the (image of a) first city, say
+Athens. This is the point $A$. Next, we place a second city, say
+Madrid: the point $M$ must be 17.43 centimeters from $A$. No problem
+so far\dots We can place $M$ at any point on a circle, but in any case
+all these positions are equivalent, up to rotating the sheet of paper
+around $A$.
+
+Next, we place Oslo. We must place a point $O$ at 26.12 cm from $A$
+and 22.24 cm from $M$. So we must construct two circles, centered at
+$A$ and $M$, with radii 26.12 cm and 22.24 cm, and place $O$ at their
+intersection. There are two intersection points, and we may choose
+either one, since the other is obtained from the first by
+symmetry. Let us therefore choose the one that respects the
+orientation we are used to, that is ``to the North''. So far so good.
+
+\begin{center}
+  \hfill
+  \includegraphics[width=0.4\textwidth]{Pix/dessin1}
+  \hfill
+  \includegraphics[width=0.4\textwidth]{Pix/dessin}
+  \hfill\rule{0mm}{1mm}
+\end{center}
+
+It remains to place Paris on the map.
+\begin{itemize}[leftmargin=4mm,rightmargin=0mm]
+\item We know the distance from Paris to Oslo and to Athens: this
+  gives us only two possibilities for placing Paris, at $P_1$ or
+  $P_1'$.
+\item We know the distance from Paris to Oslo and to Madrid: this also
+  gives us only two possibilities for placing Paris, at $P_2$ or
+  $P_2'$.
+\item We know the distance from Paris to Athens and to Madrid: this
+  gives us only two possibilities for placing Paris, at $P_3$ or
+  $P_3'$.
+\end{itemize}
+
+The problem is that these possibilities are not consistent: the points
+$P_1$ and $P_1'$ do not coincide with $P_2$ and $P_2'$\dots They are not
+very far from one another, but they do not coincide\dots
+\medskip
+
+\centerline{\textbf{It is impossible to draw an exact map of Europe!}}
+\medskip
+
+\begin{exercise}
+  Find four cities that, unlike the ones that we considered above, can
+  be represented in the plane in such a way as to respect the
+  distances exactly (up to a scale). Can you find all the situations
+  in which this is possible?
+\end{exercise}
+
+\begin{exercise}[Difficult]
+  Given six positive numbers $d_{1,2}$, $d_{1,3}$, $d_{1,4}$,
+  $d_{2,3}$, $d_{2,4}$ and $d_{3,4}$, under what
+  condition is it possible to find four points in the plane
+  $P_1$, $P_2$, $P_3$, $P_4$ such that the pairwise distances
+  $\distance(P_{i}, P_{j})$ between them are exactly $d_{i,j}$?
+\end{exercise}
+
+\section{What can we do nevertheless?}
+% How can we do as well as possible?
+Since there is no perfect map, we have to resign ourselves to
+approximations. For example, we can say that a map is precise ``within
+10\%'' if the distances measured in $X$ and in $Y$ do not differ by
+more than 10\%, taking the scale $k$ into account, of course. Formally
+speaking, we will say that a map $f$ has precision $\epsilon$ if:
+\begin{align*}
+  &\distance\big(f(x_{1}),f(x_{2})\big)
+  \leq
+    k\cdot(1+\epsilon)\cdot\distance(x_{1},x_{2})
+  \intertext{\centering and}
+  &\distance(x_{1},x_{2})
+  \leq
+    \frac1k\cdot(1+\epsilon)\cdot\distance\big(f(x_{1}),f(x_{2})\big)
+\end{align*}%
+for all points $x_{1}$ and $x_{2}$ of $X$. If $\epsilon = 0$, this
+would mean that a map is exact\dots, which does not exist. If
+$\epsilon = 0.1$, this corresponds to a map accurate to within $10\%$.
+
+These two formulas express the fact that the map works in both directions:
+\begin{itemize}
+\item if I know the distance $\distance_X(x_{1},x_2)$ between
+  two points ``in reality'', then I also know the
+  distance $\distance_Y\big(f(x_1),f(x_2)\big)$ between the points
+  that represent $x_{1}$ and $x_{2}$ on the map, up to the precision
+  $\epsilon$. I just need to multiply
+  by the scale, and the error will be at most the percentage given by $\epsilon$.
+\item if I know the distance $\distance_Y\big(f(x_1),f(x_2)\big)$
+  between two points on the map, then to find the distance
+  $\distance_X(x_1,x_2)$ between the points represented by $f(x_1)$
+  and $f(x_{2})$ on the map I have to divide by the scale the result
+  will be at most $\epsilon$ percentage off.
+\end{itemize}
+Of course, we strive for maps for which $\epsilon$ is as small as possible.
+
+The search for accurate maps began as soon as precise measurements of
+latitudes, and especially of longitudes, became possible. One anecdote
+illustrates the imperfection of maps in the 17th century.
+\begin{quoting}[vskip=1ex,leftmargin=5mm,rightmargin=5mm]\sf
+  In a map published in the early \emph{Mémoires de l'Acad\'emie des
+  Sciences}, vol. VII, p. 430 --- one of the first in which longitudes were
+  counted from the Paris Observatory --- the shaded boundaries represent
+  those established from astronomical observations carried out, under
+  the orders of Louis XIV, by various members of the Acad\'emie des
+  Sciences. The boundaries shown in simple outline, with names in
+  italics, reproduce the map of the famous Sanson, drawn up in 1679
+  and far superior to those that had preceded it. One sees that in
+  Sanson’s map the errors were generally considerable, and that
+  Brittany was displaced more than 100 kilometers to the west. Thus,
+  when Louis XIV saw this map, he complained to the academicians that
+  they had considerably reduced the extent of his dominions.%
+  \footnoteA{Bigourdan, \textit{La carte de France,} Annales de
+    G\'eographie (1899) Volume 8 Num\'ero 42, pp. 427-437, Download:
+    \url{https://www.persee.fr/doc/geo_0003-4010_1899_num_8_42_6155}(In
+    French)}
+\end{quoting}
+
+\section{A theorem and a question of J. Milnor}
+John Milnor is an American mathematician who has profoundly influenced
+twen\-ti\-eth-century mathematics, particularly in the fields of topology
+and dynamics. In 1969, he wrote a nice article%
+\footnoteA{J. Milnor, \textit{A problem in cartography.}
+  Amer. Math. Monthly 76 (1969) pp. 1101--1112.} %
+in which he proves a theorem about cartography and poses a problem\dots
+which still, up until today, has no solution.
+
+\begin{theorem}
+  Among all maps $f : X \to Y$, there exists at least one with a
+  maximal possible precision.
+\end{theorem}
+
+This result is an example of what we call a ``compactness theorem''.%
+\footnoteA{Indeed, the result follows quite easily from
+  Arzel\`a--Ascoli Theorem} %
+But it is also a typical example of an existence theorem in
+mathematics, which is extremely frustrating for at least two reasons.
+
+The first is that the theorem states that optimal maps exist, but it
+does not say how to find them! It is good to know that something
+exists, but without any concrete indication of where it can be found,
+its appeal is diminished\dots For example, if $X$ is France, how can
+one construct such a map?
+
+The second is that this is a theorem of existence and not of
+uniqueness. There may be many optimal maps. Of course, starting from a
+map $f:X \to Y$, one can translate or rotate the sheet of paper $Y$,
+or even change the scale, and thereby produce another map that clearly
+has the same precision. But this ``new map'' is really the same one:
+we have merely rotated the sheet of paper. Only mathematicians would
+consider them different!
+
+\begin{question}
+  Up to these operations of rotating the sheet of paper, shifting
+  and rescaling, is there a unique optimal map?
+\end{question}
+
+If that were the case, how could one construct it, what would it look
+like, what would its regularity be? All these are open questions, even
+for countries much simpler than France.
+
+For example, consider a ``rectangular'' country $X$, bounded by two
+parallels and two meridians. Can one solve the above problems at least
+in this particular case? Uniqueness? Practical construction? Nice
+challenges for the readers!
+
+\section{A case where everything is understood\dots}
+The situation is not completely hopeless. In his article, Milnor
+completely solves the question for a circular country. Admittedly,
+there are few regions of the world that are circular and that one
+would want to map (apart from the polar regions). But at least it is a
+simple case in which everything is understood. This seems to be one of
+the cases of so called ``Spherical cow in a vacuum''.%
+\footnoteE{This alludes to a joke highlighting the oversimplifications
+  common in theoretical science: \sf A dairy farm hires a
+  mathematician to improve the efficiency of milk production. After
+  collecting massive amounts of data at the farm and spending a few
+  sleepless nights analyzing it, the mathematician presents his
+  report, which begins: {\sl ``Consider the case of a spherical cow in
+    a vacuum...''}} %
+Nevertheless\dots
+
+\begin{figure}
+  \hfill
+  \includegraphics[width=0.4\textwidth]{Pix/dessin-2}
+  \hfill
+  \includegraphics[width=0.48\textwidth]{Pix/dessinc}
+  \hfill
+  \rule{0pt}{1ex}
+\end{figure}
+The left figure above is a spherical cap $X$, centered for instance at
+the North Pole.
+On the right figure the tangent plane $Y$ at the North Pole is shown,
+on which we are going to draw the map of $X$. Each point $x$ of $X$
+lies on a meridian starting from the North Pole. We then consider the
+ray in $Y$ that is tangent to this meridian at the North Pole, and we
+place $f(x)$ on this ray, at the same distance from the origin as $x$
+is from the North Pole.
+
+\begin{wrapfigure}{r}{0mm}
+  \begin{lpic}[t(-4ex),b(-1ex)]{Pix/AzEqHN(0.2)}
+  \end{lpic}
+\end{wrapfigure}
+
+I stress an important point: in $X$, the distances are
+\textit{intrinsic distances} the sphere --- that is, the length of
+shortest path drawn on the sphere from one point to another, without
+cutting through the interior of the Earth to go faster\dots The
+distance in $X$ between $x$ and the North Pole is therefore the length
+of the meridian arc from $x$ to the North Pole.
+The resulting map is shown on the figure.
+
+In cartography, this map is called the \textit{azimuthal equidistant
+  projection}%
+\footnoteE{See, for example, the flag of the UN. (Ed.)} %
+(attributed to Guillaume Postel), while in mathematical terms, it is
+known as the (inverse) \textit{exponential map}.
+\begin{theorem} The azimuthal equidistant projection is the only map
+  of a spherical cap that has the best possible precision.
+\end{theorem}
+
+\section{Milnor Conjecture}
+
+It is not difficult to compute the distortion $\epsilon$ of the azimuthal
+equidistant map. The result is a formula:
+\[
+  \epsilon = \sqrt{\frac{a}{\sin(a)}}-1
+\]
+where $a$ denotes the aperture of the cap --- the angle shown in the
+figure. Here is a small table giving the precision $\epsilon$ for
+various values of the angle.
+\begin{center}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    Angle $a$ & Distortion $\epsilon$ &  \\
+    \hline
+     $23^{\circ}26'$ & $1.41\%$ & Arctic polar region \\
+    \hline
+     $45^{\circ}$ & $5.39\%$ &  \\
+    \hline
+     $66^{\circ}34'$ & $12.5\%$ & North of Tropic of Cancer \\
+    \hline
+     $90^{\circ}$ & $25.3\%$ &  Northen Hemisphere\\
+    \hline
+     $113^{\circ}26'$ & $46.9\%$ & North of Tropic of Capricorn \\
+    \hline
+     $135^{\circ}$ & $82.5\%$ &  \\
+    \hline
+     $156^{\circ}34'$ & $162\%$ & North of Antarctic Polar Circle \\
+    \hline
+     $179^{\circ}$ & $1238\%$ &  \\
+    \hline
+  \end{tabular}
+\end{center}
+
+Instead of computing the precision as a function of the angle $a$, one
+can compute it as a function of the number
+\[
+  u = \frac{\area(\textrm{Cap})}{\area(\textrm{Earth})}
+\]
+which lies between $0$ and $1$ and represents the proportion of the
+Earth covered by the cap.
+
+One obtains a complicated and uninteresting formula, but Milnor shows
+that this precision is less (that is, better) than 
+\[
+  \frac13 u + \frac12 u^2
+\]
+whenever $u \leq 1/2$, that is, when the cap is smaller than a
+hemisphere.%
+\footnoteA{In fact, Milnor does not give this estimate, but it follows
+  easily from his calculations\dots} %
+
+Milnor proposes a problem: show that the same estimate for the
+precision holds for noncircular, convex countries. A country $X$ is
+convex if whenever two points $x_1$ and $x_2$ lie in $X$, the shortest
+path on the sphere joining them is entirely contained in $X$. In plain
+language, this rules out ``fjords''\dots
+
+\begin{problem}
+  Let $X$ be a convex country lying in a hemisphere, and let $u$ be
+  the proportion of the Earth’s surface occupied by $X$. Is it
+  possible to draw a map of $X$ with precision
+  $\frac13 u + \frac12 u^2$?
+\end{problem}
+
+More than forty years later, this problem still has not been solved.
+
+Here is an example: let us surround the United States of America by a
+rectangle. This rectangle covers about $1.5\%$ of the Earth.%
+\footnoteA{Such a powerful country that covers such a small percentage
+  of the world...} %
+According to Milnor, the best known map of the United States is
+accurate to within $2.2\%$, whereas according to his conjecture, there
+ought to exist one accurate to within $1\%$\dots
+
+The literature on cartography is immense, and many types of maps
+exist, each trying to represent one feature or another as well as
+possible.%
+\footnoteA{For a mathematical approach see, for example, %
+  \url{http://www.yann-ollivier.org/carto/carto.php} (In French)}$^,$%
+\footnoteE{There are numerous websites devoted to the mathematics of
+  cartographic projections. An internet search will produce a list of
+  resources to suit any taste. (Ed.)}%
+
+\section{Other trade-offs, other distances\dots}
+
+There are not only distances in kilometers that one might want to
+represent on a map. If $x_1$ and $x_2$ are two cities in France, we
+can compute the time $\time(x_1,x_2)$ needed to go from $x_1$ to
+$x_2$. One would need to be more precise, specifying whether one is
+traveling by car or by high-speed train, the time of day and the day
+of travel, etc. We encounter a new problem: the space $X$ that we want
+to represent is not known with complete precision, and one could even
+say it is not completely defined. Let us ignore this difficulty for
+the moment, promising to return to it in other articles. A precise
+temporal map would be very useful: one would read off in centimeters
+on the map the distance between $f(x_1)$ and $f(x_2)$ the time
+$\time(x_1,x_2)$, expressed for example in hours.
+
+Of course, for the same reasons we saw above, it is in general
+impossible to construct an exact temporal map, and one has to do ``as
+well as possible.'' A good exercise, following the reading of Milnor’s
+article, is to check that, given a ``temporal'' country $X$, it is
+possible to find a map that represents it ``as well as possible,''
+with the same issues as before: no idea how to actually construct such
+a map!
+
+Here is a temporal map of France for the SNCF.%
+\footnoteE{SNCF (\textbf{S}oci\'et\'e \textbf{n}ationale des
+  \textbf{c}hemins de \textbf{f}er fran\c{c}ais) is the French railway
+  operator. (Ed.)} %
+
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{Pix/SNCF}
+\end{center}
+It was constructed to be exact ``from Paris,'' in the same way that
+the azimuthal equidistant map is exact ``from the North Pole.'' It is
+therefore an SNCF azimuthal equidistant map.
+
+Along transverse routes, one shouldn’t expect very high precision. How
+can one draw a more accurate temporal map of the SNCF network? There’s
+work here for mathematicians.
+
+There is another example,%
+\footnoteA{Travel Time Tube Map. %
+  \url{https://www.tom-carden.co.uk/p5/tube_map_travel_times/applet/}} %
+using a cool modern technology. It is an interactive map of the London
+Underground network. Each time user chooses a station on the map, the
+map deforms to represent ``the azimuthal equidistant projection from
+that station.'' In plain language, you can read directly on the map the
+travel time from that station.
+
+
+\subsection{Yet another method}
+Suppose we have a large number of points $x_1, x_2, \dots, x_N$ and we
+have measured all the distances $d_{i,j}$ between these points. These
+distances may be in kilometers or in hours, for that matter. How can
+we ``best'' represent this situation by points
+$y_1 = f(x_1), y_2 = f(x_2), \dots, y_N = f(x_N)$ in the plane, given
+that we have just seen that no method is known for finding the ``best
+map,'' the one whose existence is guaranteed by Milnor?
+
+Once we choose the points $y_i$, the defect of the map will be
+smaller the closer $\distance_{Y}(y_i,y_j)$ is to $k\cdot d_{i,j}$,
+where $k$ is our schoosen scale. One idea is to compute the sum of the
+squares of the differences $\distance_{Y}(y_i,y_j) - k\cdot d_{i,j}$:
+\[
+  \mathsf{defect}:=\sum\big(\distance_{Y}(y_i,y_j) - k\cdot d_{i,j}\big)^{2}
+\]
+and try to find points $y_i$ for which the defect is as small as
+possible.
+
+Why the sum of squares? There are several good reasons for this,
+particularly coming from physics, but the best reason is that this new
+minimization problem is much simpler than Milnor’s. We know good
+methods for finding the $y_i$'s that minimize this sum of squares, and
+computers can compute it without difficulty. We have changed our
+ambitions; our new problem may be less natural, but at least we know
+how to solve it! Cartography is also a matter of ``cookbook recipes.''
+
+\section{Other criteria}
+
+There are many other things one would like to represent on a
+map. Distances, even temporal ones, are only one example. Here I would
+like to speak about \textit{cartograms}.%
+\footnoteE{A cartogram is a map distorted so that the areas of geographic
+  regions on the map represents a specific quantity, such as
+  population or GDP, instead of their actual land area. Of course,
+  such maps are not suitable for navigation, but serve as
+  visualization of features other than distances. (Ed.)} %
+Here are some cartograms representing the world population.%
+\footnoteA{Images are taken from a very interesting site
+  (\url{https://worldmapper.org/}) that offers many other kinds of
+  cartograms. } %
+\medskip
+
+\newlength{\mapwidth}\setlength{\mapwidth}{0.5\textwidth-0.5em}
+\begin{center}
+  \includegraphics[width=\mapwidth]{Pix/1500}
+  \includegraphics[width=\mapwidth]{Pix/1900}\\
+  \parbox{\mapwidth}{\centerline{\sf World population in 1500}}
+  \parbox{\mapwidth}{\centerline{\sf World population in 1900}}\\
+  \bigskip\bigskip
+  
+  \includegraphics[width=\mapwidth]{Pix/1960}
+  \includegraphics[width=\mapwidth]{Pix/2050}
+  \parbox{\mapwidth}{\centerline{\sf World population in 1960}}
+  \parbox{\mapwidth}{\centerline{\sf Projected world population in 2050}}
+\end{center}
+\medskip
+
+As you have understood, the map $f:X \to Y$ tries to represent the
+population of a country $P$ (in millions of inhabitants, for example)
+by the area of its image $f(P)$ (in $cm^2$, for example). In formulas,
+for every country $P$ in $X$, we would like to have the relation
+\[
+  \area\big(f(P)\big)=\population(P)
+\]
+\skipthis[The next paragraphs are heavily edited]{}
+\blue{
+Here again, the existence of such a map is anything but obvious; it
+follows from the theorem, due to Oxtoby and Ulam.
+
+We will not state the theorem in full generality, but only a corollary
+sufficient for our purposes. We are given a \textit{measure} $m$ on $X$,
+which may represent a density of population, of cars, of wealth,
+etc. Each subset $P$ of $X$ thus has a certain measure%
+\footnoteE{Not quite every subset is measurable, there are ``exotic''
+  subsets, that can not be assigned a measure. However, this
+  phenomenon is essentially ``invisible'' in applications and can
+  safely be ignored. (Ed.)} %
+$m(P)$, which may represent the
+number of inhabitants in $P$, the number of cars, the total wealth of
+the inhabitants of $P$, yearly rainfall at $P$, and so on. We choose
+the units of measurement in such a way, that measure of the whole $X$
+is equal to 1. Not every measure is suitable for our purposes. We
+assume that measure $m$ of some region is zero if and only if its area
+is zero. In particular, only two-dimensional regions (not points or
+curves) can have positive measure and conversely, the measure of any
+``country'' must be positive. Theorem of Oxtoby--Ulam%
+\footnoteE{An additional assumption about region $X$ is necessary,
+  namely that $X$ is connected (consists of one piece) and
+  simply-connected (has no holes inside). (Ed.)} %
+implies that there is a \textit{homeomorphism}%
+\footnoteE{A continous one-to-one map. (Ed.)} %
+from $X$ to the square $f:X\to[0,1]^{2}$ such that
+\[
+  \area\big(f(P)\big)=m(P)
+\]
+for all subsets $P$ of $X$. In other words, one can deform the image
+of $X$ to a square in such a way, that area of each distorted
+region will be equal to the measure assigned to it.
+
+The good news is that the theorem is \textit{constructive}, meaning
+that one can program a computer to draw the map, as in the examples
+above.
+
+A couple of remarks are in order here:
+\begin{itemize}
+\item The cartogram is not at all unique. One can exploit this
+  flexibility to try to impose additional constraints on the map, such
+  as best preserving ``something else.'' \textit{Optimal transport
+    theory},%
+  \footnoteE{\textit{Optimal transport theory} (in the Monge
+    formulation) concerns, roughly speaking, finding \textit{optimal
+      way} to move one pile of sand of a certain shape to another pile
+    of sand of a different shape but the same volume. Different
+    optimality criteria lead to different \textit{optimal transportation
+    plans}, that is prescriptions, for where each grain from the
+    first pile should be transported in order to fill the second pile. (Ed.)} %
+  which has been growing rapidly in recent years, offers an approach
+  that has already been discussed in the archives of \textit{Images
+    des maths} and to which we will probably return.
+
+\item Moser’s theorem%
+  \footnoteE{The difference between theorems of Moser and of
+    Oxtoby--Ulam is that Moser assumes that the density of measure $m$
+    is infinitely differentiable. In return, the map garanteed by
+    Moser is also infinitely differentiable and also easily
+    constructible. (Ed.)} %
+  and the practical method it provides --- easy to program on a
+  computer --- went completely unnoticed among
+  cartographers. Admittedly, Moser himself was likely not particularly
+  interested in cartography. It was only recently, in 2004, that
+  the theorem was rediscovered by cartographers.%
+  \footnoteA{Michael T. Gastner, M. E. J. Newman,
+    \textit{Diffusion-based method for producing density equalizing
+      maps}, \url{https://arxiv.org/pdf/physics/0401102v1}} %
+  Good ideas are often born more then once.
+\end{itemize}
+}
+\end{document}
