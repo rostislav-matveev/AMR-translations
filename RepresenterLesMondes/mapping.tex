@@ -59,7 +59,7 @@
 
 \centerline{by \'Etienne Ghys}
 
-\section{Classical Maps}
+\section{Charting the Lands}
 \begin{center}
   \includegraphics[width=\textwidth]{Pix/TypusOrbisTerrarum}
 \end{center}
@@ -171,13 +171,13 @@ Oslo. Here is a table giving the distances between them.%
     \hline
     \mbox{}& Athens & Madrid & Paris & Oslo\\
     \hline\hline
-    Athens & 0km & 1743km & 2414km & 2612km \\
+    Athens & 0 km & 1743 km & 2414 km & 2612 km \\
     \hline
-    Madrid & 1743km & 0km & 936.6km & 2224km \\
+    Madrid & 1743 km & 0 km & 936.6 km & 2224 km \\
     \hline
-    Paris  & 2414km & 936.6km & 0km & 1351km \\
+    Paris  & 2414 km & 936.6 km & 0 km & 1351 km \\
     \hline
-    Oslo   & 2612km & 2224km & 1351km & 0km \\
+    Oslo   & 2612 km & 2224 km & 1351 km & 0 km \\
     \hline
   \end{tabular}
 \end{center}
@@ -530,9 +530,9 @@ Along transverse routes, one shouldn’t expect very high precision. How
 can one draw a more accurate temporal map of the SNCF network? There’s
 work here for mathematicians.
 
-There is another example,%
-\footnoteA{Travel Time Tube Map. %
-  \url{https://www.tom-carden.co.uk/p5/tube_map_travel_times/applet/}} %
+There is another example, so called
+\foothref{https://www.tom-carden.co.uk/p5/tube_map_travel_times/applet/}{Travel
+  Time Tube Map}, 
 using a cool modern technology. It is an interactive map of the London
 Underground network. Each time user chooses a station on the map, the
 map deforms to represent ``the azimuthal equidistant projection from
@@ -551,7 +551,7 @@ map,'' the one whose existence is guaranteed by Milnor?
 
 Once we choose the points $y_i$, the defect of the map will be
 smaller the closer $\distance_{Y}(y_i,y_j)$ is to $k\cdot d_{i,j}$,
-where $k$ is our schoosen scale. One idea is to compute the sum of the
+where $k$ is our chosen scale. One idea is to compute the sum of the
 squares of the differences $\distance_{Y}(y_i,y_j) - k\cdot d_{i,j}$:
 \[
   \mathsf{defect}:=\sum\big(\distance_{Y}(y_i,y_j) - k\cdot d_{i,j}\big)^{2}
@@ -573,7 +573,7 @@ There are many other things one would like to represent on a
 map. Distances, even temporal ones, are only one example. Here I would
 like to speak about \textit{cartograms}.%
 \footnoteE{A cartogram is a map distorted so that the areas of geographic
-  regions on the map represents a specific quantity, such as
+  regions on the map represent a specific quantity, such as
   population or GDP, instead of their actual land area. Of course,
   such maps are not suitable for navigation, but serve as
   visualization of features other than distances. (Ed.)} %
@@ -630,16 +630,18 @@ curves) can have positive measure and conversely, the measure of any
 \footnoteE{An additional assumption about region $X$ is necessary,
   namely that $X$ is connected (consists of one piece) and
   simply-connected (has no holes inside). (Ed.)} %
-implies that there is a \textit{homeomorphism}%
-\footnoteE{A continous one-to-one map. (Ed.)} %
-from $X$ to the square $f:X\to[0,1]^{2}$ such that
-\[
-  \area\big(f(P)\big)=m(P)
-\]
+implies the following statement.
+\begin{theorem}
+  There is a \textit{homeomorphism}%
+  \footnoteE{A continous one-to-one map. (Ed.)} %
+  from $X$ to the square $f:X\to[0,1]^{2}$ such that
+  \[
+    \area\big(f(P)\big)=m(P)
+  \]
 for all subsets $P$ of $X$. In other words, one can deform the image
 of $X$ to a square in such a way, that area of each distorted
 region will be equal to the measure assigned to it.
-
+\end{theorem}
 The good news is that the theorem is \textit{constructive}, meaning
 that one can program a computer to draw the map, as in the examples
 above.
@@ -655,7 +657,7 @@ A couple of remarks are in order here:
       way} to move one pile of sand of a certain shape to another pile
     of sand of a different shape but the same volume. Different
     optimality criteria lead to different \textit{optimal transportation
-    plans}, that is prescriptions, for where each grain from the
+    plans}, that is prescriptions for where each grain from the
     first pile should be transported in order to fill the second pile. (Ed.)} %
   which has been growing rapidly in recent years, offers an approach
   that has already been discussed in the archives of \textit{Images
@@ -664,8 +666,8 @@ A couple of remarks are in order here:
 \item Moser’s theorem%
   \footnoteE{The difference between theorems of Moser and of
     Oxtoby--Ulam is that Moser assumes that the density of measure $m$
-    is infinitely differentiable. In return, the map garanteed by
-    Moser is also infinitely differentiable and also easily
+    is infinitely differentiable. In return, the map guaranteed by
+    Moser is infinitely differentiable as well and also easily
     constructible. (Ed.)} %
   and the practical method it provides --- easy to program on a
   computer --- went completely unnoticed among
@@ -675,13 +677,13 @@ A couple of remarks are in order here:
   \footnoteA{Michael T. Gastner, M. E. J. Newman,
     \textit{Diffusion-based method for producing density equalizing
       maps}, \url{https://arxiv.org/pdf/physics/0401102v1}} %
-  Good ideas are often born more then once.
+  Good ideas are often born more than once.
 \end{itemize}
 }
 
-\section{The Networks}
+\section{Charting the Networks}
 \begin{center}
-  \includegraphics[width=0.5\textwidth]{Pix/02homunc}
+  \includegraphics[width=0.7\textwidth,height=15em]{Pix/internet_map_1_full}
 \end{center}
 
 \textbf{``We live in a networked world.''} --- this is a comment we
@@ -713,10 +715,10 @@ understand how they function. This is not easy, since these are truly
 enormous structures, sometimes containing billions of elements, which
 certainly cannot be drawn on a sheet of paper like a subway map.
 
-This article raises more questions than it answers. I would first like
-to show a few examples, and then discuss a theorem that gives reason
-for optimism: \textit{it may be possible to represent these immense networks
-in a reasonable way.}
+The discussion below raises more questions than it answers. I would
+first like to show a few examples, and then discuss a theorem that
+gives reason for optimism: \textit{it may be possible to represent
+  these immense networks in a reasonable way.}
 
 \subsection{The Brain}
 
@@ -986,14 +988,9 @@ sciences.
 Finally, the goal is to represent these 88 sciences as 88 points in
 the plane, in such a way that the distances between them correspond as
 closely as possible to the computed angles. This can be done, for
-example, by a minimization method such as those described in the
-previous article%
-\footnoteE{\href{https://images-des-maths.pages.math.cnrs.fr/freeze/Representer-les-mondes.html}
-  {Repr\'esenter les Mondes} by \'Etienne Ghys,\\
-  \url{https://images-des-maths.pages.math.cnrs.fr/freeze/Representer-les-mondes.html}.
-  English translation: \href{URL}{Mapping the Worlds I}, \red{URL}\url{???}} %
---- though, again, many other approaches could be used.  The result is
-the map shown above.%
+example, by a minimization method such as that described in the first
+part of the article --- though, again, many other approaches could be
+used.  The result is the map shown above.%
 \footnoteE{The thickness of the graph edges indicates citation traffic
   between the ``sciences'', with only significant links shown. See the
   original publication for more detailed explanation. (Ed.)}
