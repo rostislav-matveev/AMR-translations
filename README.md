@@ -40,9 +40,9 @@ Translation of articles for amr
   - [ ] Final
 
 * Unified **Representer les mondes I + II**
-  - [ ] Unified two articles
-  - [ ] Edits/comments
-  - [ ] Editor comments
+  - [x] Unified two articles
+  - [x] Edits/comments
+  - [x] Editor comments
   - [ ] Comments/approval by the author
   - [ ] Final
 
