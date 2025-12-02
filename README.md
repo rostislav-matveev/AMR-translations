@@ -42,7 +42,7 @@ Translation of articles for amr
   - [x] Edits/comments
   - [x] Editor comments
   - [x] Comments/approval by the author
-  - [ ] Final
+  - [X] Final
 
 # The List
 
