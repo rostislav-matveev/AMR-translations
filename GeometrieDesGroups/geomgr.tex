@@ -7,7 +7,9 @@
 \titleformat{\subsection}{\normalfont\bf}{}{0em}{}
 
 \usepackage{manyfoot}
+\SetFootnoteHook{\hspace{1.5em}}
 \DeclareNewFootnote{A}
+\SetFootnoteHook{\hspace{1.5em}}
 \DeclareNewFootnote{E}[alph]
 
 \usepackage[hyperfootnotes=false,
@@ -35,9 +37,9 @@
 \centerline{\bf A Bit of Geometric Group Theory%
   \footnoteE{English translation by Rostislav Matveev of the article
     \textit{Un peu de g\'eom\'etrie des groupes}, by
-     Gilbert Levitt\, (2004),
+     Gilbert Levitt\, (2004),\\
     \url{https://images-archive.math.cnrs.fr/%
-      Un-peu-de-geometrie-des-groupes.html}.\\
+      Un-peu-de-geometrie-des-groupes.html}.
 }}
 \medskip
 \centerline{by  Gilbert Levitt}
@@ -299,10 +301,7 @@ automorphisms of a finitely generated free group, modulo conjugations.
 If a group $G$ is not free, different reduced words may represent the
 same element; we say that such words are equivalent in $G$. The
 \textit{word problem} is the problem of determining, by an algorithm,
-whether two given words represent the same element. In fact, it
-suffices to determine which words are trivial, that is, which
-represent the neutral element $\1_G$.
-
+whether two given words represent the same element. 
 \begin{wrapfigure}{r}{0mm}
   \begin{lpic}[draft,l(8mm),r(4mm),b(18mm),t(-5mm),clean]{Pix/z2(0.4)}
     \lbl[b]{60,73;\color{blue}$a$}
@@ -329,6 +328,9 @@ represent the neutral element $\1_G$.
         the corresponding paths have the same endpoint $F$.}}
   \end{lpic}
 \end{wrapfigure}
+In fact, it
+suffices to determine which words are trivial, that is, which
+represent the neutral element $\1_G$.
 This is easy in $\mathbb{Z}^2$, which is commutative. For instance, it
 is immediately clear to us that
 $a^{100} b^{100} a^{-100} b^{-100} = \1$. But a machine that could
@@ -528,7 +530,9 @@ Like the Euclidean plane, the hyperbolic plane is a homogeneous metric
 space: any point can be sent to any other by an isometry; in
 particular, the center of $D$ plays no special role; any Möbius
 transformation of the complex plane that maps $D$ onto itself induces
-an isometry. 
+an isometry. But hyperbolic plane has negative curvature, whereas the
+Euclidean plane has zero curvature, and the sphere has positive
+curvature.
 
 \begin{wrapfigure}{r}{0mm}
   \begin{lpic}[b(23mm)]{Pix/escher-circle-limit-III(0.8)}
@@ -538,10 +542,6 @@ an isometry.
         separated by white geodesic lines.  }}
   \end{lpic}
 \end{wrapfigure}
-But hyperbolic plane has negative curvature, whereas the
-Euclidean plane has zero curvature, and the sphere has positive
-curvature.
-
 To study $G_3$, we tile $\mathbb{H}^2$ with regular octagons whose
 sides are geodesic segments of equal length and whose angles are
 $2\pi / 8$, in such a way that eight octagons meet at each vertex. The
