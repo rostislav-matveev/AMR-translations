@@ -18,7 +18,9 @@
 \usepackage{lpic}
 
 \usepackage{manyfoot}
+\SetFootnoteHook{\hspace{1.5em}}
 \DeclareNewFootnote{A}
+\SetFootnoteHook{\hspace{1.5em}}
 \DeclareNewFootnote{E}[alph]
 \usepackage[hyperfootnotes=false,
     colorlinks,
@@ -95,7 +97,6 @@ which depicts the most mysterious land: that of romantic emotions.
   \includegraphics[width=0.6\textwidth]{Pix/Carte_du_tendre}
 \end{center}
 
-\skipthis[Next par is reduced]{}
 A map is an image. It is a representation of a continent, a country, a
 region, and so on, on a medium --- most often a sheet of paper --- which
 one can, for example, slip into one’s pocket when traveling through
@@ -107,8 +108,6 @@ is a mapping
 \]
 
 \subsection{What do we expect from a map?}
-
-\skipthis[Section is reduced]{}
 That it be faithful, of course! We hope to gather enough information
 in $Y$ to find our way around in $X$. We will see later --- though the
 reader can already imagine --- that if it is a matter of making a map of
@@ -605,8 +604,6 @@ for every country $P$ in $X$, we would like to have the relation
 \[
   \area\big(f(P)\big)=\population(P)
 \]
-\skipthis[The next paragraphs are heavily edited]{}
-\blue{
 Here again, the existence of such a map is anything but obvious; it
 follows from the theorem, due to Oxtoby and Ulam.
 
@@ -679,7 +676,6 @@ A couple of remarks are in order here:
       maps}, \url{https://arxiv.org/pdf/physics/0401102v1}} %
   Good ideas are often born more than once.
 \end{itemize}
-}
 
 \section{Charting the Networks}
 \begin{center}
@@ -723,11 +719,7 @@ gives reason for optimism: \textit{it may be possible to represent
 \subsection{The Brain}
 
 The brain is a mystery. It was toward the end of the nineteenth
-century that the neuronal dogma was accepted.%
-\skipthis[Broken link]{%
-  \footnoteA{The discovery of the neuron.
-    \url{http://scienceblogs.com/neurophilosophy/2007/07/%
-      the_discovery_of_the_neuron.php}}} %
+century that the neuronal dogma was accepted.
 The brain is not a continuous tissue but a network containing
 roughly ten billion neurons connected to each other by axons. Each
 neuron is connected to many other neurons --- typically about ten
@@ -741,11 +733,7 @@ earliest sketches, dating from 1888:
   \end{lpic}
 \end{center}
 
-One of the first “cartographers” of the brain was Wilder Penfield.%
-\skipthis[Broken link]{%
-\footnoteA{Wilder Penfield, Neural cartographer;
-  \url{http://scienceblogs.com/
-    neurophilosophy/2008/08/wilder_penfield_neural_cartographer.php.}}} %
+One of the first “cartographers” of the brain was Wilder Penfield.
 In the 1930s, during brain surgeries, he stimulated certain areas of
 the brain with electrodes and recorded the patient’s reactions. The
 photograph below, taken in 1937, shows a series of numbered tags
@@ -960,13 +948,6 @@ the same direction, it means they assign similar relative importance
 to all other journals --- in other words, they are interested in roughly the
 same topics.
 
-\skipthis[removed par]{ If you remember the dot product of two
-  vectors, you know that one can easily compute the angle between two
-  vectors from their coordinates. The same idea applies whether we are
-  in two or three dimensions — or in 7,000!  High-dimensional geometry
-  should not frighten us. In any case, it is reasonable to accept
-  that, one way or another, we can estimate “distances” between
-  journals.  }%
 Next comes a clustering operation --- that is, grouping together
 journals that are very close to one another. There are many ways to do
 this, and they do not all yield the same result.
@@ -1134,10 +1115,6 @@ one has
   1.01p_{A,B}
 \]
 
-\skipthis[Removed par]{ Readers should not be intimidated by
-this formula --- it simply means that $\frac{N(X,Y)}{N(X)\cdot N(Y)}$
-and $p_{A,B}$ are equal to within 1\%.}
-
 However, this definition doesn’t quite work. If $X$ and $Y$ each
 contain only one vertex, then the ratio
 $\frac{N(X,Y)}{N(X)\cdot N(Y)}$ is either $0$ or $1$, which can hardly
@@ -1221,11 +1198,8 @@ statement may not be exactly correct! We’ll need to refine it.
   almost-equipartition into $1000$ parts that are well connected.
 \end{theorem}
 
-\blue{\subsubsection{Szemer\'edi’s Theorem%
-\protect\footnoteE{This section was added by the
-  translator. (Ed.)}}
-}
-\blue{
+\subsubsection{Szemer\'edi’s Theorem%
+  \protect\footnoteE{This section was added by the translator. (Ed.)}}
 There are several versions of Szemer\'edi's Theorem, which is also
 known in the literature as Szemer\'edi's Regularity Lemma. One of the
 statements is given below. To make it simpler we first introduce
@@ -1240,8 +1214,7 @@ $\epsilon$-well-connected. One may or may not require the partition
 to be an almost equipartition. The theorem holds in both setups,
 however the known bounds on the size of the partition will be
 different.
-}
-\blue{
+
 Now we are ready to state the theorem.  For any precision level
 $\epsilon$ ($1\%$ in the text above) the theorem provides the upper
 bound $M$ on the size of the $\epsilon$-regular partition, for any
@@ -1252,9 +1225,7 @@ sufficiently large graph.
   vertices there exist an $\epsilon$-regular
   partition of $G$ with the number of parts not exceeding $M$.
 \end{theorem}
-}
-
-\blue{ The known bounds on $M$ are just astounding,%
+The known bounds on $M$ are just astounding,%
   \footnoteE{W.T. Gowers, \textit{Quasirandomness, counting and
       regularity for 3-uniform hypergraphs},
     Combin. Probab. Comput. 15 (2006), 143–184.} %
@@ -1266,7 +1237,7 @@ sufficiently large graph.
   about that big, so that the bound can not be improved by much. We
   may still hope that such synthetic examples are rare and there are
   large classes of graphs for which Szemer\'edi Regularity Lemma with
-  some reasonable $M$ holds.}
+  some reasonable $M$ holds.
 
 \subsection{The Significance of the Theorem and a Few Comments}
 
@@ -1317,18 +1288,11 @@ statement --- ``an integer $M$ exists, but we don’t know it.'' That’s how
 mathematics often is: we do what we can!
 
 Now, the hunt is on to determine the best possible $M$ for a given
-precision. \skipthis[Removed sentences. The result of Gowers says that
-$M$ is an exponential tower of height $1/\epsilon^{2}$]{Recent work by
-  T. Gowers suggests that $n$ grows roughly like the inverse square of
-  the desired precision. That is not very satisfying: for a precision
-  of $1\%$ (that is, $0.01$), this would give $n=10\,000$.}
-Researchers are striving to make the theorem effective --- to obtain
-actual, reasonable values of $M$ for realistic levels of precision
-\blue{at least for some large classes of graphs or a slightly modified
-conditions imposed on the partition}.\skipthis[Removed sentence. See blue
-sentences above]{To
-achieve this, they might slightly adjust the conditions imposed on the
-partition.} The theorem is flexible, and the goal is to make it usable.
+precision.  Researchers are striving to make the theorem effective ---
+to obtain actual, reasonable values of $M$ for realistic levels of
+precision at least for some large classes of graphs or a slightly
+modified conditions imposed on the partition. The theorem is flexible,
+and the goal is to make it usable.
 
 \subsubsection{Finding the partition itself}
 
