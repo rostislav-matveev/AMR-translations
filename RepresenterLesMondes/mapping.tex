@@ -1305,26 +1305,25 @@ First, the theorem as stated above is not quite
 correct. Unfortunately, I cannot guarantee a partition with exactly
 $1\,000$ clusters, as I somewhat boldly claimed earlier. The truth is
 that for each desired precision (say, $1\%$ in our example), there
-exists some integer $n$ that makes the theorem valid.
+exists some integer $M$ that makes the theorem valid.
 
-What is the actual value of $n$ for a $1\%$ precision? Is it $1\,000$, as
-I suggested? I have no idea. All I know is that such an integer $n$
-exists. The important point is that this $n$ depends only on the chosen
+What is the actual value of $M$ for a $1\%$ precision? Is it $1\,000$, as
+I suggested? The important point is that this $M$ depends only on the chosen
 precision --- not on the size of the graph itself. If it depended on the
 size, the theorem would lose all appeal.
 
 I would not be surprised if the reader felt frustrated by such a
-statement --- ``an integer $n$ exists, but we don’t know it.'' That’s how
+statement --- ``an integer $M$ exists, but we don’t know it.'' That’s how
 mathematics often is: we do what we can!
 
-Now, the hunt is on to determine the best possible $n$ for a given
+Now, the hunt is on to determine the best possible $M$ for a given
 precision. \skipthis[Removed sentences. The result of Gowers says that
 $M$ is an exponential tower of height $1/\epsilon^{2}$]{Recent work by
   T. Gowers suggests that $n$ grows roughly like the inverse square of
   the desired precision. That is not very satisfying: for a precision
   of $1\%$ (that is, $0.01$), this would give $n=10\,000$.}
 Researchers are striving to make the theorem effective --- to obtain
-actual, reasonable values of $n$ for realistic levels of precision
+actual, reasonable values of $M$ for realistic levels of precision
 \blue{at least for some large classes of graphs or a slightly modified
 conditions imposed on the partition}.\skipthis[Removed sentence. See blue
 sentences above]{To
