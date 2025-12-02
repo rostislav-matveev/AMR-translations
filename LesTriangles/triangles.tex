@@ -2,15 +2,17 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage{manyfoot}
+\SetFootnoteHook{\hspace{1.5em}}
 \DeclareNewFootnote{A}
+\SetFootnoteHook{\hspace{1.5em}}
 \DeclareNewFootnote{E}[alph]
-\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
 
 \usepackage[hyperfootnotes=false,
     colorlinks,
     linkcolor={blue!80!black},
     citecolor={blue!50!black},
     urlcolor={blue!80!black}]{hyperref}
+\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
 
 \usepackage{titlesec}
 \titleformat{\section}{\normalfont\bf\large}{\relax}{0em}{}
@@ -308,13 +310,14 @@ the first half of the twentieth century.
 
 Let us now turn to Misha Gromov, who was honored with the Abel Prize
 in 2009 (see the special feature%
-\footnoteE{Dossier : Mikha\"il Gromov, g\'eom\`etre,  \url{https://images-archive.math.cnrs.fr/+-Mikhail-Gromov-geometre-+.html}
-  (in French) (Ed.)}
+\footnoteE{Dossier : Mikha\"il Gromov, g\'eom\`etre,\\
+  \url{https://images-archive.math.cnrs.fr/+-Mikhail-Gromov-geometre-+.html}
+  (in French) (Ed.)} %
 devoted to him on ``Images des Mathématiques''). Like many
 mathematicians of his generation, he was fascinated by non-Euclidean
 geometry. But what struck him most were the qualitative properties of
-this remarkable geometry. He observed a kind of stability, which
-I’ll try to explain below.
+this remarkable geometry. He observed a kind of stability, which I’ll
+try to explain below.
 
 Gradually --- probably beginning in the early 1970s --- Gromov
 observed a number of properties satisfied by non-Euclidean
@@ -334,7 +337,7 @@ at the International Congress in Warsaw (1983)%
 already contained the major ideas, though still somewhat
 unpolished. In 1987 his book on hyperbolic groups%
 \footnoteA{M. Gromov, \textit{Hyperbolic groups}, in
-\textit{Essays in Group Theory}, S. Gersten ed., MSRI Publications 8 (1987), 75--263
+\textit{Essays in Group Theory}, S. Gersten ed., MSRI Publications~8~(1987), 75--263
 Springer.}
 was published --- a work that, nearly a quarter of a century later,
 can rightly be called marvelous. And yet, it was not easy to
@@ -567,11 +570,11 @@ into his geometric approach. He showed that if one picks a group at
 random, there is a high probability that it will be hyperbolic.
 
 On July 12, 1831, Gauss wrote a letter%
-\footnoteE{Carl Friedrich Gauss, \textit{Werke, Band VIII},
+\footnoteE{Carl Friedrich Gauß, \textit{Werke, Band VIII},
   \url{https://link.springer.com/book/10.1007/978-3-642-92474-3}
   or
   \url{https://archive.org/details/briefwechselzwi03schugoog/page/n10/mode/2up}
-  (Ed.)}
+  (Ed.)} %
 to his friend Schumacher about non-Euclidean geometry. Here is an English
 translation of an excerpt from that letter.
 \begin{quoting}[leftmargin=5mm,rightmargin=5mm]\sf
@@ -582,7 +585,7 @@ translation of an excerpt from that letter.
   In non-Euclidean geometry, there are no similar figures without
   equality. For example, the angles of an equilateral triangle are not
   only dependent on $R$,%
-  \footnoteE{By letter $R$, Gauss denotes the parameter of deformation
+  \footnoteE{By letter $R$ Gauss denotes the parameter of deformation
     of the geometry. Nowadays it is called (Gauss) curvature. (Ed.)}
   but also vary according to the size of the sides; and when
   the sides increases without limit, the angles can become as small as
