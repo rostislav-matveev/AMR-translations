@@ -98,11 +98,11 @@ Translation of articles for amr
 
   - [ ] http://images-archive.math.cnrs.fr/Transport-optimal-de-mesure-coup-de-neuf-pour-un-tres-vieux-probleme.html?lang=fr
 
-  - [ ] http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-1.html
+  - [x] http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-1.html
 
-  - [ ] http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-2.html
+  - [x] http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-2.html
 
-  - [ ] http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-3.html
+  - [x] http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-3.html
 
   - [ ] http://images-archive.math.cnrs.fr/Dynamique-diophantienne.html
 
