@@ -72,14 +72,14 @@ Translation of articles for amr
   - [ ] Editor comments
   - [ ] Article is unified with part I
 
-* ** https://images-archive.math.cnrs.fr/Une-famille-infinie-de-noeuds.html**
+* **https://images-archive.math.cnrs.fr/Une-famille-infinie-de-noeuds.html**
   - [ ] Contact author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
   - [ ] Article is unified with part I
 
-* ** https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-I.html**
+* **https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-I.html**
   - [ ] Contact author
   - [ ] Translation
   - [ ] Edits/comments
