@@ -85,7 +85,7 @@ Translation of articles for amr
   - [ ] Comments/approval by the author
   - [ ] Final
 
-* https://images-archive.math.cnrs.fr/**De-la-topographie-a-la-geometrie-I**.html
+* **https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-I.html**
   - [ ] Contact author
   - [ ] Translation
   - [ ] Edits/comments
@@ -93,6 +93,21 @@ Translation of articles for amr
   - [ ] Comments/approval by the author
   - [ ] Final
 
+* **https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-II.html**
+  - [ ] Contact author
+  - [ ] Translation
+  - [ ] Edits/comments
+  - [ ] Editor comments
+  - [ ] Comments/approval by the author
+  - [ ] Final
+
+* **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-1.html**
+  - [ ] Contact author
+  - [ ] Translation
+  - [ ] Edits/comments
+  - [ ] Editor comments
+  - [ ] Comments/approval by the author
+  - [ ] Final
 
 * **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-2.html**
   - [ ] Contact author
