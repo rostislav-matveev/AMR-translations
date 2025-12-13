@@ -49,49 +49,59 @@ Translation of articles for amr
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
-  - [ ] Article is unified with part I
+  - [ ] Comments/approval by the author
+  - [ ] Final
 
 * **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-2.html**
   - [ ] Contact author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
-  - [ ] Article is unified with part I
+  - [ ] Comments/approval by the author
+  - [ ] Final
 
 * **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-3.html**
   - [ ] Contact author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
-  - [ ] Article is unified with part I
+  - [ ] Comments/approval by the author
+  - [ ] Final
 
 * **http://images-archive.math.cnrs.fr/Transport-optimal-de-mesure-coup-de-neuf-pour-un-tres-vieux-probleme.html**
   - [ ] Contact author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
-  - [ ] Article is unified with part I
+  - [ ] Comments/approval by the author
+  - [ ] Final
+
 
 * **https://images-archive.math.cnrs.fr/Une-famille-infinie-de-noeuds.html**
   - [ ] Contact author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
-  - [ ] Article is unified with part I
+  - [ ] Comments/approval by the author
+  - [ ] Final
 
 * **https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-I.html**
   - [ ] Contact author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
-  - [ ] Article is unified with part I
+  - [ ] Comments/approval by the author
+  - [ ] Final
+
 
 * **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-2.html**
   - [ ] Contact author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
-  - [ ] Article is unified with part I
+  - [ ] Comments/approval by the author
+  - [ ] Final
+
 
 
 # The List
