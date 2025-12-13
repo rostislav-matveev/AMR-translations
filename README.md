@@ -65,7 +65,7 @@ Translation of articles for amr
   - [ ] Editor comments
   - [ ] Article is unified with part I
 
-*  **http://images-archive.math.cnrs.fr/Transport-optimal-de-mesure-coup-de-neuf-pour-un-tres-vieux-probleme.html**
+* **http://images-archive.math.cnrs.fr/Transport-optimal-de-mesure-coup-de-neuf-pour-un-tres-vieux-probleme.html**
   - [ ] Contact author
   - [ ] Translation
   - [ ] Edits/comments
