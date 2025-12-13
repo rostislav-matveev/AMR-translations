@@ -85,7 +85,7 @@ Translation of articles for amr
   - [ ] Comments/approval by the author
   - [ ] Final
 
-* **https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-I.html**
+* https://images-archive.math.cnrs.fr/**De-la-topographie-a-la-geometrie-I**.html
   - [ ] Contact author
   - [ ] Translation
   - [ ] Edits/comments
