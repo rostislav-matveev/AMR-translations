@@ -110,7 +110,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-2.html**
-  - [ ] Contact author
+  - [x] Contact author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
