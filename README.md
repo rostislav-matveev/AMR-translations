@@ -3,46 +3,21 @@ Translation of articles for amr
 
 ## Slava's log
 
-* **Les triangles d'Euclide, de Gauss et de Gromov**
-  https://images-archive.math.cnrs.fr/Les-triangles-d-Euclide-de-Gauss-et-de-Gromov.html
+* **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-1.html**
   - [x] Contact the author
-  - [x] Translation
-  - [x] Edits/comments
-  - [x] Editor comments
-  - [x] Comments/approval by the author
-  - [x] Final
-  
-* **Un peu de geometrie des groupes**
-  https://images-archive.math.cnrs.fr/Un-peu-de-geometrie-des-groupes
-  - [x] Contact the author
-  - [x] Translation
-  - [x] Edits/comments
-  - [x] Editor comments
-  - [x] Comments/approval by the author
-  - [x] Final
+  - [ ] Translation
+  - [ ] Edits/comments
+  - [ ] Editor comments
+  - [ ] Comments/approval by the author
+  - [ ] Final
 
-* **Representer les mondes I**
-  https://images-archive.math.cnrs.fr/Representer-les-mondes.html
+* **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-2.html**
   - [x] Contact the author
-  - [x] Translation
-  - [x] Edits/comments
-  - [x] Editor comments
-  - [x] Article is unified with part II
-
-* **Representer les mondes II**
-  https://images-archive.math.cnrs.fr/Representer-les-mondes-II.html
-  - [x] Contact the author
-  - [x] Translation
-  - [x] Edits/comments
-  - [x] Editor comments
-  - [x] Article is unified with part I
-
-* Unified **Representer les mondes I + II**
-  - [x] Unified two articles
-  - [x] Edits/comments
-  - [x] Editor comments
-  - [x] Comments/approval by the author
-  - [X] Final
+  - [ ] Translation
+  - [ ] Edits/comments
+  - [ ] Editor comments
+  - [ ] Comments/approval by the author
+  - [ ] Final
 
 * **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-1.html**
   - [ ] Contact the author
@@ -101,22 +76,48 @@ Translation of articles for amr
   - [ ] Comments/approval by the author
   - [ ] Final
 
-* **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-1.html**
-  - [x] Contact the author
-  - [ ] Translation
-  - [ ] Edits/comments
-  - [ ] Editor comments
-  - [ ] Comments/approval by the author
-  - [ ] Final
+### Completed
 
-* **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-2.html**
+* **Les triangles d'Euclide, de Gauss et de Gromov**
+  https://images-archive.math.cnrs.fr/Les-triangles-d-Euclide-de-Gauss-et-de-Gromov.html
   - [x] Contact the author
-  - [ ] Translation
-  - [ ] Edits/comments
-  - [ ] Editor comments
-  - [ ] Comments/approval by the author
-  - [ ] Final
+  - [x] Translation
+  - [x] Edits/comments
+  - [x] Editor comments
+  - [x] Comments/approval by the author
+  - [x] Final
+  
+* **Un peu de geometrie des groupes**
+  https://images-archive.math.cnrs.fr/Un-peu-de-geometrie-des-groupes
+  - [x] Contact the author
+  - [x] Translation
+  - [x] Edits/comments
+  - [x] Editor comments
+  - [x] Comments/approval by the author
+  - [x] Final
 
+* **Representer les mondes I**
+  https://images-archive.math.cnrs.fr/Representer-les-mondes.html
+  - [x] Contact the author
+  - [x] Translation
+  - [x] Edits/comments
+  - [x] Editor comments
+  - [x] Article is unified with part II
+
+* **Representer les mondes II**
+  https://images-archive.math.cnrs.fr/Representer-les-mondes-II.html
+  - [x] Contact the author
+  - [x] Translation
+  - [x] Edits/comments
+  - [x] Editor comments
+  - [x] Article is unified with part I
+
+* Unified **Representer les mondes I + II**
+  - [x] Unified two articles
+  - [x] Edits/comments
+  - [x] Editor comments
+  - [x] Comments/approval by the author
+  - [X] Final
 
 
 # The List
