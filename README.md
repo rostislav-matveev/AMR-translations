@@ -1,7 +1,7 @@
 # AMR-translations
 Translation of articles for amr
 
-## Slava
+## Slava's log
 
 * **Les triangles d'Euclide, de Gauss et de Gromov**
   https://images-archive.math.cnrs.fr/Les-triangles-d-Euclide-de-Gauss-et-de-Gromov.html
@@ -102,7 +102,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-1.html**
-  - [ ] Contact author
+  - [x] Contact author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
