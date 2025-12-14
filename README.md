@@ -5,7 +5,7 @@ Translation of articles for amr
 
 * **Les triangles d'Euclide, de Gauss et de Gromov**
   https://images-archive.math.cnrs.fr/Les-triangles-d-Euclide-de-Gauss-et-de-Gromov.html
-  - [x] Contact author
+  - [x] Contact the author
   - [x] Translation
   - [x] Edits/comments
   - [x] Editor comments
@@ -14,7 +14,7 @@ Translation of articles for amr
   
 * **Un peu de geometrie des groupes**
   https://images-archive.math.cnrs.fr/Un-peu-de-geometrie-des-groupes
-  - [x] Contact author
+  - [x] Contact the author
   - [x] Translation
   - [x] Edits/comments
   - [x] Editor comments
@@ -31,7 +31,7 @@ Translation of articles for amr
 
 * **Representer les mondes II**
   https://images-archive.math.cnrs.fr/Representer-les-mondes-II.html
-  - [x] Contact author
+  - [x] Contact the author
   - [x] Translation
   - [x] Edits/comments
   - [x] Editor comments
@@ -45,7 +45,7 @@ Translation of articles for amr
   - [X] Final
 
 * **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-1.html**
-  - [ ] Contact author
+  - [ ] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
@@ -53,7 +53,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-2.html**
-  - [ ] Contact author
+  - [ ] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
@@ -61,7 +61,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-3.html**
-  - [ ] Contact author
+  - [ ] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
@@ -69,7 +69,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **http://images-archive.math.cnrs.fr/Transport-optimal-de-mesure-coup-de-neuf-pour-un-tres-vieux-probleme.html**
-  - [ ] Contact author
+  - [ ] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
@@ -78,7 +78,7 @@ Translation of articles for amr
 
 
 * **https://images-archive.math.cnrs.fr/Une-famille-infinie-de-noeuds.html**
-  - [ ] Contact author
+  - [ ] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
@@ -86,7 +86,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-I.html**
-  - [ ] Contact author
+  - [ ] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
@@ -94,7 +94,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-II.html**
-  - [ ] Contact author
+  - [ ] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
@@ -102,7 +102,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-1.html**
-  - [x] Contact author
+  - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
@@ -110,7 +110,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-2.html**
-  - [x] Contact author
+  - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
