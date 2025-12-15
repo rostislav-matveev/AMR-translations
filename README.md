@@ -20,7 +20,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-1.html**
-  - [ ] Contact the author
+  - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
@@ -28,7 +28,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-2.html**
-  - [ ] Contact the author
+  - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
@@ -36,7 +36,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-3.html**
-  - [ ] Contact the author
+  - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
