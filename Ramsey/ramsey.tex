@@ -1,0 +1,110 @@
+\documentclass{amsart}
+\usepackage[utf8]{inputenc}
+    
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\bf\Large}{\Roman{section}. }{0em}{}
+\titleformat{\subsection}{\normalfont\bf\large }{\relax}{0em}{}
+\titleformat{\subsubsection}{\normalfont\bf}{\relax}{0em}{}
+
+\usepackage{enumitem}
+\usepackage{quoting}
+
+\usepackage{xcolor}
+\long\def\gray#1{{\color{gray}{#1}}}\let\grey=\gray
+\long\def\blue#1{{\color{blue}{#1}}}
+\long\def\red#1{{\color{red}{#1}}}
+
+\usepackage{wrapfig}
+\usepackage{lpic}
+
+\usepackage{manyfoot}
+\SetFootnoteHook{\hspace{1.5em}}
+\DeclareNewFootnote{A}
+\SetFootnoteHook{\hspace{1.5em}}
+\DeclareNewFootnote{E}[alph]
+\usepackage[hyperfootnotes=false,
+    colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}]{hyperref}
+\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
+
+\newcommand{\skipthis}[2][\dots]{\red{[#1]}\gray{#2}}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{question}{Question}
+\newtheorem*{problem}{Problem}
+\newtheorem{exercise}{Exercise}
+
+\let\dmo=\DeclareMathOperator
+
+\let\tmp\epsilon
+\let\epsilon\varepsilon
+\let\varepsilon\tmp
+
+
+\begin{document}
+\centerline{\bf\Large From Ramsey’s Theorem to the Erdős–Hajnal
+  Conjecture I%
+  \footnoteE{English translation by Rostislav Matveev of the article
+    \textit{Du Th\'eor\`eme de Ramsey \`a la Conjecture d’Erdős-Hajnal (1)},
+    by  Patrice Ossona de Mendez, (2017),
+    \url{https://images-archive.math.cnrs.fr/%
+      Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdős-Hajnal-1.htm}.
+  }}%
+\medskip
+
+\centerline{by Patrice Ossona de Mendez}
+\red{[Figure out how to deal with url]}
+\begin{center}
+  \begin{lpic}[draft,b(12ex),t(5ex),clean]{Pix/ramsey(0.5)}
+     \lbl[t]{70,-5;\parbox{0.9\textwidth}{
+        \begin{center}
+          \sf Ordnung muss sein! (Order is inevitable.) This saying,
+          attributed to Theodore Motzkin, aptly summarizes Ramsey
+          theory, which aims to solve problems of the form: ``From what
+          size on can a structure no longer avoid having a certain
+          property?''
+        \end{center}
+      }}
+  \end{lpic}
+\end{center}
+
+\section{A first example}
+
+A classic recreational problem is the “friends problem”:
+\begin{quoting}[leftmargin=5mm,rightmargin=5mm]\sf
+  When six people meet, we are sure that either three of them know one
+  another, or three of them do not know one another.
+\end{quoting}
+The proof of this fact is a bit tedious, because one has to consider
+different cases. Nevertheless, this annoying complication will open
+the way to a more general and more interesting point of view. Let us
+look at it more closely:
+
+So we have six people. Let us call Dominique%
+\footnoteA{Note that this is an epicene name, as gender is of no
+  relevance here.} %
+one of the people in the group.
+
+If Dominique knows at least three people in the group, two cases can occur:
+\begin{itemize}
+\item either two of them know each other (and together with Dominique,
+  that makes at least three people who know one another);
+\item or they do not know each other (and that makes three people who
+  do not know one another).
+\end{itemize}
+We see that in both cases we reach the desired conclusion. So we only
+have to consider the case where Dominique knows at most two people in
+the group. Again, two cases can occur among the people whom Dominique
+does not know:
+\begin{itemize}
+\item either two of them do not know each other (and together with
+  Dominique, that makes three people who do not know one another);
+\item or they all know one another (and that makes at least three
+  people who know one another).
+\end{itemize}
+In this case as well, we reach the desired conclusion.
+
+
+
+\end{document}

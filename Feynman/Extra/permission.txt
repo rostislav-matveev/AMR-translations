@@ -1,0 +1,56 @@
+From nils.berglund@univ-orleans.fr Sun Dec 14 21:11:15 2025
+Date: Sun, 14 Dec 2025 21:11:06 +0100
+From: Nils Berglund <nils.berglund@univ-orleans.fr>
+To: Slava Matveev <rostislav.matveev@googlemail.com>
+Subject: Re: Translations of your articles from Images des Math
+
+Dear Slava,
+Thanks for this initiative.
+
+Yes, you are welcome to translate my articles for your website. 
+
+Many figures in those articles have been produced with TiKZ. You may
+want to use the TiKZ code in your translation, rather than screenshots.
+I attach an archive that should contain all relevant TiKZ codes, as
+well as the associated PDFs. 
+
+Best regards,
+Nils
+
+
+
+
+> my name is Slava Matveev. Association for Math Research publishes 
+> translations of articles from Images des Mathematique at
+> https://ddec1-0-en-ctp.trendmicro.com:443/wis/clicktime/v1/query?url=https%3a%2f%2famathr.org%2fimages%2f&umid=badf1381-61f9-47e3-a5c4-1eb7a9c5723c&rct=1765699772&auth=66532154a22d8ff5d1f4a9c61e98c0d1d5243a94-8b55799a340f964a881544d991a00849052c1851
+> 
+> We have a broad permition from IdM to use articles, if authors afree.
+> 
+> I plan to translate your Les diagrammes de Feynman 1,2,3. Would that
+> be 
+> ok with you?
+> 
+> Needless to say, that you will see the translations for comments and
+> an 
+> endorsement before they are posted.
+> 
+> Best regards,
+> Slava Matveev.
+> 
+> 
+> 
+
+
+-- 
+Nils Berglund         
+Institut Denis Poisson 
+Universite d'Orleans, Universite de Tours, CNRS - UMR 7013 
+Route de Chartres, B.P. 6759            phone: ++33 2 38 49 26 87
+F-45067 Orleans cedex 2, France         fax:   ++33 2 38 41 72 05
+https://www.idpoisson.fr/berglund/
+https://www.youtube.com/c/NilsBerglund
+
+
+    [ Part 2, Application/X-COMPRESSED-TAR (Name: "feynman.tar.gz") 2.4 ]
+    [ MB. ]
+    [ Unable to print this part. ]
