@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
     
 \usepackage{titlesec}
-\titleformat{\section}{\normalfont\bf\Large}{\Roman{section}. }{0em}{}
+\titleformat{\section}{\normalfont\bf\Large}{\relax }{0em}{}
 \titleformat{\subsection}{\normalfont\bf\large }{\relax}{0em}{}
 \titleformat{\subsubsection}{\normalfont\bf}{\relax}{0em}{}
 
@@ -13,6 +13,10 @@
 \long\def\gray#1{{\color{gray}{#1}}}\let\grey=\gray
 \long\def\blue#1{{\color{blue}{#1}}}
 \long\def\red#1{{\color{red}{#1}}}
+\long\def\green#1{{\color{green}{#1}}}
+\long\def\violet#1{{\color{violet}{#1}}}
+\long\def\lila#1{{\color{lila}{#1}}}
+\long\def\cyan#1{{\color{cyan}{#1}}}
 
 \usepackage{wrapfig}
 \usepackage{lpic}
@@ -70,12 +74,14 @@
 \end{center}
 
 \section{A first example}
-
+\noindent
 A classic recreational problem is the “friends problem”:
+\medskip
 \begin{quoting}[leftmargin=5mm,rightmargin=5mm]\sf
   When six people meet, we are sure that either three of them know one
   another, or three of them do not know one another.
 \end{quoting}
+\medskip
 The proof of this fact is a bit tedious, because one has to consider
 different cases. Nevertheless, this annoying complication will open
 the way to a more general and more interesting point of view. Let us
@@ -105,6 +111,149 @@ does not know:
 \end{itemize}
 In this case as well, we reach the desired conclusion.
 
+\section{Is that a graph, doctor?}
 
+Let us now see how we can translate this result into the language of
+graph theory. A graph is a collection of vertices connected (or not)
+to one another by edges. Each edge has two incident vertices and
+represents a relation%
+\footnoteE{The relation must be symmetric for this representation to
+  work and such symmetry is assumed in this article. (Ed.)} %
+between two entities, the entities being the vertices. For example,
+the vertices can be people, and the edges can indicate who knows
+whom. Two vertices connected by an edge are said to be adjacent. We
+will also use the following two terms:
 
+A set of vertices is an independent set if it does not contain two
+adjacent%
+\footnoteE{That is, connected. (Ed.)} %
+vertices. In our example, a set of people who do not know one
+another is an independent set.
+
+A set of vertices is a clique if all vertices in the set are pairwise
+adjacent. In our example, a set of people who all know one another
+forms a clique.
+
+Let us return to our example. We have six people (so six vertices),
+and the edges connect the vertices corresponding to people who know
+one another: an edge connects the vertex Dominique and the vertex
+Claude if Dominique and Claude know one another.%
+\footnoteA{Note that here we are considering symmetric relations,
+  which would not have been the case if we had considered the property
+  “Dominique knows Claude,” which does not necessarily imply that,
+  symmetrically, Claude knows Dominique.} %
+
+\noindent
+In this language, the result we proved above can be stated as follows:
+\medskip
+\begin{quoting}[leftmargin=5mm,rightmargin=5mm]\sf
+  In any graph with six vertices, there exist three vertices forming
+  an independent set, or three vertices forming a clique.
+\end{quoting}
+\medskip
+
+\section{In \red{red} and \blue{blue}, Ramsey and his clique}
+
+We could also have constructed a graph differently, by connecting two
+people with a red edge if they know each other, and with a blue edge
+if they do not know each other. Thus, any two vertices are always
+connected by an edge, either \red{red} or \blue{blue}. Our result can
+then be stated as follows:
+\medskip
+\begin{quoting}[leftmargin=5mm,rightmargin=5mm]\sf
+  In any complete graph on six vertices whose edges are colored red or
+  blue, there exists a triangle (a 3-vertex clique) all of whose edges
+  have the same color (all \red{red} or all \blue{blue}).
+\end{quoting}
+\medskip
+This last formulation is a special case of Ramsey’s Theorem.
+
+\begin{theorem}[Ramsey’s Theorem]
+  For any finite set of colors (\red{red}, \green{green}, \blue{blue},
+  \violet{violet}, \dots) and any sequence of integers
+  $n_{\text{\red{red}}}, n_{\text{\green{green}}}, n_{\text{blue}},
+  n_{\text{\violet{violet}}}, \ldots$, there exists an integer $N$
+  with the following property:
+  
+  For every complete%
+  \footnoteE{A graph is called \emph{complete} if any pair of vertices
+    are connected by an edge. (Ed.)} %
+  graph on $N$ vertices whose edges are colored
+  with the colors \red{red}, \green{green}, \blue{blue},
+  \violet{violet},\dots there exists either
+  \begin{itemize}
+  \item
+    a clique of size $n_{\text{\red{red}}}$ all of whose edges are \red{red}, or
+  \item
+    a clique of size $n_{\text{\green{green}}}$ all of whose edges are \green{green}, or
+  \item
+    a clique of size $n_{\text{\blue{blue}}}$ all of whose edges are \blue{blue}, or
+  \item
+    a clique of size $n_{\text{\violet{violet}}}$ all of whose edges
+    are \violet{violet},
+  \item[etc.]\ \qed
+  \end{itemize}
+\end{theorem}
+Our example above corresponds to the fact that $N = 6$ has the
+property stated by the theorem in the case of two colors, \red{red} and
+\blue{blue}, and for the values $n_{\text{\red{red}}} = 3$ and
+$n_{\text{\blue{blue}}} = 3$. By contrast, $N = 5$ does not have this
+property:
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{Pix/r33-}
+\end{center}
+This group of five people is such that, in every subgroup of three
+people, one can find two people who know each other and two people who
+do not know each other. In other words, in a 5-cycle (corresponding to
+the red edges), one finds neither a clique of size 3 nor an
+independent set of size 3.
+
+\section{Big and colorful}
+Let us look at a slightly larger example and see how, in a complete
+graph on 17 vertices whose edges are colored red, green, and blue, we
+can always find a \emph{monochromatic triangle}, that is, a triangle
+all of whose edges have the same color. Here is the complete graph:
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{Pix/r333_}
+\end{center}
+Let us arbitrarily choose a vertex $v_1$. Consider the most prevalent
+color among the edges incident to this vertex (here, the \red{red} color,
+which appears on 6 edges), and focus on the complete subgraph whose
+vertices are $v_1$ and its neighbors connected to it by \red{red}
+edges:
+\begin{center}
+  \includegraphics[width=0.45\textwidth]{Pix/r333_0}
+  \includegraphics[width=0.45\textwidth]{Pix/r333_1}
+\end{center}
+If two of the selected neighbors of $v_1$ were connected by a red
+edge, we would have found a \red{red} monochromatic triangle. Here, this
+is not the case.
+
+So we arbitrarily choose one of the selected neighbors of $v_1$ and
+call it $v_2$. At this vertex, we again consider the majority color
+(here \blue{blue}, appearing on three edges), and we now select the vertices
+that are not only adjacent to $v_1$ by a \red{red} edge, but also adjacent
+to $v_2$ by a \blue{blue} edge.
+\begin{center}
+  \includegraphics[width=0.45\textwidth]{Pix/r333_2}
+\end{center}
+If two of the selected neighbors were connected by a \blue{blue} edge,
+we would have found a \blue{blue} monochromatic triangle. Since this is not
+the case, it means that the three neighbors of $v_2$ are all connected
+by \green{green} edges, so we have finally found a \green{green} monochromatic
+triangle. To find this triangle, it was necessary that $v_2$ have
+three neighbors in the majority color, hence at least 5 neighbors
+(after the selection among the neighbors of $v_1$). Therefore $v_1$
+needed to have at least 6 neighbors in the majority color, hence have
+degree at least 16 --- that is, the initial complete graph had to have
+size at least 17.
+
+By contrast, the edges of a complete graph on 16 vertices can be
+colored red, green, and blue without creating any monochromatic
+triangle:
+\begin{center}
+  \includegraphics[width=0.45\textwidth]{Pix/r333}
+\end{center}
+
+\section{Two colors is already not simple}
 \end{document}
