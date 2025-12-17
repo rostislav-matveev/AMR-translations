@@ -61,7 +61,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-I.html**
-  - [ ] Contact the author
+  - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
@@ -69,7 +69,7 @@ Translation of articles for amr
   - [ ] Final
 
 * **https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-II.html**
-  - [ ] Contact the author
+  - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
