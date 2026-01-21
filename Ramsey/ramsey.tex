@@ -35,6 +35,7 @@
 
 \newcommand{\skipthis}[2][\dots]{\red{[#1]}\gray{#2}}
 \newtheorem*{theorem}{Theorem}
+\newtheorem*{proposition}{Proposition}
 \newtheorem*{question}{Question}
 \newtheorem*{problem}{Problem}
 \newtheorem{exercise}{Exercise}
@@ -47,13 +48,12 @@
 
 
 \begin{document}
-\centerline{\bf\Large From Ramsey’s Theorem to the Erdős–Hajnal
+\centerline{\bf\Large From Ramsey’s Theorem to the Erd\H os–Hajnal
   Conjecture I%
   \footnoteE{English translation by Rostislav Matveev of the article
     \textit{Du Th\'eor\`eme de Ramsey \`a la Conjecture d’Erdős-Hajnal (1)},
     by  Patrice Ossona de Mendez, (2017),
-    \url{https://images-archive.math.cnrs.fr/%
-      Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdős-Hajnal-1.htm}.
+    \url{https://doi.org/10.60868/tg9t-gq67}.
   }}%
 \medskip
 
@@ -171,7 +171,7 @@ This last formulation is a special case of Ramsey’s Theorem.
 \begin{theorem}[Ramsey’s Theorem]
   For any finite set of colors (\red{red}, \green{green}, \blue{blue},
   \violet{violet}, \dots) and any sequence of integers
-  $n_{\text{\red{red}}}, n_{\text{\green{green}}}, n_{\text{blue}},
+  $n_{\text{\red{red}}}, n_{\text{\green{green}}}, n_{\text{\blue{blue}}},
   n_{\text{\violet{violet}}}, \ldots$, there exists an integer $N$
   with the following property:
   
@@ -210,9 +210,10 @@ independent set of size 3.
 
 \section{Big and colorful}
 Let us look at a slightly larger example and see how, in a complete
-graph on 17 vertices whose edges are colored red, green, and blue, we
-can always find a \emph{monochromatic triangle}, that is, a triangle
-all of whose edges have the same color. Here is the complete graph:
+graph on 17 vertices whose edges are colored \red{red}, \green{green},
+and \blue{blue}, we can always find a \emph{monochromatic triangle},
+that is, a triangle all of whose edges have the same color. Here is
+an example of a colored complete graph:
 \begin{center}
   \includegraphics[width=0.5\textwidth]{Pix/r333_}
 \end{center}
@@ -225,7 +226,7 @@ edges:
   \includegraphics[width=0.45\textwidth]{Pix/r333_0}
   \includegraphics[width=0.45\textwidth]{Pix/r333_1}
 \end{center}
-If two of the selected neighbors of $v_1$ were connected by a red
+If two of the selected neighbors of $v_1$ were connected by a \red{red}
 edge, we would have found a \red{red} monochromatic triangle. Here, this
 is not the case.
 
@@ -249,11 +250,197 @@ degree at least 16 --- that is, the initial complete graph had to have
 size at least 17.
 
 By contrast, the edges of a complete graph on 16 vertices can be
-colored red, green, and blue without creating any monochromatic
-triangle:
+colored \red{red}, \green{green}, and \blue{blue} without creating any
+monochromatic triangle:
 \begin{center}
   \includegraphics[width=0.45\textwidth]{Pix/r333}
 \end{center}
 
-\section{Two colors is already not simple}
+\section{With just two colors it is already not so simple}
+\noindent Let us return to the two-color problem:
+\medskip
+\begin{quoting}[leftmargin=5mm,rightmargin=5mm]\sf
+  For an integer $t$, what is the smallest integer $n$ such that in
+  every complete graph on $n$ vertices whose edges are colored
+  \red{red} and \blue{blue}, we are guaranteed to find a monochromatic
+  clique of size $t$?
+\end{quoting}
+\medskip
+
+For example, we have already shown above that every complete graph on
+6 vertices whose edges are colored with two colors contains a
+monochromatic triangle. In other words, for $t = 3$ it is enough to
+choose $n \ge 6$.
+
+In the general case, we can apply the same proof method as the one we
+followed above.
+
+Consider a complete graph on $n$ vertices whose edges are colored \blue{blue}
+and \red{red}. Let $v_1$ be any vertex, and let $c_1$ be the majority color
+among the edges incident to $v_1$. Select the neighbors of $v_1$ that
+are connected to $v_1$ by an edge of color $c_1$, and among these
+vertices choose an arbitrary $v_2$. Let $c_2$ be the majority color
+among the edges incident to $v_2$ that connect $v_2$ to vertices that
+are connected to $v_1$ by an edge of color $c_1$. Select the vertices
+that are both connected to $v_1$ by an edge of color $c_1$ and
+connected to $v_2$ by an edge of color $c_2$. Among these vertices we
+choose an arbitrary $v_3$, etc.
+
+In this process, we select a sequence $v_1, v_2, v_3, \ldots, v_k$ of
+vertices, until $v_k$ has no neighbors left. Moreover, we color vertex
+$v_i$ with the color $c_i$.
+
+Counting backwards, we see that $v_{k-1}$ has at least 1 neighbor
+($v_k$), $v_{k-2}$ has at least 3 neighbors, $v_{k-3}$ has at least 7
+neighbors, and so on.
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{Pix/ramsey-graph}
+\end{center}
+Another way to count is the following: the complete subgraph formed by
+$v_{k-1}$ and the set of vertices connected to $v_1$ by an edge of
+color $c_1$, to $v_2$ by an edge of color $c_2$, …, to $v_{k-1}$ by an
+edge of color $c_{k-1}$ has size 2 (it contains only $v_{k-1}$ and
+$v_k$). The complete subgraph formed by $v_{k-2}$ and the set of
+vertices connected to $v_1$ by an edge of color $c_1$, to $v_2$ by an
+edge of color $c_2$, …, to $v_{k-2}$ by an edge of color $c_{k-2}$ is
+twice as large, of size 4, and so on.
+
+To be sure to find a monochromatic clique of size $t$, it is enough
+that $k \ge 2t - 1$, because then the vertices among
+$v_1, \ldots, v_{2t-1}$ of the majority color (which appears at least
+$t$ times) form a monochromatic clique. So it is sufficient that the
+size $n$ of the initial complete graph whose edges are colored blue
+and red be at least
+\[
+n\geq \underbrace{2\times2\times\dots\times2}_{2t-1}=2^{2t-1}
+\]
+
+It is rather surprising that this result is, up to a small margin,
+optimal. Indeed, if one colors at random%
+\footnoteA{Independently, with probability $1/2$ for each color.} %
+the edges of a clique of
+size $2^{t}$ in \red{red} and \blue{blue}, there is a very high
+probability%
+\footnoteA{More precisely, with a probability that tends to $1$ as $t$
+  tends to infinity, that is, ``asymptotically almost surely.''} %
+that the size of the largest monochromatic clique is of the same order
+of magnitude as $t$.%
+\footnoteA{This result can be derived from Markov’s inequality. In the
+  1970s, Matula proved that the likely values of the size of the
+  largest monochromatic clique are essentially concentrated on two
+  values close to $2t$. For example, if $t=10$ (that is, if we
+  consider a complete graph of size $2^{10}=1024$), there is about an 80\%
+  chance that the largest monochromatic clique has size exactly $15$.
+} %
+
+
+In summary, Ramsey’s theorem states that a certain amount of order is
+unavoidable, and the structures where this order is ``minimal'' are,
+quite intuitively,%
+\footnoteA{In the sense that ``at random'' and ``without order'' are
+  two notions that are often regarded, pragmatically, as equivalent.} %
+the random structures.
+
+Instead of looking at an edge-coloring of a clique with two colors,
+one can study an arbitrary graph $G$ on a set of $n$ vertices. Indeed,
+if we consider the complete graph with edges present in $G$ to be blue
+and the edges absent from $G$ to be red, Ramsey’s theorem can be
+interpreted in the following form:
+\begin{theorem}
+  Let $t$ be a natural number, and let $n$ be a natural number greater
+  than $2^{2t-1}$.  Then any graph $G$ on $n$ vertices necessarily
+  contains a clique of size $t$ or an independent set of size $t$ (or
+  both).
+\end{theorem}
+We see that the number $n$ grows very quickly with $t$. For example,
+to be sure of finding a clique or an independent set of size $t=100$,
+we need to consider a graph of size
+\[
+n\geq 2^{199}=803469022129495137770981046170581301261101496891396417650688
+\]
+A natural question then arises: under what conditions can we reduce
+this astronomical number?
+
+\section{The Erd\H os--Hajnal conjecture}
+
+We have seen that if the number $n$ of vertices in a graph is large
+enough, then the graph contains a large clique or a large independent
+set.
+
+What happens if one of the two possibilities is forbidden? More
+precisely, what if we consider a graph that contains no triangle, that
+is, no clique of size $3$? Does the number $n$ of vertices of $G$ still
+need to grow as fast as $2^{2t-1}$ in order to guarantee the existence
+of an independent set of size $t$? We will see that in fact, instead of
+requiring $n\geq2^{2t-1}$, it is enough to have just $n\geq t^2$. For
+example, for $t=100$, the necessary size is merely $n\geq10000$.
+
+\subsubsection{Why is this so?}
+
+Consider a triangle-free graph $G$ with $n\geq t^{2}$ vertices. There
+are two possibilities:
+\begin{itemize}
+\item 
+  Graph $G$ contains a vertex $v$ with at least $t$
+  neighbors. Then the set of neighbors of $v$ forms an independent set
+  of size $t$: indeed, there cannot be an edge joining two neighbors of
+  $v$, because otherwise those two vertices together with $v$ would form
+  a triangle.
+\item
+  Every vertex of $G$ has at most $t-1$ neighbors. We will
+  color the vertices using the $t$ colors: we
+  take the vertices one by one. Each vertex receives one of the
+  colors that is not already used by one of its neighbors. Since each
+  vertex has at most $t-1$ neighbors, there is always an available
+  color. In the end, we have colored the vertices of the graph and, by
+  construction, two adjacent vertices never share the same color. Now
+  choose the most frequently used color. Since the graph has $n$
+  vertices, at least $n/t$ vertices have this majority color. These
+  vertices form an independent set. Indeed, two vertices of the same
+  color are never adjacent. Since $n\geq t^2$, this set has size at least
+  $t$.
+\end{itemize}
+
+We have in effect proved the following proposition:
+\begin{proposition}
+  If a triangle-free graph has at least $t^{2}$ vertices, then it
+  contains an independent set of size $t$.
+\end{proposition}
+
+We have seen that when we forbid the presence of a triangle (that is,
+a clique of size $3$), we can find a large independent set. What
+happens if we forbid a larger clique? A priori, we expect the size of
+the graph required to guarantee the presence of an independent set of
+size $t$ to grow progressively from $t^{2}$ up to $2^{2t-1}$, depending
+on the size of the forbidden clique.
+
+We will see that the size of the graph without cliques of size $k$
+required to guarantee the existence of an independent set of size $t$
+grows like $t^{k-1}$:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
