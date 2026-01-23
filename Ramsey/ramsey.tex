@@ -37,7 +37,7 @@
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{proposition}{Proposition}
 \newtheorem*{question}{Question}
-\newtheorem*{problem}{Problem}
+\newtheorem*{conjecture}{Conjecture}
 \newtheorem{exercise}{Exercise}
 
 \let\dmo=\DeclareMathOperator
@@ -50,11 +50,18 @@
 \begin{document}
 \centerline{\bf\Large From Ramsey’s Theorem to the Erd\H os–Hajnal
   Conjecture I%
+  \footnoteA{This article grew out of a conversation in Prague, over a
+    glass of wine, with Shalom Eliahou. I am grateful to him for his
+    encouragement, his insightful suggestions, and his valuable
+    comments on the first draft of this article. I would also like to
+    thank Marielle Simon and Pierre Lescanne for their kind feedback,
+    wise advice, and careful proofreading. Finally, I wish to express
+    my gratitude to Carole Gaboriau and Ma\"i Sauvageot, indispensable
+    editorial assistants, for their constant help.}$^{,}$%
   \footnoteE{English translation by Rostislav Matveev of the article
-    \textit{Du Th\'eor\`eme de Ramsey \`a la Conjecture d’Erdős-Hajnal (1)},
-    by  Patrice Ossona de Mendez, (2017),
-    \url{https://doi.org/10.60868/tg9t-gq67}.
-  }}%
+    \textit{Du Th\'eor\`eme de Ramsey \`a la Conjecture d’Erdős-Hajnal
+      (1)}, by Patrice Ossona de Mendez, (2017),
+    \url{https://doi.org/10.60868/tg9t-gq67}.  }}%
 \medskip
 
 \centerline{by Patrice Ossona de Mendez}
@@ -418,27 +425,102 @@ We will see that the size of the graph without cliques of size $k$
 required to guarantee the existence of an independent set of size $t$
 grows like $t^{k-1}$:
 
+\begin{proposition}
+  Every graph on at least $t^{k-1}$ vertices and with no clique of
+  size $k\geq3$ contains an independent set of size $t$.
+\end{proposition}
+\paragraph{\textbf{Proof sketch by induction on $k$:}} We have already shown
+that if we forbid all triangles (that is, all cliques of size $3$),
+then every graph with $t^2$ vertices contains an independent set of
+size $t$. \blue{This will be the base of the induction. Now we show
+  how to make one induction step: $(k=3)\;\to\;(k=4)$.}
 
+Consider a graph with no cliques of size $4$ and with $n\geq t^{3}$
+vertices.
 
+If, on the one hand, $G$ contains a vertex $v$ with at least $t^{2}$
+neighbors, then the subgraph induced%
+\footnoteE{An induced subgraph is the one that contains all the
+  possible edges of the ambient graph, given the set of
+  vertices. (Ed.)} %
+by the neighbors of $v$ contains no triangle, because any triangle in
+the neighborhood of $v$ would form, together with $v$, a clique of size
+$4$. Moreover, the graph induced by the neighbors of $v$ has at least
+$t^{2}$ vertices (since $v$ has at least $t^{2}$ neighbors). By the previous
+result, we can conclude that the neighborhood of $v$ contains an
+independent set of size $t$.
 
+If, on the other hand, all vertices of $G$ have at most $t^{2}-1$
+neighbors, then, as we saw above, we can color the vertices of $G$
+using $t^{2}$ colors so that no two adjacent vertices share the same
+color. The most frequent color class then forms an independent set of
+size $n/t^{2}$. Hence $G$ contains an independent set of size at least
+$t$, since $n\geq t^{3}$.
 
+\blue{The general induction step proceeds along the same lines.}
+\bigskip
 
+These results show that forbidding a clique of fixed size guarantees
+that the number of vertices needed to guaramtee the presence of an
+independent set of size $t$ is bounded by a power of $t$, with
+exponent depending on the size of the forbidden clique.
 
+By passing to the complementary graph (obtained by swapping edges and
+non-edges), we see that the number of vertices needed to guarantee
+a clique of size $t$ in a graph with no independent
+set of size $k$ is at most $t^{k-1}$ --- a power
+of $t$ whose exponent depends only on the size $k$ of the forbidden
+independent set.
 
+It is natural to ask whether such a phenomenon can be
+generalized. This is the point of the conjecture posed by Erd\H os and
+Hajnal in 1989. Before stating it, let us take a moment to introduce a
+few definitions.
 
+Let $G$ and $H$ be two graphs. Let $a_1,\dots,a_{h}$ be all vertices
+of $H$. A copy of $H$ in $G$ is a set of distinct vertices
+$v_{1},\dots,v_{h}$ of $G$ such that $v_{i}$ is adjacent to $v_{j}$ in
+$G$ if and only if $a_{i}$ is adjacent to $a_{j}$ in $H$:%
+\footnoteE{In other words, a copy of $H$ in $G$ is an induced subgraph
+of $G$ isomorphic to $H$. (Ed.)} %
+\begin{center}
+  \includegraphics[width=0.7\textwidth]{Pix/copy}
+\end{center}
 
+In particular, if $H$ is a graph with $t$ vertices and no edges, then
+a copy of $H$ in $G$ is an independent set of size $t$ in
+$G$. Similarly, if $H$ is a complete graph with $t$ vertices, then a
+copy of $H$ in $G$ is a clique of size $t$.
 
+Paul Erd\H os and Andr\'as Hajnal proposed the follwing conjecture:
 
+\red{I have removed ``sufficiently large'' quantifier, because we can
+  always increase $c(F)$ so that $2^{c(F)}\geq N$, where $N$ is the
+  (sufficiently-large)-threshold.}
+\begin{conjecture}[Erd\H os--Hajnal conjecture]
+  For every graph $F$, there exists an integer $c(F)$ with the
+  following property: any \grey{sufficiently large}%
+  \footnoteA{\gray{``Sufficiently large'' means ``larger than some size
+    $N(F)$ depending only on $F$.''}} %
+  graph $G$ that contains no copy of $F$, and that has more than $t^{c(F)}$
+  vertices, contains either an independent set or a clique of size
+  $t$.
+\end{conjecture}
 
+We can restate the Erd\H os--Hajnal conjecture in a dual form,
+emphasizing how it is related to a notion of ``unavoidable order''.
 
+\red{Added  $t>h$ below.}
+\begin{conjecture}[Erd\H os–Hajnal conjecture (second formulation)]
+  For every integer $h$, there exists an integer $K(h)$ with the
+  following property: if a graph $G$ contains neither an independent
+  set nor a clique of size $t>h$, and has at least $t^{K(h)}$ vertices,
+  then $G$ contains a copy of every graph on $h$ vertices.
+\end{conjecture}
 
-
-
-
-
-
-
-
+In the second part, we will look at a few special cases in which the
+conjecture can be proved, and we will take stock of how much work
+remains to establish it in full generality.
 
 
 

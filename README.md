@@ -3,9 +3,10 @@ Translation of articles for amr
 
 ## Slava's log
 
-* **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-1.html**
+* **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 1**\\
+   https://doi.org/10.60868/tg9t-gq67**
   - [x] Contact the author
-  - [ ] Translation
+  - [x] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
   - [ ] Comments/approval by the author
