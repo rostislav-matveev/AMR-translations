@@ -5,7 +5,7 @@ Translation of articles for amr
 
 * **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 1**
 
-   https://doi.org/10.60868/tg9t-gq67**
+   https://doi.org/10.60868/tg9t-gq67
   - [x] Contact the author
   - [x] Translation
   - [ ] Edits/comments
@@ -13,7 +13,9 @@ Translation of articles for amr
   - [ ] Comments/approval by the author
   - [ ] Final
 
-* **https://images-archive.math.cnrs.fr/Du-Theoreme-de-Ramsey-a-la-Conjecture-d-Erdös-Hajnal-2.html**
+* **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 2**
+
+  https://doi.org/10.60868/q1m6-2n71	  
   - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
