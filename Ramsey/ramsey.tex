@@ -508,17 +508,19 @@ copy of $H$ in $G$ is a clique of size $t$.
 
 Paul Erd\H os and Andr\'as Hajnal proposed the follwing conjecture:
 
-\red{I have removed ``sufficiently large'' quantifier, because we can
-  always increase $c(F)$ so that $2^{c(F)}\geq N$, where $N$ is the
-  (sufficiently-large)-threshold.}
 \begin{conjecture}[Erd\H os--Hajnal conjecture]
   For every graph $F$, there exists an integer $c(F)$ with the
-  following property: any \grey{sufficiently large}%
-  \footnoteA{\gray{``Sufficiently large'' means ``larger than some size
-    $N(F)$ depending only on $F$.''}} %
-  graph $G$ that contains no copy of $F$, and that has more than $t^{c(F)}$
-  vertices, contains either an independent set or a clique of size
-  $t$.
+  following property: any sufficiently large%
+  \footnoteA{``Sufficiently large'' means ``larger than some
+      size $N(F)$ depending only on $F$.''}$^{,}$%
+  \footnoteE{Formally speaking the ``sufficiently large'' quantifier
+    is not necessary in the statement, since we can always increase
+    the value of $c(F)$ to be bigger then $\log_{2}N(F)$. However, one
+    is interested in the minimal value of $c(F)$ for which the
+    property in the conjecture is satisfied for large graphs.} %
+  graph $G$ that contains no copy of $F$, and that has more than
+  $t^{c(F)}$ vertices, contains either an independent set or a clique
+  of size $t$.
 \end{conjecture}
 
 We can restate the Erd\H os--Hajnal conjecture in a dual form,
@@ -542,7 +544,7 @@ emphasizing how it is related to a notion of ``unavoidable order''.
     commentary. Finally, a big thank you to Carole Gaboriau and Ma\"i
     Sauvageot, tireless shell hunters, for their precious support.}}
 \medskip
-
+\red{Todo: scale to the size of Ramsey?}
 \begin{center}
   \begin{lpic}[draft,b(15ex),t(1ex),l(2em),r(2.5em),clean]{Pix/erdos-hajnal-fixedres}
      \lbl[t]{50,-2;\parbox{0.9\textwidth}{
@@ -590,14 +592,14 @@ whereas a clique is a set of vertices that are all pairwise adjacent.
   hasty conclusions.} 
 
 \bigskip\par
+\red{The original (here) is longer and more complex then French
+  translation.}
 \begin{quoting}\sf\noindent
   The human understanding is of its own nature prone to suppose the
-  existence of more order and regularity in the world than it finds.
-  too much.
-  
-\noindent\it
-Francis Bacon%
-\footnoteE{Francis Bacon, \textit{Novum Organum} (1620), Book I, Aphorism 45.}
+  existence of more order and regularity in the world than it finds.  
+  \par\noindent\it
+  Francis Bacon%
+  \footnoteE{Francis Bacon, \textit{Novum Organum} (1620), Book I, Aphorism 45.}
 \end{quoting}
 \bigskip\par
 
@@ -626,7 +628,7 @@ us allow ourselves to borrow a philosophical quotation to illustrate
 our point.
 
 \bigskip\par
-\red{Strugling to translate:}
+\red{Somewhat free translation:}
 \begin{quoting}\sf\noindent
   What characterizes chaos is not so much the absence of patterns, but
   the great speed at which they emerge and disappear. Chaos is not a
@@ -686,4 +688,53 @@ define $c(F)$ to be the smallest integer with this property.
 In the first part, we proved that complete graphs do have the Erd\H os–Hajnal
 property. In fact, if $F$ is a complete graph of size $k$, then we have
 $c(F)\leq k-1$.
+
+\section{A textbook case: paths of length 3 and cographs}
+\subsection{A short path to warm up\dots}
+What about the path $P_{3}$ of length $2$ (the ``$3$'' in $P_{3}$
+refers to the number of vertices in the path, not its length)?
+
+A graph contains an induced copy of the path $P_{3}$ of length $2$ if
+it contains three vertices $a$, $b$ and $c$ such that $a$ is adjacent to $b$
+and $b$ is adjacent to $c$, but $a$ is not adjacent to $c$.%
+\footnoteE{Thus, absence of copies of $P_{3}$ means that any induced
+  connected subgraph on $3$ vertices is a triangle.} %
+\begin{center}
+  \begin{lpic}[draft,b(4ex),l(6em),r(6em),clean]{Pix/p3-2}
+     \lbl[t]{13,-2;\parbox{0.53\textwidth}{
+         \begin{center}\sf
+           An induced copy of $P_{3}$ on the vertices $a,b,c$.
+         \end{center}
+         }}
+  \end{lpic}
+\end{center}
+Graphs with no induced copies of $P_{3}$ have a very simple structure:
+they are disjoint unions of complete graphs!
+\begin{center}
+  \begin{lpic}[draft,b(7ex),l(1em),r(1em),clean]{Pix/nop3(0.5)}
+     \lbl[t]{98,-2;\parbox{0.8\textwidth}{
+         \begin{center}\sf
+           A (disconnected) graph with no induced copies of a path of
+           length $2$.  In this graph, each connected component is a
+           clique.
+         \end{center}
+       }}
+  \end{lpic}
+\end{center}
+\red{Replaced   $c(P_{3})\leq2$ with $c(P_{3})=2$}
+\begin{proposition}
+  The path $P_{3}$ of length $2$ has the Erd\H os--Hajnal property
+  with $c(P_{3})=2$.
+\end{proposition}
+\paragraph{\textbf{Proof:}}
+Let $G$ be a graph with no induced copy of the path $P_{3}$ of length
+$2$. Then $G$ is a disjoint union of cliques. Suppose that $G$ has at
+least $t^{2}$ vertices. 
+
+If $G$ contains no clique of size $t$, then it must contain at least
+$t$ cliques. By choosing one vertex from each clique, we obtain an
+independent set of size at least $t$.
+\subsection{Let’s join the dance: from a pas de deux to a pas de trois.}
+
+lll
 \end{document}
