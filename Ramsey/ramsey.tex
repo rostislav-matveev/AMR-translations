@@ -127,7 +127,7 @@ does not know:
 \item or they all know one another (and that makes at least three
   people who know one another).
 \end{itemize}
-In this case as well, we reach the desired conclusion.
+In this case as well, we reach the desired conclusion.\hfill\qed
 
 \section{Is that a graph, doctor?}
 
@@ -472,6 +472,7 @@ size $n/t^{2}$. Hence $G$ contains an independent set of size at least
 $t$, since $n\geq t^{3}$.
 
 \blue{The general induction step proceeds along the same lines.}
+\hfill\qed
 \bigskip
 
 These results show that forbidding a clique of fixed size guarantees
@@ -733,7 +734,7 @@ least $t^{2}$ vertices.
 
 If $G$ contains no clique of size $t$, then it must contain at least
 $t$ cliques. By choosing one vertex from each clique, we obtain an
-independent set of size at least $t$.
+independent set of size at least $t$.\hfill\qed
 \subsection{Let’s join the dance: from a pas de deux to a pas de trois.}
 A far less simple --- however very instructive --- example is the path
 of length $3$. A graph contains an induced copy of the path $P_{4}$ of
@@ -832,7 +833,112 @@ of length $3$, contradicting our initial assumption.
 
 Hence, by contradiction, we have shown that in a cograph --- that is, in a
 graph containing no induced copy of $P_{4}$ --- every maximal independent set
-intersects every maximal clique.
+intersects every maximal clique.\hfill\qed
+
+
+\begin{proposition} Let $S$ be a maximal independent set of a cograph
+  $G$, and let $K$ be a maximum%
+  \footnoteE{Note the distiction, a \emph{maximum} clique is the largest
+    in size among all cliques of $G$, whereas a \emph{maximal} clique is
+    the one that can not be extended to a bigger one. One implies the
+    other (which way?), but not the other way around. (Ed.)} %
+  clique of $G$.
+
+  Let $G$ be the graph obtained from $G$ by deleting all vertices of
+  $S$ (together with all edges incident to them), and let $K'$ be the
+  clique of $G'$ obtained by removing from $K$ the unique vertex that
+  lies in both $K$ and $S$.
+
+  Then $K'$ is a maximum clique of the cograph $G'$.
+\end{proposition}
+\paragraph{\bf Proof:} Let $c$ be the number of vertices in $K$. Since
+every maximal clique intersects every maximal independent set, there
+exists a vertex $v$ that belongs to both $K$ and $S$.
+
+Note that no other vertex can lie in both $K$ and $S$: otherwise, that
+vertex would have to be adjacent to $v$ (since both are in the clique
+$K$) and non-adjacent to $v$ (since both are in the independent set $S$),
+which is impossible.
+
+If we delete all vertices of $S$, we in particular delete the vertex
+$v$ from $K$, and we obtain the clique $K':=K\setminus\{v\}$ of size
+$c-1$.
+
+\begin{center}
+  \begin{lpic}[draft,b(4ex),l(1em),r(1em),clean]{Pix/sk(0.29)}
+     \lbl[t]{135,-2;\parbox{0.80\textwidth}{
+         \begin{center}\sf
+           Deleting a maximal independent set from a cograph.
+         \end{center}
+         }}
+  \end{lpic}
+\end{center}
+Assume for contradiction that $K'$ is not a maximum clique of $G'$.
+Let $K'$ be a maximum clique of $G'$, so $|K'|\geq c$. But $K''$ is
+also a clique of $G$, and in fact a maximum clique of $G$ (since it
+has size $c$). Therefore $K''$ intersects $S$, contradicting the
+assumption that $K''$ is a clique of $G'$.\hfill\qed
+
+\subsection{And from structure comes order}
+We will see that this property will allow us to prove that $P_{4}$ has
+the Erd\H os--Hajnal property. More precisely:
+\begin{proposition}
+  The path $P_{4}$ of length $3$ has the Erd\H os--Hajnal property
+  with $c(P_{4})\leq2$.
+\end{proposition}
+\paragraph{Proof:}
+We will in fact prove a slightly stronger statement: if a cograph on
+$n$ vertices (that is, a graph on $n$ vertices with no induced copies
+of $P_{4}$) has neither an independent set nor a clique of size $t$,
+then $n\leq(t-1)^{2}$. 
+
+Indeed, suppose that our graph $G$ contains no clique of size $t$, and
+let $K$ be a maximum clique (so $|K|=k\leq t-1$). Choose a maximal
+independent set $S$ (which therefore contains a vertex $v$ of $K$) and
+delete it.  We obtain a new graph $G'$, which is still a cograph and
+$K\setminus\{v\}$ is a maximum clique of $G'$.
+
+Repeat the same operation until the graph is empty (i.e., has no
+vertices left). Since at each step we delete exactly one vertex of KK,
+we have deleted $k$ independent sets in total. If
+$n>(t-1)^{2}\geq k(t-1)$, then one of the independent sets we deleted
+had size at least $t$. Because deleting vertices does not change
+adjacency relations within that set, the original graph already
+contained an independent set of size $t$.  \hfill\qed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
