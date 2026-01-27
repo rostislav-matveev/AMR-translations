@@ -38,7 +38,7 @@
 \newtheorem*{proposition}{Proposition}
 \newtheorem*{question}{Question}
 \newtheorem*{conjecture}{Conjecture}
-\newtheorem{exercise}{Exercise}
+\newtheorem*{definition}{Definition}
 
 \let\dmo=\DeclareMathOperator
 
@@ -735,6 +735,98 @@ If $G$ contains no clique of size $t$, then it must contain at least
 $t$ cliques. By choosing one vertex from each clique, we obtain an
 independent set of size at least $t$.
 \subsection{Let’s join the dance: from a pas de deux to a pas de trois.}
+A far less simple --- however very instructive --- example is the path
+of length $3$. A graph contains an induced copy of the path $P_{4}$ of
+length $3$ if it contains four vertices $a$,$b$,$c$ and $d$ such that
+$a$ is adjacent to $b$, $b$ to $c$, and $c$ to $d$, and there are no
+other adjacencies; that is, if one can find in the graph the following
+configuration:
+\medskip\par
+\begin{center}
+  \begin{lpic}[draft,b(4ex),l(6em),r(6em),clean]{Pix/p4-2}
+     \lbl[t]{19,-2;\parbox{0.60\textwidth}{
+         \begin{center}\sf
+           An induced copy of $P_{4}$ on the vertices $a,b,c,d$.
+         \end{center}
+         }}
+  \end{lpic}
+\end{center}
+This example will show us how a local constraint can give rise to a
+global structure, and how that global structure forces the presence of
+a large clique or a large independent set.
 
-lll
+\subsection{From constraint comes structure.}
+\begin{definition} Graphs that contain no induced copy of the path
+  $P_{4}$ of length $3$ are called cographs.
+\end{definition}
+
+% \medskip\par
+\begin{center}
+  \begin{lpic}[draft,b(4ex),l(1em),r(1em),clean]{Pix/cog}
+     \lbl[t]{26,-2;\parbox{0.40\textwidth}{
+         \begin{center}\sf
+           An example of a cograph.
+         \end{center}
+         }}
+  \end{lpic}
+\end{center}
+Cographs have a very special global structure, which, in particular,
+links \emph{maximal independent sets} (that is, independent sets that are not
+strictly contained in any larger independent set) and \emph{maximal cliques}
+(that is, cliques that are not strictly contained in any larger
+clique):
+
+\begin{proposition}
+  In a cograph, every maximal independent set intersects every maximal
+  clique.
+\end{proposition}
+
+% \begin{wrapfigure}{r}{0mm}
+  % \fbox{\includegraphics[width=0.2\textwidth]{Pix/cogr0}}
+% \end{wrapfigure}
+
+\paragraph{Proof:} We prove this by contradiction, with the help of
+figures.
+\newlength{\cogwidth}\setlength{\cogwidth}{0.29\textwidth}
+\begin{center}
+  \begin{tabular}{ccc}
+    \includegraphics[width=\cogwidth]{Pix/cogr0}
+    &\includegraphics[width=\cogwidth]{Pix/cogr1}
+    &\includegraphics[width=\cogwidth]{Pix/cogr2}\\
+    \sf Fig. 1
+    &\sf Fig. 2
+    &\sf Fig. 3
+  \end{tabular}
+  \bigskip\par
+  \begin{tabular}{cc}
+    \includegraphics[width=\cogwidth]{Pix/cogr3}
+    &\includegraphics[width=\cogwidth]{Pix/cogr4}\\
+    \sf Fig. 4
+    &\sf Fig. 5
+  \end{tabular}
+\end{center}
+Suppose there exists a maximal independent set $S$ and a maximal
+clique $K$ that are disjoint as in Fig. 1.
+
+\begin{itemize}
+\item There is at least one vertex of $S$ that has a neighbor in $K$,
+  Fig. 2. Otherwise, we could add one of the vertices of $K$ to $S$
+  and obtain a larger independent set (since no vertex of $S$ is
+  adjacent to the added vertex). Let $a$ be a vertex of $S$ with a
+  maximum number of neighbors in $K$.
+\item
+  
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
