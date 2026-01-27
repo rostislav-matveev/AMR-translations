@@ -8,7 +8,7 @@
 
 \usepackage{enumitem}
 \usepackage{quoting}
-
+\usepackage{array}
 \usepackage{xcolor}
 \long\def\gray#1{{\color{gray}{#1}}}\let\grey=\gray
 \long\def\blue#1{{\color{blue}{#1}}}
@@ -781,44 +781,58 @@ clique):
   clique.
 \end{proposition}
 
-% \begin{wrapfigure}{r}{0mm}
-  % \fbox{\includegraphics[width=0.2\textwidth]{Pix/cogr0}}
-% \end{wrapfigure}
-
 \paragraph{Proof:} We prove this by contradiction, with the help of
 figures.
-\newlength{\cogwidth}\setlength{\cogwidth}{0.29\textwidth}
-\begin{center}
-  \begin{tabular}{ccc}
-    \includegraphics[width=\cogwidth]{Pix/cogr0}
-    &\includegraphics[width=\cogwidth]{Pix/cogr1}
-    &\includegraphics[width=\cogwidth]{Pix/cogr2}\\
-    \sf Fig. 1
-    &\sf Fig. 2
-    &\sf Fig. 3
-  \end{tabular}
-  \bigskip\par
-  \begin{tabular}{cc}
-    \includegraphics[width=\cogwidth]{Pix/cogr3}
-    &\includegraphics[width=\cogwidth]{Pix/cogr4}\\
-    \sf Fig. 4
-    &\sf Fig. 5
-  \end{tabular}
-\end{center}
-Suppose there exists a maximal independent set $S$ and a maximal
-clique $K$ that are disjoint as in Fig. 1.
 
-\begin{itemize}
-\item There is at least one vertex of $S$ that has a neighbor in $K$,
-  Fig. 2. Otherwise, we could add one of the vertices of $K$ to $S$
-  and obtain a larger independent set (since no vertex of $S$ is
-  adjacent to the added vertex). Let $a$ be a vertex of $S$ with a
-  maximum number of neighbors in $K$.
-\item
-  
-\end{itemize}
+\newlength{\cogwidth}\setlength{\cogwidth}{0.35\textwidth}
+\newlength{\proofwidth}\setlength{\proofwidth}{0.6\textwidth}
+\noindent
+\begin{tabular}{cc}
+  \parbox[c]{\cogwidth}{\includegraphics[width=\cogwidth]{Pix/cogr0}}
+  &\parbox[c]{\proofwidth}{%
+    Suppose there exist a maximal independent set $S$ and a maximal
+    clique $K$ that are disjoint.}
+  \\
+  \parbox[c]{\cogwidth}{\includegraphics[width=\cogwidth]{Pix/cogr1}}
+  &\parbox[c]{\proofwidth}{%
+    There is at least one vertex of $S$ that has a neighbor in $K$.
+    Otherwise, we could add one of the vertices of $K$ to $S$
+    and obtain a larger independent set (since no vertex of $S$ is
+    adjacent to the added vertex). Let $a$ be a vertex of $S$ with a
+    maximum number of neighbors in $K$.}
+  \\
+  \parbox[c]{\cogwidth}{\includegraphics[width=\cogwidth]{Pix/cogr2}}
+  &\parbox[c]{\proofwidth}{%
+    The clique $K$ contains a vertex $c$ that is not adjacent to
+    $a$. Otherwise, $a$ would be adjacent to every vertex of $K$, and by
+    adding $a$ to $K$ we would obtain a larger clique.}
+  \\
+  \parbox[c]{\cogwidth}{\includegraphics[width=\cogwidth]{Pix/cogr3}}
+  &\parbox[c]{\proofwidth}{%
+    The set $S$ contains a vertex $d$ that is adjacent to
+    $c$. Otherwise, $c$ could be added to $S$ to form a larger independent set.
 
+    The vertex $d$ is distinct from $a$ (since $c$ is adjacent to $d$
+    but not to $a$) and is not adjacent to $a$ (because $a$ and $d$
+    both belong to the independent set $S$).}
+  \\
+  \parbox[c]{\cogwidth}{\includegraphics[width=\cogwidth]{Pix/cogr4}}
+  &\parbox[c]{\proofwidth}{%
+    The vertex $a$ has at least one neighbor $b$ in $K$ that is not
+    adjacent to $d$. Otherwise, $d$ would be adjacent to all of $a$’s
+    neighbors in $K$, contradicting the choice of $a$ as a vertex of
+    $S$ with the maximum number of neighbors in $K$. 
 
+    Thus $b$ is distinct from $c$ (to which it is adjacent).}
+\end{tabular}
+\smallskip
+
+The vertices $a,b,c,d$ therefore form an induced copy of the path
+of length $3$, contradicting our initial assumption.
+
+Hence, by contradiction, we have shown that in a cograph --- that is, in a
+graph containing no induced copy of $P_{4}$ --- every maximal independent set
+intersects every maximal clique.
 
 
 
