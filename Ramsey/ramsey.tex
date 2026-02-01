@@ -34,6 +34,8 @@
 \def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
 
 \newcommand{\skipthis}[2][\dots]{\red{[#1]}\gray{#2}}
+\long\def\skipthis#1{\relax}
+
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{proposition}{Proposition}
 \newtheorem*{question}{Question}
@@ -70,7 +72,6 @@
 
 \centerline{\bf\Large Part I: Order is inevitable}
 \medskip
-
 \begin{center}
   \begin{lpic}[draft,b(12ex),t(1ex),clean]{Pix/ramsey(0.5)}
      \lbl[t]{70,-5;\parbox{0.9\textwidth}{
@@ -545,6 +546,7 @@ emphasizing how it is related to a notion of ``unavoidable order''.
     commentary. Finally, a big thank you to Carole Gaboriau and Ma\"i
     Sauvageot, tireless shell hunters, for their precious support.}}
 \medskip
+
 \red{Todo: scale to the size of Ramsey?}
 \begin{center}
   \begin{lpic}[draft,b(15ex),t(1ex),l(2em),r(2.5em),clean]{Pix/erdos-hajnal-fixedres}
@@ -882,7 +884,7 @@ assumption that $K''$ is a clique of $G'$.\hfill\qed
 \subsection{And from structure comes order}
 We will see that this property will allow us to prove that $P_{4}$ has
 the Erd\H os--Hajnal property. More precisely:
-\begin{proposition}
+\begin{proposition}\mbox{}\hspace{-0.7ex}%
   The path $P_{4}$ of length $3$ has the Erd\H os--Hajnal property
   with $c(P_{4})\leq2$.
 \end{proposition}
@@ -906,32 +908,234 @@ had size at least $t$. Because deleting vertices does not change
 adjacency relations within that set, the original graph already
 contained an independent set of size $t$.  \hfill\qed
 
+\section{Back to the general problem, or how to make something new out
+  of something old}
+We have succeeded in resolving one case of the Erd\H os--Hajnal
+conjecture. Studying the cases one by one would be a Herculean
+task. That is why, instead of considering all graphs $F$ one by one, we
+will look for which constructions make it possible to obtain new
+graphs with the Erd\H os--Hajnal property from known examples.
 
+\let\bar=\overline
+\subsection{Additional examples}
+The first construction consists in taking the complement of a graph.
+The complementary graph of a graph $G$ is the graph, denoted $\bar G$,
+which has the same vertex set as $G$, and in which edges and non-edges
+are swapped.  In other words, two vertices $x$ and $y$ are adjacent in
+$\bar G$ if and only if they are not adjacent in $G$:
+\medskip
 
+\begin{center}
+  \begin{lpic}[draft,b(4ex),l(1em),r(1em),clean]{Pix/complement(0.29)}
+     \lbl[t]{90,-4;\parbox{0.50\textwidth}{
+         \begin{center}\sf
+           Complimenatry graph.
+         \end{center}
+         }}
+  \end{lpic}
+\end{center}
 
+Note that the complement of the complement of a graph is the graph
+itself, $\bar{\bar G}$.
 
+Next we will prove that the Erd\H os--Hajnal property is preserved under
+taking complements, as stated in the following proposition.
 
+\begin{proposition}
+A graph $F$ has the Erd\H os--Hajnal property if and only if its
+complement $\bar F$ has the Erd\H os--Hajnal property.
 
+Moreover, we then have
+\[
+  c(\bar F) = c(F)
+\]
+\end{proposition}
+\paragraph{Proof:}% 
+\footnoteE{One observes that both the assumption and the conclusion of
+  the Erd\H os--Hajnal Conjecture are invariant under taking
+  complements simultaneously of the graphs $F$ and $G$, so the
+  proposition follows immediately. (Ed.)} %
+It suffices to show that if $F$ has the Erd\H os--Hajnal property, then the
+same holds for $\bar F$, with exponent $c(\bar F)=c(F)$.
 
+One checks immediately that $G$ contains no induced copies of $\bar F$ if
+and only if the graph $\bar G$ contains no induced copies of $F$.
 
+Let $G$ be a sufficiently large graph containing no induced copies of
+$\bar F$. Then $\bar G$ (which is the same size as $G$) contains no induced
+copies of $F$, and therefore (since we assume that $F$ has the
+Erd\H os--Hajnal property) if the size of $\bar G$ (i.e., the size of $G$) is at
+least $t^{c(F)}$, then $\bar G$ contains a clique or a stable set of size
+$t$. Now, a clique in $\bar G$ is a stable set in $G$, and a stable
+set in $\bar G$ is a clique in $G$.
 
+Thus $G$ contains a clique or a stable set of size $t$, which means
+that $\bar F$ has the Erd\H os--Hajnal property and that
+$c(\bar F)\leq c(F)$. Applying operation of taking complement a second
+time, we obtain
+\[
+  c(F)=c(\bar{\bar F})\leq c(\bar F)
+\]
+\qed
 
+Since cliques have the Erd\H os--Hajnal property, the same is true of
+edgeless graphs. More precisely, we see that any graph on
+$n\geq t^{k-1}$ vertices with no stable set of size $k$ contains a clique
+of size $t$.
 
+\subsection{Something universal}
 
+Adding a \emph{universal vertex} to a graph $F$ consists in creating a
+new graph $F'$, obtained from $F$ by adding a new vertex and connecting
+it by edges to all the vertices of $F$:
+\medskip
 
+\begin{center}
+  \begin{lpic}[draft,b(4ex),l(1em),r(1em),clean]{Pix/univ(0.4)}
+     \lbl[t]{63,-4;\parbox{0.40\textwidth}{
+         \begin{center}\sf
+           Adding a universal vertex.
+         \end{center}
+         }}
+  \end{lpic}
+\end{center}
 
+\begin{proposition} If a graph $F$ has the Erd\H os--Hajnal property
+  and if the graph $F'$ is obtained from $F$ by adding a universal
+  vertex, then $F$ has the Erd\H os--Hajnal property.
+  Moreover, we then have
+  \[
+    c(F')\leq c(F)+1
+  \]
+\end{proposition}
+\paragraph{Proof:} Assume that the graph $F$ has the Erd\H os--Hajnal
+property, and let $G$ be a sufficiently large graph with no induced
+copies of $F'$. Let $t$ be an integer.
 
+If $G$ has a vertex $v$ with at least $t^{c(F)}$ neighbors, then the
+graph $G'$ induced by the neighbors of $v$ (together with the edges
+between them) contains no induced copies of $F$, since any induced
+copy of $F$ inside the neighborhood would form, together with $v$, an
+induced copy of $F'$ in $G$. Therefore the graph $G'$ has at least
+$t^{c(F)}$ vertices (because $v$ has at least $t^{c(F)}$
+neighbors). Since $F$ has the Erd\H os--Hajnal property, we deduce
+that $G'$ contains a clique or a stable set of size $t$, and therefore
+$G$ does as well.
 
+Otherwise, every vertex of $G$ has at most $t^{c(F)}-1$ neighbors. As
+we saw in Part I, we can then color the vertices of $G$ with
+$n/t^{c(F)}$ colors, in such a way that two vertices of the same color
+are never adjacent. Taking the largest color class, we obtain a stable
+set of size at least $n/t^{c(F)}$. If $n\geq t^{c(F)}$, the graph $G$
+therefore contains a stable set of size $t$.\qed
+\medskip
 
+Let us note that this proposition allows us to recover the fact that
+the clique $K_{k}$ of size $k$ has the Erd\H os--Hajnal property with
+$c(K_{k})\leq k-1$: indeed, the clique $K_{2}$ of size $2$ (formed by
+two vertices joined by an edge) clearly has the Erd\H os--Hajnal
+property with $c(k_{2})=1$, since any edgeless graph of size $t^{1}$
+contains a stable set of size $t$. Since the clique $K_{k}$ of size
+$k$ is obtained by adding a universal vertex to the clique $k_{k-1}$
+of size $k-1$, we therefore obtain, by induction on $k$, the
+inequality $c(K_{k})\leq k-1$.
 
+A less immediate example is that of the star $S_{k}$, which is the
+graph obtained by adding a universal vertex to an edgeless graph on
+$k$ vertices.
+\medskip
 
+\begin{center}
+  \begin{lpic}[draft,b(4ex),l(1em),r(1em),clean]{Pix/s7(0.55)}
+     \lbl[t]{21,-4;\parbox{0.20\textwidth}{
+         \begin{center}\sf
+           The star $s_{7}$.
+         \end{center}
+         }}
+  \end{lpic}
+\end{center}
 
+We therefore can deduce from the previous proposition that the star
+$S_{k}$ has, for every integer $k$, the Erd\H os--Hajnal property, and
+moreover that $c(S_{k})\leq k$.
 
+\subsection{Substitutions}
+In the early 2000s, Noga Alon, J\'anos Pach, and J\'ozsef Solymosi
+proved that the Erd\H os--Hajnal property is preserved under an
+operation called \emph{substitution}.
 
+Let $F_{1}$ and $F_{2}$ be two graphs, and let $v$ be a vertex of
+$F_{1}$. Substituting the vertex $v$ in $F_{1}$ by the graph $F_{2}$
+consists in taking the disjoint union of the graphs $F_{1}$ and
+$F_{2}$, deleting the vertex $v$ from $F_{1}$, and joining all
+neighbors of $v$ in $F_{1}$ to every vertex of $F_{2}$: 
+\medskip
 
+\begin{center}
+  \begin{lpic}[draft,b(6ex),l(1em),r(1em),clean]{Pix/substitution(0.45)}
+     \lbl[t]{49,-4;\parbox{0.40\textwidth}{
+         \begin{center}\sf
+           The substitution of vertex $v$ in $F_{1}$ by the graph $F_{2}$.
+         \end{center}
+         }}
+  \end{lpic}
+\end{center}
+\medskip
 
+\begin{proposition}[Alon, Pach, Solymosi] If $F_{1}$ and $F_{2}$ have
+  the Erd\H os--Hajnal property and $v$ is a vertex of $F_{1}$, then the
+  substitution of $v$ in $F_{1}$ by $F_{2}$ has the Erd\H os--Hajnal
+  property.
+\end{proposition}
 
+This a difficult proposition. Nevertheless, we will outline the
+arguments and give the intuition behind the proof.
+\medskip
 
+\paragraph{Sketch of the proof:}
+Let $F$ be the graph obtained by substituting vertex $v$ in $F_{1}$ by
+the graph $F_{2}$. 
+
+Let $t$ be an integer, and let $k$ be a sufficiently large
+integer. Let $n=t^{\max\{c(F_{1}),c(F_{2})\}}$. Consider a graph $G$ with
+at least $N=n^k$ vertices that contains no induced copy of the graph
+$F$. Suppose (for a contradiction) that $G$ contains no cliques or
+stable sets of size $t$. Since $F_{1}$ and $F_{2}$ have the Erd\H os--Hajnal
+property, if we take any subset of vertices $A$ of size $n$, then the
+graph $G[A]$ induced by $A$ (i.e., the vertices in $A$ together with
+the edges between them) contains both an induced copy of $F_{1}$ and an
+induced copy of $F_{2}$.
+
+A counting argument then shows (assuming $k$ is large enough) that
+there exists an induced copy $F'_{1}$ in $G$ of $F_{1}$ with the
+following property: if we denote by $v'$ the vertex in $F'$
+corresponding to $v$, then there exist at least $n$
+\blue{``alternative''} vertices of $G$ that allow one to extend
+$F'_1\setminus\{v\}$ (i.e., the induced copy $F'_{1}$ of $F_{1}$ with
+the vertex $v'$ removed) into an induced copy of $F_{1}$:
+\medskip
+
+\begin{center}
+  \begin{lpic}[draft,b(6ex),l(1em),r(1em),clean]{Pix/manyv(0.45)}
+     \lbl[t]{85,-6;\parbox{0.60\textwidth}{
+         \begin{center}\sf
+           \blue{Replacing $v$ by one of $n$ alternative vertices.}
+         \end{center}
+         }}
+  \end{lpic}
+\end{center}
+\medskip
+
+The set $A$ of ``alternative'' vertices that allow one to extend
+$F'_{1}\setminus\{v'\}$ into an induced copy of $F_{1}$ then induces a
+graph $G[A]$ that has more than $n$ vertices and contains neither a
+stable set nor a clique of size $t$. Since $F_{2}$ has the Erd\H
+os--Hajnal property, we deduce that $G[A]$ contains an induced copy of
+$F_{2}$ which, together with $F'_{1}\setminus\{v'\}$, forms an induced
+copy of $F$. The graph $G$ therefore contains an induced copy of $F$,
+contradicting our initial assumption. We have thus proved (or rather,
+sketched the proof) that the graph $F$ has the Erd\H os--Hajnal
+property.\qed
 
 
 
