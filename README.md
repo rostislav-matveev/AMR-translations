@@ -3,19 +3,8 @@ Translation of articles for amr
 
 ## Slava's log
 
-* **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 1**
-
-   https://doi.org/10.60868/tg9t-gq67
-  - [x] Contact the author
-  - [x] Translation
-  - [ ] Edits/comments
-  - [ ] Editor comments
-  - [ ] Comments/approval by the author
-  - [ ] Final
-
-* **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 2**
-
-  https://doi.org/10.60868/q1m6-2n71	  
+* **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 1 et 2**
+   https://doi.org/10.60868/tg9t-gq67, https://doi.org/10.60868/q1m6-2n71
   - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
@@ -23,7 +12,20 @@ Translation of articles for amr
   - [ ] Comments/approval by the author
   - [ ] Final
 
-* **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-1.html**
+* **Les diagrammes de Feynman 1,2,3**
+  http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-1.html,
+  http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-2.html,
+  http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-3.html  
+  - [x] Contact the author
+  - [ ] Translation
+  - [ ] Edits/comments
+  - [ ] Editor comments
+  - [ ] Comments/approval by the author
+  - [ ] Final
+  - [ ] Final
+
+* **Transport optimal de mesure coup de neuf pour un tres vieux probleme**
+  http://images-archive.math.cnrs.fr/Transport-optimal-de-mesure-coup-de-neuf-pour-un-tres-vieux-probleme.html
   - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
@@ -31,7 +33,9 @@ Translation of articles for amr
   - [ ] Comments/approval by the author
   - [ ] Final
 
-* **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-2.html**
+
+* **Une famille infinie de noeuds**
+  https://images-archive.math.cnrs.fr/Une-famille-infinie-de-noeuds.html
   - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
@@ -39,40 +43,9 @@ Translation of articles for amr
   - [ ] Comments/approval by the author
   - [ ] Final
 
-* **http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-3.html**
-  - [x] Contact the author
-  - [ ] Translation
-  - [ ] Edits/comments
-  - [ ] Editor comments
-  - [ ] Comments/approval by the author
-  - [ ] Final
-
-* **http://images-archive.math.cnrs.fr/Transport-optimal-de-mesure-coup-de-neuf-pour-un-tres-vieux-probleme.html**
-  - [ ] Contact the author
-  - [ ] Translation
-  - [ ] Edits/comments
-  - [ ] Editor comments
-  - [ ] Comments/approval by the author
-  - [ ] Final
-
-
-* **https://images-archive.math.cnrs.fr/Une-famille-infinie-de-noeuds.html**
-  - [ ] Contact the author
-  - [ ] Translation
-  - [ ] Edits/comments
-  - [ ] Editor comments
-  - [ ] Comments/approval by the author
-  - [ ] Final
-
-* **https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-I.html**
-  - [x] Contact the author
-  - [ ] Translation
-  - [ ] Edits/comments
-  - [ ] Editor comments
-  - [ ] Comments/approval by the author
-  - [ ] Final
-
-* **https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-II.html**
+* **De la topographie a la geometrie I, II**
+  https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-I.html, 
+  https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-II.html
   - [x] Contact the author
   - [ ] Translation
   - [ ] Edits/comments
