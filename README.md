@@ -6,7 +6,7 @@ Translation of articles for amr
 * **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 1 et 2**
    https://doi.org/10.60868/tg9t-gq67, https://doi.org/10.60868/q1m6-2n71
   - [x] Contact the author
-  - [ ] Translation
+  - [x] Translation
   - [ ] Edits/comments
   - [ ] Editor comments
   - [ ] Comments/approval by the author

@@ -73,7 +73,7 @@
 \centerline{\bf\Large Part I: Order is inevitable}
 \medskip
 \begin{center}
-  \begin{lpic}[draft,b(12ex),t(1ex),clean]{Pix/ramsey(0.5)}
+  \begin{lpic}[draft,b(12ex),t(1ex),clean]{Pix/ramsey(0.6)}
      \lbl[t]{70,-5;\parbox{0.9\textwidth}{
         \begin{center}
           \sf Ordnung muss sein! (Order is inevitable.) This saying,
@@ -182,7 +182,7 @@ then be stated as follows:
 \begin{quoting}[leftmargin=5mm,rightmargin=5mm]\sf
   In any \emph{complete graph}%
   \footnoteE{A graph is \emph{complete} is every pair of distinct
-    vertices is connected by an adge} %
+    vertices is connected by an adge. (Ed.)} %
   on six vertices whose edges are colored red or blue, there exists a
   triangle (a 3-vertex clique) all of whose edges have the same color
   (all \red{red} or all \blue{blue}).
@@ -549,7 +549,8 @@ emphasizing how it is related to a notion of ``unavoidable order''.
 
 \red{Todo: scale to the size of Ramsey?}
 \begin{center}
-  \begin{lpic}[draft,b(15ex),t(1ex),l(2em),r(2.5em),clean]{Pix/erdos-hajnal-fixedres}
+  \begin{lpic}[draft,b(15ex),t(1ex),l(2em),r(2.5em),clean]
+    {Pix/erdos-hajnal-fixedres(0.9)}
      \lbl[t]{50,-2;\parbox{0.9\textwidth}{
         \begin{center}
           \sf In the previous part, we saw that a certain amount of order
@@ -559,7 +560,6 @@ emphasizing how it is related to a notion of ``unavoidable order''.
           random graphs. What happens if we impose a
           strong local constraint? This is precisely the subject of
           the Erdős–Hajnal conjecture\dots%
-          \footnotemarkA{}
         \end{center}
       }}
   \end{lpic}
@@ -575,9 +575,9 @@ possibility to sharpen our intuition for this ever-surprising world.
   The faculty that teaches us to see is intuition. Without it, the
   geometer would be like a writer who is well-versed in grammar but
   has no ideas.
-
-  \noindent
-  \it Henri Poincar\'e%
+  
+  \medskip\par\noindent\it
+  Henri Poincar\'e%
   \footnoteA{Henri Poincar\'e, \textit{Science et M\'ethode,} Livre
     II, §II, p.9.}$^{,}$%
   \footnoteE{See also: Henri Poincar\'e, \textit{Science et Method,}
@@ -600,7 +600,7 @@ whereas a clique is a set of vertices that are all pairwise adjacent.
 \begin{quoting}\sf\noindent
   The human understanding is of its own nature prone to suppose the
   existence of more order and regularity in the world than it finds.  
-  \par\noindent\it
+  \medskip\par\noindent\it
   Francis Bacon%
   \footnoteE{Francis Bacon, \textit{Novum Organum} (1620), Book I, Aphorism 45.}
 \end{quoting}
@@ -639,7 +639,7 @@ our point.
   impossibility of any stable relation between them. One form never
   appears without another already vanishing, and each disappears at
   the very moment another begins to take shape.
-
+  \medskip\par
   \noindent\it
   Gilles Deleuze, F\'elix Guattari%
   \footnoteA{Gilles Deleuze, F\'elix Guattari, \textit{Qu’est-ce que
@@ -1138,6 +1138,57 @@ sketched the proof) that the graph $F$ has the Erd\H os--Hajnal
 property.\qed
 
 
+\section{And now?}
+A few other examples of graphs having the Erd\H os--Hajnal property are
+known, such as all graphs on at most $4$ vertices.
+
+For graphs on $5$ vertices, two graphs remain resistant: the path of
+length $4$ (or, equivalently, its complement) and the cycle of length
+$5$ \blue{(which is self-complimentary)}:
+
+\medskip
+
+\begin{center}
+  \begin{lpic}[draft,b(5ex),l(1em),r(1em),clean]{Pix/probeh(0.45)}
+     \lbl[t]{90,-6;\parbox{0.60\textwidth}{
+         \begin{center}\sf
+           Difficult cases of Erd\H os--Hajnal conjecture.
+         \end{center}
+         }}
+  \end{lpic}
+\end{center}
+\medskip
+
+And what about the others, you might ask? Even if the conjecture is
+not resolved in the general case, it is ``almost'' resolved:
+
+\begin{theorem}[Loebl, Reed, Scott, Thomason, Thomass\'e]
+  For every graph $F$, there exists an integer $c(F)$ with the following property:
+
+  Almost all%
+  \footnoteA{``Almost all graphs $G$'' means that the proportion of
+    graphs $G$ on $n$ vertices having this property tends to $1$ as
+    $n$ tends to infinity.} %
+  sufficiently large graphs $G$ that contain no induced copies of $F$
+  and have more than $t^{c(F)}$ vertices contain a stable set or a
+  clique of size $t$.
+\end{theorem}
+
+\blue{In other words, the examples of graphs $G$ that may fail the
+  conjecture, \emph{are not} the random graphs with no induced copies
+  of $F$}.
+
+Which goes to show\dots
+\bigskip\par
+\begin{quoting}\sf\noindent
+  We can form a clear notion of order, but not of disorder.
+  
+  \medskip\par\noindent\it%
+  Jacques-Henri Bernardin de Saint-Pierre%
+  \footnoteA{Jacques-Henri Bernardin de Saint-Pierre, \textit{Paul et
+      Virginie.}} %
+\end{quoting}
+\bigskip\par
 
 
 
