@@ -3,8 +3,9 @@ Translation of articles for amr
 
 ## Slava's log
 
-* **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 1 et 2**
-   https://doi.org/10.60868/tg9t-gq67, https://doi.org/10.60868/q1m6-2n71
++ **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 1 et 2**
+   + https://doi.org/10.60868/tg9t-gq67,
+   + https://doi.org/10.60868/q1m6-2n71
   - [x] Contact the author
   - [x] Translation
   - [ ] Edits/comments
@@ -12,7 +13,7 @@ Translation of articles for amr
   - [ ] Comments/approval by the author
   - [ ] Final
 
-* **Les diagrammes de Feynman 1,2,3**
++ **Les diagrammes de Feynman 1,2,3**
   http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-1.html,
   http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-2.html,
   http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-3.html  
