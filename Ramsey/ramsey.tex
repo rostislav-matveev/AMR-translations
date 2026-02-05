@@ -56,13 +56,15 @@
     glass of wine, with Shalom Eliahou. I am grateful to him for his
     encouragement, his insightful suggestions, and his valuable
     comments on the first draft of this article. I would also like to
-    thank Marielle Simon and Pierre Lescanne for their kind feedback,
-    wise advice, and careful proofreading. Finally, I wish to express
-    my gratitude to Carole Gaboriau and Ma\"i Sauvageot, indispensable
-    editorial assistants, for their constant help.}$^{,}$%
-  \footnoteE{English translation by Rostislav Matveev of the article
-    \textit{Du Th\'eor\`eme de Ramsey \`a la Conjecture d’Erdős-Hajnal
-      (1) \& (2)}, by Patrice Ossona de Mendez, (2017),\\
+    thank Bedaride Nicolas, Pierre Lescanne, Marielle Simon and
+    Cidrolin for their kind feedback, wise advice, and careful
+    proofreading. Finally, I wish to express my gratitude to Carole
+    Gaboriau and Ma\"i Sauvageot, indispensable editorial assistants
+    (and tireless shell hunters) for their precious support.}$^{,}$%
+  \footnoteE{English translation by Rostislav Matveev of the article:
+    Patrice Ossona de Mendez, \textit{Du Th\'eor\`eme de Ramsey \`a la
+      Conjecture d’Erd\H os--Hajnal (1) \& (2)}, Images des
+    Mathematiques (2017),
     \url{https://doi.org/10.60868/tg9t-gq67} and
     \url{https://doi.org/10.60868/q1m6-2n71}.  }}%
 \smallskip
@@ -109,9 +111,8 @@ look at it more closely:
 So we have six people. Let us call Dominique%
 \footnoteA{Note that this is an epicene name, as gender is of no
   relevance here.} %
-one of the people in the group.
-
-If Dominique knows at least three people in the group, two cases can occur:
+one of the people in the group. If Dominique knows at least three
+people in the group, two cases can occur:
 \begin{itemize}
 \item either two of them know each other (and together with Dominique,
   that makes at least three people who know one another);
@@ -130,24 +131,19 @@ does not know:
 \end{itemize}
 In this case as well, we reach the desired conclusion.\hfill\qed
 
-\subsection{Is that a graph, doctor?}
+\subsection{There is a graph grafted on}
 
 Let us now see how we can translate this result into the language of
 graph theory. A graph is a collection of vertices connected (or not)
 to one another by edges. Each edge has two incident vertices and
-represents a relation%
-\footnoteE{The relation must be symmetric for this representation to
-  work and such symmetry is assumed in this article. (Ed.)} %
-between two entities, the entities being the vertices. For example,
-the vertices can be people, and the edges can indicate who knows
-whom. Two vertices connected by an edge are said to be adjacent. We
-will also use the following two terms:
+represents a relation between two entities, the entities being the
+vertices. For example, the vertices can be people, and the edges can
+indicate who knows whom. Two vertices connected by an edge are said to
+be adjacent. We will also use the following two terms:
 
 A set of vertices is an \emph{independent set} if it does not contain
-two adjacent%
-\footnoteE{That is, connected. (Ed.)} %
-vertices. In our example, a set of people who do not know one another
-is an independent set.
+two adjacent vertices. In our example, a set of people who do not know
+one another is an independent set.
 
 A set of vertices is a \emph{clique} if all vertices in the set are
 pairwise adjacent. In our example, a set of people who all know one
@@ -340,13 +336,13 @@ n\geq \underbrace{2\times2\times\dots\times2}_{2t-1}=2^{2t-1}
 It is rather surprising that this result is, up to a small margin,
 optimal. Indeed, if one colors at random%
 \footnoteA{Independently, with probability $1/2$ for each color.} %
-the edges of a clique of
+the edges of a complete graph of
 size $2^{t}$ in \red{red} and \blue{blue}, there is a very high
 probability%
 \footnoteA{More precisely, with a probability that tends to $1$ as $t$
   tends to infinity, that is, ``asymptotically almost surely.''} %
-that the size of the largest monochromatic clique is of the same order
-of magnitude as $t$.%
+that the size of the largest monochromatic clique is of the order
+of magnitude of $t$.%
 \footnoteA{This result can be derived from Markov’s inequality. In the
   1970s, Matula proved that the likely values of the size of the
   largest monochromatic clique are essentially concentrated on two
@@ -363,11 +359,11 @@ quite intuitively,%
   two notions that are often regarded, pragmatically, as equivalent.} %
 the random structures.
 
-Instead of looking at an edge-coloring of a clique with two colors,
-one can study an arbitrary graph $G$ on a set of $n$ vertices. Indeed,
-if we consider the complete graph with edges present in $G$ to be blue
-and the edges absent from $G$ to be red, Ramsey’s theorem can be
-interpreted in the following form:
+Instead of looking at an edge-coloring of a complete graph with two
+colors, one can study an arbitrary graph $G$ on a set of $n$
+vertices. Indeed, if we consider the complete graph with edges present
+in $G$ to be blue and the edges absent from $G$ to be red, Ramsey’s
+theorem can be interpreted in the following form:
 \begin{theorem}
   Let $t$ be a natural number, and let $n$ be a natural number greater
   than $2^{2t-1}$.  Then any graph $G$ on $n$ vertices necessarily
@@ -447,8 +443,8 @@ grows like $t^{k-1}$:
 \paragraph{\textbf{Proof sketch by induction on $k$:}} We have already shown
 that if we forbid all triangles (that is, all cliques of size $3$),
 then every graph with $t^2$ vertices contains an independent set of
-size $t$. \blue{This will be the base of the induction. Now we show
-  how to make one induction step: $(k=3)\;\to\;(k=4)$.}
+size $t$. This will be the base of the induction. Now we show
+  how to make one induction step: $(k=3)\;\to\;(k=4)$.
 
 Consider a graph with no cliques of size $4$ and with $n\geq t^{3}$
 vertices.
@@ -472,7 +468,7 @@ color. The most frequent color class then forms an independent set of
 size $n/t^{2}$. Hence $G$ contains an independent set of size at least
 $t$, since $n\geq t^{3}$.
 
-\blue{The general induction step proceeds along the same lines.}
+The general induction step proceeds along the same lines.
 \hfill\qed
 \bigskip
 
@@ -528,7 +524,6 @@ Paul Erd\H os and Andr\'as Hajnal proposed the follwing conjecture:
 We can restate the Erd\H os--Hajnal conjecture in a dual form,
 emphasizing how it is related to a notion of ``unavoidable order''.
 
-\red{Added  $t>h$ below.}
 \begin{conjecture}[Erd\H os–Hajnal conjecture (second formulation)]
   For every integer $h$, there exists an integer $K(h)$ with the
   following property: if a graph $G$ contains neither an independent
@@ -539,15 +534,15 @@ emphasizing how it is related to a notion of ``unavoidable order''.
 \newpage
 
 \centerline{\bf\Large Part II: The power of the forbidden%
-  \footnoteA{I would like to reiterate my appreciation to Shalom
-    Eliahou for his invaluable comments when writing this second
-    part. I would like to thank Bedaride Nicolas, Marielle Simon and
-    Cidrolin for their careful review and benevolent
-    commentary. Finally, a big thank you to Carole Gaboriau and Ma\"i
-    Sauvageot, tireless shell hunters, for their precious support.}}
+  % \footnoteA{I would like to reiterate my appreciation to Shalom
+    % Eliahou for his invaluable comments when writing this second
+    % part. I would like to thank Bedaride Nicolas, Marielle Simon and
+    % Cidrolin for their careful review and benevolent
+    % commentary. Finally, a big thank you to Carole Gaboriau and Ma\"i
+    % Sauvageot, tireless shell hunters, for their precious support.}
+}
 \medskip
 
-\red{Todo: scale to the size of Ramsey?}
 \begin{center}
   \begin{lpic}[draft,b(15ex),t(1ex),l(2em),r(2.5em),clean]
     {Pix/erdos-hajnal-fixedres(0.9)}
@@ -572,37 +567,34 @@ mathematical daydreaming about order and chance, and offers a
 possibility to sharpen our intuition for this ever-surprising world.
 \bigskip\par
 \begin{quoting}\sf\noindent
-  The faculty that teaches us to see is intuition. Without it, the
-  geometer would be like a writer who is well-versed in grammar but
-  has no ideas.
-  
-  \medskip\par\noindent\it
+  (...) the faculty which teaches us to see is intuition. Without it,
+  the geometrician would be like a writer well up in grammar but
+  destitute of ideas.
+    \medskip\par\noindent\it
   Henri Poincar\'e%
   \footnoteA{Henri Poincar\'e, \textit{Science et M\'ethode,} Livre
     II, §II, p.9.}$^{,}$%
-  \footnoteE{See also: Henri Poincar\'e, \textit{Science et Method,}
+  \footnoteE{See also: Henri Poincar\'e, \textit{Science and Method,}
     \url{https://henripoincarepapers.univ-nantes.fr/chp/hp-pdf/hp1914sm.pdf}}
 \end{quoting}
 \bigskip\par
-\section{A bit of philosophy at random}
+\section{A bit of random philosophy}
 In the first part, we saw that every sufficiently large graph contains
 an independent set or a clique of non-negligible size. Recall that an
 independent set is a set of vertices that  none are adjacent,
 whereas a clique is a set of vertices that are all pairwise adjacent.
 
-\red{Edited (more apropriate in the context):\\}
-\blue{Despite this unavoidable order, we should be wary of drawing any
-  hasty conclusions.} 
+Despite this unavoidable order, we should be wary of drawing any hasty
+conclusions.
 
 \bigskip\par
-\red{The original (here) is longer and more complex then French
-  translation.}
 \begin{quoting}\sf\noindent
-  The human understanding is of its own nature prone to suppose the
-  existence of more order and regularity in the world than it finds.  
-  \medskip\par\noindent\it
-  Francis Bacon%
-  \footnoteE{Francis Bacon, \textit{Novum Organum} (1620), Book I, Aphorism 45.}
+  The human understanding, from its peculiar na- ture, easily supposes
+  a greater degree of order and equality in things than it really
+  finds.
+  \medskip\par\noindent\it Francis Bacon%
+  \footnoteE{Francis Bacon, \textit{Novum Organum} (1620), Book I,
+    Aphorism 45.}
 \end{quoting}
 \bigskip\par
 
@@ -631,19 +623,17 @@ us allow ourselves to borrow a philosophical quotation to illustrate
 our point.
 
 \bigskip\par
-\red{Somewhat free translation:}
 \begin{quoting}\sf\noindent
-  What characterizes chaos is not so much the absence of patterns, but
-  the great speed at which they emerge and disappear. Chaos is not a
-  transition from one pattern to another; rather, it is the
-  impossibility of any stable relation between them. One form never
-  appears without another already vanishing, and each disappears at
-  the very moment another begins to take shape.
-  \medskip\par
-  \noindent\it
-  Gilles Deleuze, F\'elix Guattari%
-  \footnoteA{Gilles Deleuze, F\'elix Guattari, \textit{Qu’est-ce que
-      la philosophie ?}, p.44}
+  In fact, chaos is characterized less by the absence of
+  determinations than by the infiinite speed with which they take
+  shape and vanish. This is not a movement from one determination to
+  the other but, on the contrary, the impossibility of a connection
+  between them, since one does not appear without the other having
+  already disappeared, and one appears as disappearance when the other
+  disappears as outline.%
+  \medskip\par\noindent\it Gilles Deleuze, F\'elix Guattari%
+  \footnoteA{What Is Philosophy? p. 42, (translation by Hugh Tomlinson
+    and Graham Burchell)}
 \end{quoting}
 \bigskip\par
 
@@ -661,7 +651,7 @@ From constraint comes structure, and from structure comes order.
 \end{quoting}
 \bigskip\par
 
-By forbidding the presence of a given \blue{subgraph}, we force a
+By forbidding the presence of a given subgraph, we force a
 global structure, and this global structure entails the appearance of
 independent sets or cliques that are significantly larger than what
 one would find in a random graph. More precisely, in 1989 Paul Erd\H os
@@ -675,12 +665,6 @@ and Andr\'as Hajnal proposed the following conjecture.
   $F$, and that has more than $t^{c(F)}$ vertices, contains an
   independent set or a clique of size $t$.
 \end{conjecture}
-
-\red{Removed the sentence, since parts (1) and (2) are merged:}
-\grey{Dans cet énoncé, un graphe G contient une copie induite d’un
-  graphe F si on peut trouver dans G autant de sommets qu’il y a dans
-  F, avec exactement les mêmes paires de sommets adjacents (cf
-  première partie).}
 
 We say that a graph $F$ has the Erd\H os–Hajnal property if there exists
 an integer $c(F)$ such that every sufficiently large graph $G$ that
@@ -724,7 +708,6 @@ they are disjoint unions of complete graphs!
        }}
   \end{lpic}
 \end{center}
-\red{Replaced   $c(P_{3})\leq2$ with $c(P_{3})=2$}
 \begin{proposition}
   The path $P_{3}$ of length $2$ has the Erd\H os--Hajnal property
   with $c(P_{3})=2$.
@@ -737,7 +720,9 @@ least $t^{2}$ vertices.
 If $G$ contains no clique of size $t$, then it must contain at least
 $t$ cliques. By choosing one vertex from each clique, we obtain an
 independent set of size at least $t$.\hfill\qed
-\subsection{Let’s join the dance: from a pas de deux to a pas de trois.}
+
+\subsection{Let’s join the dance: from a \it{pas de deux} to a \it{pas de trois}}
+% \subsection{Let’s join the dance: from a pas de deux to a pas de trois.}
 A far less simple --- however very instructive --- example is the path
 of length $3$. A graph contains an induced copy of the path $P_{4}$ of
 length $3$ if it contains four vertices $a$,$b$,$c$ and $d$ such that
@@ -908,8 +893,7 @@ had size at least $t$. Because deleting vertices does not change
 adjacency relations within that set, the original graph already
 contained an independent set of size $t$.  \hfill\qed
 
-\section{Back to the general problem, or how to make something new out
-  of something old}
+\section{Back to the general problem, or how to put old wine in a new bottle}
 We have succeeded in resolving one case of the Erd\H os--Hajnal
 conjecture. Studying the cases one by one would be a Herculean
 task. That is why, instead of considering all graphs $F$ one by one, we
@@ -1119,7 +1103,7 @@ the vertex $v'$ removed) into an induced copy of $F_{1}$:
   \begin{lpic}[draft,b(6ex),l(1em),r(1em),clean]{Pix/manyv(0.45)}
      \lbl[t]{85,-6;\parbox{0.60\textwidth}{
          \begin{center}\sf
-           \blue{Replacing $v$ by one of $n$ alternative vertices.}
+           Replacing $v$ by one of $n$ alternative vertices.
          \end{center}
          }}
   \end{lpic}
@@ -1144,7 +1128,7 @@ known, such as all graphs on at most $4$ vertices.
 
 For graphs on $5$ vertices, two graphs remain resistant: the path of
 length $4$ (or, equivalently, its complement) and the cycle of length
-$5$ \blue{(which is self-complimentary)}:
+$5$ (which is self-complimentary):
 
 \medskip
 
@@ -1174,9 +1158,9 @@ not resolved in the general case, it is ``almost'' resolved:
   clique of size $t$.
 \end{theorem}
 
-\blue{In other words, the examples of graphs $G$ that may fail the
-  conjecture, \emph{are not} the random graphs with no induced copies
-  of $F$}.
+In other words, the examples of graphs $G$ that may fail the
+conjecture, \emph{are not} the random graphs with no induced copies of
+$F$.
 
 Which goes to show\dots
 \bigskip\par
