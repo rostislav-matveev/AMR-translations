@@ -8,9 +8,9 @@ Translation of articles for amr
     + https://doi.org/10.60868/q1m6-2n71
   - [x] Contact the author
   - [x] Translation
-  - [ ] Edits/comments
-  - [ ] Editor comments
-  - [ ] Comments/approval by the author
+  - [x] Edits/comments
+  - [x] Editor comments
+  - [x] Comments/approval by the author
   - [ ] Final
 
 + **Les diagrammes de Feynman 1,2,3**
