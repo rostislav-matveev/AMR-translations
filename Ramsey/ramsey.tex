@@ -50,7 +50,7 @@
 
 
 \begin{document}
-\centerline{\bf\Large From Ramsey’s Theorem to the Erd\H os–Hajnal
+\centerline{\bf\Large From Ramsey’s Theorem to the Erd\H os--Hajnal
   Conjecture%
   \footnoteA{This article grew out of a conversation in Prague, over a
     glass of wine, with Shalom Eliahou. I am grateful to him for his
@@ -75,7 +75,7 @@
 \centerline{\bf\Large Part I: Order is inevitable}
 \medskip
 \begin{center}
-  \begin{lpic}[draft,b(12ex),t(1ex),clean]{Pix/ramsey(0.6)}
+  \begin{lpic}[draft,b(12ex),t(1ex),clean]{Pix/ramsey(0.65)}
      \lbl[t]{70,-5;\parbox{0.9\textwidth}{
         \begin{center}
           \sf Ordnung muss sein! (Order is inevitable.) This saying,
@@ -178,7 +178,7 @@ then be stated as follows:
 \begin{quoting}[leftmargin=5mm,rightmargin=5mm]\sf
   In any \emph{complete graph}%
   \footnoteE{A graph is \emph{complete} is every pair of distinct
-    vertices is connected by an adge. (Ed.)} %
+    vertices is connected by an edge. (Ed.)} %
   on six vertices whose edges are colored red or blue, there exists a
   triangle (a 3-vertex clique) all of whose edges have the same color
   (all \red{red} or all \blue{blue}).
@@ -218,7 +218,7 @@ property stated by the theorem in the case of two colors, \red{red} and
 $n_{\text{\blue{blue}}} = 3$. By contrast, $N = 5$ does not have this
 property:
 \begin{center}
-  \includegraphics[width=0.5\textwidth]{Pix/r33-}
+  \includegraphics[width=0.4\textwidth]{Pix/r33-}
 \end{center}
 This group of five people is such that, in every subgroup of three
 people, one can find two people who know each other and two people who
@@ -233,7 +233,7 @@ and \blue{blue}, we can always find a \emph{monochromatic triangle},
 that is, a triangle all of whose edges have the same color. Here is
 an example of a colored complete graph:
 \begin{center}
-  \includegraphics[width=0.5\textwidth]{Pix/r333_}
+  \includegraphics[width=0.4\textwidth]{Pix/r333_}
 \end{center}
 Let us arbitrarily choose a vertex $v_1$. Consider the most prevalent
 color among the edges incident to this vertex (here, the \red{red} color,
@@ -394,7 +394,6 @@ requiring $n\geq2^{2t-1}$, it is enough to have just $n\geq t^2$. For
 example, for $t=100$, the necessary size is merely $n\geq10000$.
 
 \subsubsection{Why is this so?}
-
 Consider a triangle-free graph $G$ with $n\geq t^{2}$ vertices. There
 are two possibilities:
 \begin{itemize}
@@ -418,13 +417,11 @@ are two possibilities:
   color are never adjacent. Since $n\geq t^2$, this set has size at least
   $t$.
 \end{itemize}
-
-We have in effect proved the following proposition:
+In effect we have proved the following proposition:
 \begin{proposition}
   If a triangle-free graph has at least $t^{2}$ vertices, then it
   contains an independent set of size $t$.
 \end{proposition}
-
 We have seen that when we forbid the presence of a triangle (that is,
 a clique of size $3$), we can find a large independent set. What
 happens if we forbid a larger clique? A priori, we expect the size of
@@ -432,19 +429,19 @@ the graph required to guarantee the presence of an independent set of
 size $t$ to grow progressively from $t^{2}$ up to $2^{2t-1}$, depending
 on the size of the forbidden clique.
 
-We will see that the size of the graph without cliques of size $k$
-required to guarantee the existence of an independent set of size $t$
-grows like $t^{k-1}$:
-
+In what follows we will see that the size of the graph without cliques
+of size $k$ required to guarantee the existence of an independent set
+of size $t$ grows like $t^{k-1}$:
 \begin{proposition}
   Every graph on at least $t^{k-1}$ vertices and with no clique of
   size $k\geq3$ contains an independent set of size $t$.
 \end{proposition}
-\paragraph{\textbf{Proof sketch by induction on $k$:}} We have already shown
-that if we forbid all triangles (that is, all cliques of size $3$),
-then every graph with $t^2$ vertices contains an independent set of
-size $t$. This will be the base of the induction. Now we show
-  how to make one induction step: $(k=3)\;\to\;(k=4)$.
+\paragraph{\textbf{Proof sketch by induction on $k$:}} It has already
+been shown that if we forbid all triangles (that is, all cliques of
+size $3$), then every graph with $t^2$ vertices contains an
+independent set of size $t$. This will be the base of the
+induction. Now we show how to make one induction step:
+$(k=3)\;\to\;(k=4)$.
 
 Consider a graph with no cliques of size $4$ and with $n\geq t^{3}$
 vertices.
@@ -452,14 +449,14 @@ vertices.
 If, on the one hand, $G$ contains a vertex $v$ with at least $t^{2}$
 neighbors, then the subgraph induced%
 \footnoteE{An induced subgraph is the one that contains all the
-  possible edges of the ambient graph, given the set of
+  possible edges of the ambient graph, given its set of
   vertices. (Ed.)} %
 by the neighbors of $v$ contains no triangle, because any triangle in
-the neighborhood of $v$ would form, together with $v$, a clique of size
-$4$. Moreover, the graph induced by the neighbors of $v$ has at least
-$t^{2}$ vertices (since $v$ has at least $t^{2}$ neighbors). By the previous
-result, we can conclude that the neighborhood of $v$ contains an
-independent set of size $t$.
+the neighborhood of $v$ would form, together with $v$, a clique of
+size $4$. Moreover, the graph induced by the neighbors of $v$ has at
+least $t^{2}$ vertices (since $v$ has at least $t^{2}$ neighbors). By
+the previous result, we can conclude that the neighborhood of $v$
+contains an independent set of size $t$.
 
 If, on the other hand, all vertices of $G$ have at most $t^{2}-1$
 neighbors, then, as we saw above, we can color the vertices of $G$
@@ -467,13 +464,12 @@ using $t^{2}$ colors so that no two adjacent vertices share the same
 color. The most frequent color class then forms an independent set of
 size $n/t^{2}$. Hence $G$ contains an independent set of size at least
 $t$, since $n\geq t^{3}$.
-
 The general induction step proceeds along the same lines.
 \hfill\qed
-\bigskip
+\smallskip
 
 These results show that forbidding a clique of fixed size guarantees
-that the number of vertices needed to guaramtee the presence of an
+that the number of vertices needed to guarantee the presence of an
 independent set of size $t$ is bounded by a power of $t$, with
 exponent depending on the size of the forbidden clique.
 
@@ -496,7 +492,7 @@ $G$ if and only if $a_{i}$ is adjacent to $a_{j}$ in $H$:%
 \footnoteE{In other words, a copy of $H$ in $G$ is an induced subgraph
   of $G$ isomorphic to $H$. (Ed.)} %
 \begin{center}
-  \includegraphics[width=0.7\textwidth]{Pix/copy}
+  \includegraphics[width=0.6\textwidth]{Pix/copy}
 \end{center}
 
 In particular, if $H$ is a graph with $t$ vertices and no edges, then
@@ -504,7 +500,7 @@ a copy of $H$ in $G$ is an independent set of size $t$ in
 $G$. Similarly, if $H$ is a complete graph with $t$ vertices, then a
 copy of $H$ in $G$ is a clique of size $t$.
 
-Paul Erd\H os and Andr\'as Hajnal proposed the follwing conjecture:
+Paul Erd\H os and Andr\'as Hajnal proposed the following conjecture:
 
 \begin{conjecture}[Erd\H os--Hajnal conjecture]
   For every graph $F$, there exists an integer $c(F)$ with the
@@ -515,7 +511,7 @@ Paul Erd\H os and Andr\'as Hajnal proposed the follwing conjecture:
     is not necessary in the statement, since we can always increase
     the value of $c(F)$ to be bigger then $\log_{2}N(F)$. However, one
     is interested in the minimal value of $c(F)$ for which the
-    property in the conjecture is satisfied for large graphs.} %
+    property in the conjecture is satisfied for large graphs. (Ed.)} %
   graph $G$ that contains no copy of $F$, and that has more than
   $t^{c(F)}$ vertices, contains either an independent set or a clique
   of size $t$.
@@ -589,7 +585,7 @@ conclusions.
 
 \bigskip\par
 \begin{quoting}\sf\noindent
-  The human understanding, from its peculiar na- ture, easily supposes
+  The human understanding, from its peculiar nature, easily supposes
   a greater degree of order and equality in things than it really
   finds.
   \medskip\par\noindent\it Francis Bacon%
@@ -708,7 +704,7 @@ they are disjoint unions of complete graphs!
        }}
   \end{lpic}
 \end{center}
-\begin{proposition}
+\begin{proposition}\mbox{}\hspace{-0.55em}
   The path $P_{3}$ of length $2$ has the Erd\H os--Hajnal property
   with $c(P_{3})=2$.
 \end{proposition}
@@ -719,9 +715,9 @@ least $t^{2}$ vertices.
 
 If $G$ contains no clique of size $t$, then it must contain at least
 $t$ cliques. By choosing one vertex from each clique, we obtain an
-independent set of size at least $t$.\hfill\qed
+independent set of size at\break least $t$.\hfill\qed
 
-\subsection{Let’s join the dance: from a \it{pas de deux} to a \it{pas de trois}}
+\subsection{Let’s join the dance: from a \textit{pas de deux} to a \textit{pas de trois}}
 % \subsection{Let’s join the dance: from a pas de deux to a pas de trois.}
 A far less simple --- however very instructive --- example is the path
 of length $3$. A graph contains an induced copy of the path $P_{4}$ of
@@ -771,10 +767,9 @@ clique):
 
 \paragraph{Proof:} We prove this by contradiction, with the help of
 figures.
-
 \newlength{\cogwidth}\setlength{\cogwidth}{0.35\textwidth}
 \newlength{\proofwidth}\setlength{\proofwidth}{0.6\textwidth}
-\noindent
+\smallskip\par\noindent
 \begin{tabular}{cc}
   \parbox[c]{\cogwidth}{\includegraphics[width=\cogwidth]{Pix/cogr0}}
   &\parbox[c]{\proofwidth}{%
@@ -788,7 +783,10 @@ figures.
     and obtain a larger independent set (since no vertex of $S$ is
     adjacent to the added vertex). Let $a$ be a vertex of $S$ with a
     maximum number of neighbors in $K$.}
-  \\
+\end{tabular}
+
+\noindent
+\begin{tabular}{cc}
   \parbox[c]{\cogwidth}{\includegraphics[width=\cogwidth]{Pix/cogr2}}
   &\parbox[c]{\proofwidth}{%
     The clique $K$ contains a vertex $c$ that is not adjacent to
@@ -840,7 +838,7 @@ intersects every maximal clique.\hfill\qed
 \end{proposition}
 \paragraph{\bf Proof:} Let $c$ be the number of vertices in $K$. Since
 every maximal clique intersects every maximal independent set, there
-exists a vertex $v$ that belongs to both $K$ and $S$.
+exists a vertex $v$ that belongs to both\break $K$ and $S$.
 
 Note that no other vertex can lie in both $K$ and $S$: otherwise, that
 vertex would have to be adjacent to $v$ (since both are in the clique
@@ -850,9 +848,9 @@ which is impossible.
 If we delete all vertices of $S$, we in particular delete the vertex
 $v$ from $K$, and we obtain the clique $K':=K\setminus\{v\}$ of size
 $c-1$.
-
+\medskip\par
 \begin{center}
-  \begin{lpic}[draft,b(4ex),l(1em),r(1em),clean]{Pix/sk(0.29)}
+  \begin{lpic}[draft,b(4ex),l(1em),r(1em),clean]{Pix/sk(0.35)}
      \lbl[t]{135,-2;\parbox{0.80\textwidth}{
          \begin{center}\sf
            Deleting a maximal independent set from a cograph.
@@ -886,7 +884,7 @@ delete it.  We obtain a new graph $G'$, which is still a cograph and
 $K\setminus\{v\}$ is a maximum clique of $G'$.
 
 Repeat the same operation until the graph is empty (i.e., has no
-vertices left). Since at each step we delete exactly one vertex of KK,
+vertices left). Since at each step we delete exactly one vertex of $K$,
 we have deleted $k$ independent sets in total. If
 $n>(t-1)^{2}\geq k(t-1)$, then one of the independent sets we deleted
 had size at least $t$. Because deleting vertices does not change
@@ -910,17 +908,17 @@ $\bar G$ if and only if they are not adjacent in $G$:
 \medskip
 
 \begin{center}
-  \begin{lpic}[draft,b(4ex),l(1em),r(1em),clean]{Pix/complement(0.29)}
+  \begin{lpic}[draft,b(4ex),l(1em),r(1em),clean]{Pix/complement(0.35)}
      \lbl[t]{90,-4;\parbox{0.50\textwidth}{
          \begin{center}\sf
-           Complimenatry graph.
+           Complimentary graph.
          \end{center}
          }}
   \end{lpic}
 \end{center}
 
 Note that the complement of the complement of a graph is the graph
-itself, $\bar{\bar G}$.
+itself, that is $\bar{\bar G}=G$.
 
 Next we will prove that the Erd\H os--Hajnal property is preserved under
 taking complements, as stated in the following proposition.
@@ -1076,7 +1074,7 @@ This a difficult proposition. Nevertheless, we will outline the
 arguments and give the intuition behind the proof.
 \medskip
 
-\paragraph{Sketch of the proof:}
+\paragraph{\bf Sketch of the proof:}
 Let $F$ be the graph obtained by substituting vertex $v$ in $F_{1}$ by
 the graph $F_{2}$. 
 
@@ -1094,13 +1092,11 @@ A counting argument then shows (assuming $k$ is large enough) that
 there exists an induced copy $F'_{1}$ in $G$ of $F_{1}$ with the
 following property: if we denote by $v'$ the vertex in $F'$
 corresponding to $v$, then there exist at least $n$
-\blue{``alternative''} vertices of $G$ that allow one to extend
+``alternative'' vertices of $G$ that allow one to extend
 $F'_1\setminus\{v\}$ (i.e., the induced copy $F'_{1}$ of $F_{1}$ with
 the vertex $v'$ removed) into an induced copy of $F_{1}$:
-\medskip
-
 \begin{center}
-  \begin{lpic}[draft,b(6ex),l(1em),r(1em),clean]{Pix/manyv(0.45)}
+  \begin{lpic}[draft,b(4ex),l(1em),r(1em),clean]{Pix/manyv(0.40)}
      \lbl[t]{85,-6;\parbox{0.60\textwidth}{
          \begin{center}\sf
            Replacing $v$ by one of $n$ alternative vertices.
@@ -1108,7 +1104,6 @@ the vertex $v'$ removed) into an induced copy of $F_{1}$:
          }}
   \end{lpic}
 \end{center}
-\medskip
 
 The set $A$ of ``alternative'' vertices that allow one to extend
 $F'_{1}\setminus\{v'\}$ into an induced copy of $F_{1}$ then induces a
@@ -1120,9 +1115,7 @@ copy of $F$. The graph $G$ therefore contains an induced copy of $F$,
 contradicting our initial assumption. We have thus proved (or rather,
 sketched the proof) that the graph $F$ has the Erd\H os--Hajnal
 property.\qed
-
-
-\section{And now?}
+\section{What's next?}
 A few other examples of graphs having the Erd\H os--Hajnal property are
 known, such as all graphs on at most $4$ vertices.
 
@@ -1130,10 +1123,8 @@ For graphs on $5$ vertices, two graphs remain resistant: the path of
 length $4$ (or, equivalently, its complement) and the cycle of length
 $5$ (which is self-complimentary):
 
-\medskip
-
 \begin{center}
-  \begin{lpic}[draft,b(5ex),l(1em),r(1em),clean]{Pix/probeh(0.45)}
+  \begin{lpic}[draft,b(4ex),l(1em),r(1em),clean]{Pix/probeh(0.45)}
      \lbl[t]{90,-6;\parbox{0.60\textwidth}{
          \begin{center}\sf
            Difficult cases of Erd\H os--Hajnal conjecture.

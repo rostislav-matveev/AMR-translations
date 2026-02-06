@@ -11,7 +11,7 @@ Translation of articles for amr
   - [x] Edits/comments
   - [x] Editor comments
   - [x] Comments/approval by the author
-  - [ ] Final
+  - [x] Final
 
 + **Les diagrammes de Feynman 1,2,3**
     + http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-1.html,
