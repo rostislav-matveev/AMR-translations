@@ -3,6 +3,8 @@ Translation of articles for amr
 
 ## Slava's log
 
+### Current
+
 + **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 1 et 2**
     + https://doi.org/10.60868/tg9t-gq67,
     + https://doi.org/10.60868/q1m6-2n71
@@ -59,7 +61,7 @@ Translation of articles for amr
 ### Completed
 
 * **Les triangles d'Euclide, de Gauss et de Gromov**
-  https://images-archive.math.cnrs.fr/Les-triangles-d-Euclide-de-Gauss-et-de-Gromov.html
+    + https://images-archive.math.cnrs.fr/Les-triangles-d-Euclide-de-Gauss-et-de-Gromov.html
   - [x] Contact the author
   - [x] Translation
   - [x] Edits/comments
@@ -70,7 +72,7 @@ Translation of articles for amr
   - [x] Published
   
 * **Un peu de geometrie des groupes**
-  https://images-archive.math.cnrs.fr/Un-peu-de-geometrie-des-groupes
+    + https://images-archive.math.cnrs.fr/Un-peu-de-geometrie-des-groupes
   - [x] Contact the author
   - [x] Translation
   - [x] Edits/comments
@@ -81,7 +83,7 @@ Translation of articles for amr
   - [x] Published
 
 * **Representer les mondes I**
-  https://images-archive.math.cnrs.fr/Representer-les-mondes.html
+    + https://images-archive.math.cnrs.fr/Representer-les-mondes.html
   - [x] Contact the author
   - [x] Translation
   - [x] Edits/comments
@@ -89,7 +91,7 @@ Translation of articles for amr
   - [x] Article is unified with part II
 
 * **Representer les mondes II**
-  https://images-archive.math.cnrs.fr/Representer-les-mondes-II.html
+    + https://images-archive.math.cnrs.fr/Representer-les-mondes-II.html
   - [x] Contact the author
   - [x] Translation
   - [x] Edits/comments
