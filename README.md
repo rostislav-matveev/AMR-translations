@@ -12,7 +12,8 @@ Translation of articles for amr
   - [x] Editor comments
   - [x] Comments/approval by the author
   - [x] Final
-
+  - [ ] Published
+  
 + **Les diagrammes de Feynman 1,2,3**
     + http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-1.html,
     + http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-2.html,
@@ -23,7 +24,7 @@ Translation of articles for amr
   - [ ] Editor comments
   - [ ] Comments/approval by the author
   - [ ] Final
-  - [ ] Final
+  - [ ] Published
 
 + **Transport optimal de mesure coup de neuf pour un tres vieux probleme**
     +  http://images-archive.math.cnrs.fr/Transport-optimal-de-mesure-coup-de-neuf-pour-un-tres-vieux-probleme.html
@@ -53,7 +54,8 @@ Translation of articles for amr
   - [ ] Editor comments
   - [ ] Comments/approval by the author
   - [ ] Final
-
+  - [ ] Published
+  
 ### Completed
 
 * **Les triangles d'Euclide, de Gauss et de Gromov**
@@ -65,6 +67,7 @@ Translation of articles for amr
   - [x] Comments/approval by the author
   - [ ] Adjust citation and style
   - [ ] Final
+  - [x] Published
   
 * **Un peu de geometrie des groupes**
   https://images-archive.math.cnrs.fr/Un-peu-de-geometrie-des-groupes
@@ -75,6 +78,7 @@ Translation of articles for amr
   - [x] Comments/approval by the author
   - [ ] Adjust citation and style
   - [ ] Final
+  - [x] Published
 
 * **Representer les mondes I**
   https://images-archive.math.cnrs.fr/Representer-les-mondes.html
@@ -99,6 +103,7 @@ Translation of articles for amr
   - [x] Comments/approval by the author
   - [ ] Adjust citation and style
   - [ ] Final
+  - [x] Published
 
 
 # The List
