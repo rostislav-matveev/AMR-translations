@@ -1,5 +1,5 @@
 # AMR-translations
-Translation of articles for amr
+Translation of articles for the AMR.
 
 ## Slava's log
 
@@ -108,4 +108,4 @@ Translation of articles for amr
   - [x] Published
 
 
-# The List
+## The List
