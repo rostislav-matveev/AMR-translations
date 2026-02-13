@@ -5,6 +5,17 @@ Translation of articles for the AMR.
 
 ### Current
 
+* **De la topographie a la geometrie I, II**
+    + https://doi.org/10.60868/7xv4-9g98
+    + https://doi.org/10.60868/tzg9-3c39
+  - [x] Contact the author
+  - [ ] Translation
+  - [ ] Edits/comments
+  - [ ] Editor comments
+  - [ ] Comments/approval by the author
+  - [ ] Final
+  - [ ] Published
+  
 + **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 1 et 2**
     + https://doi.org/10.60868/tg9t-gq67,
     + https://doi.org/10.60868/q1m6-2n71
@@ -47,17 +58,6 @@ Translation of articles for the AMR.
   - [ ] Comments/approval by the author
   - [ ] Final
 
-* **De la topographie a la geometrie I, II**
-    + https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-I.html, 
-    + https://images-archive.math.cnrs.fr/De-la-topographie-a-la-geometrie-II.html
-  - [x] Contact the author
-  - [ ] Translation
-  - [ ] Edits/comments
-  - [ ] Editor comments
-  - [ ] Comments/approval by the author
-  - [ ] Final
-  - [ ] Published
-  
 ### Completed
 
 * **Les triangles d'Euclide, de Gauss et de Gromov**
