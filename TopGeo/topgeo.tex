@@ -1,0 +1,92 @@
+\documentclass{amsart}
+\usepackage[utf8]{inputenc}
+    
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\bf\Large}{\relax }{0em}{}
+\titleformat{\subsection}{\normalfont\bf\large }{\relax}{0em}{}
+\titleformat{\subsubsection}{\normalfont\bf}{\relax}{0em}{}
+
+\usepackage{enumitem}
+\usepackage{quoting}
+\usepackage{array}
+\usepackage{xcolor}
+\long\def\gray#1{{\color{gray}{#1}}}\let\grey=\gray
+\long\def\blue#1{{\color{blue}{#1}}}
+\long\def\red#1{{\color{red}{#1}}}
+\long\def\green#1{{\color{green}{#1}}}
+\long\def\violet#1{{\color{violet}{#1}}}
+\long\def\lila#1{{\color{lila}{#1}}}
+\long\def\cyan#1{{\color{cyan}{#1}}}
+
+\usepackage{wrapfig}
+\usepackage{lpic}
+
+\usepackage{manyfoot}
+\SetFootnoteHook{\hspace{1.5em}}
+\DeclareNewFootnote{A}
+\SetFootnoteHook{\hspace{1.5em}}
+\DeclareNewFootnote{E}[alph]
+\usepackage[hyperfootnotes=false,
+    colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}]{hyperref}
+\def\foothref#1#2{\href{#1}{ #2}\footnoteA{\url{#1}}}
+
+\newcommand{\skipthis}[2][\dots]{\red{[#1]}\gray{#2}}
+\long\def\skipthis#1{\relax}
+
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{question}{Question}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{definition}{Definition}
+
+\let\dmo=\DeclareMathOperator
+
+\let\tmp\epsilon
+\let\epsilon\varepsilon
+\let\varepsilon\tmp
+
+
+\begin{document}
+\centerline{\bf\Large From Topography to Geometry%
+  \footnoteE{English translation by Rostislav Matveev of the article:
+    Patrick Popescu-Pampu,  \textit{De la topographie \`a la
+      g\'eom\'trie I et II}, Images des
+    Math\'ematiques (2017);\\
+    \url{https://doi.org/10.60868/7xv4-9g98} and
+    \url{https://doi.org/10.60868/tzg9-3c39} (Ed.)}}%
+\smallskip
+
+\centerline{by Patrick Popescu-Pampu}
+\bigskip
+
+\centerline{\bf\large Contribution of Maps to Mathematical Thinking}
+\medskip
+% \begin{center}
+  % \begin{lpic}[draft,b(12ex),t(1ex),clean]{Pix/ramsey(0.65)}
+     % \lbl[t]{70,-5;\parbox{0.9\textwidth}{
+        % \begin{center}
+          % \sf Ordnung muss sein! (Order is inevitable.) This saying,
+          % attributed to Theodore Motzkin, aptly summarizes Ramsey
+          % theory, which aims to solve problems of the form: ``From what
+          % size on can a structure no longer avoid having a certain
+          % property?''%
+          % \footnotemarkA{}
+        % \end{center}
+      % }}
+  % \end{lpic}
+% \end{center}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
