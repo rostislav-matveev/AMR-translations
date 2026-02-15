@@ -1,6 +1,8 @@
 \documentclass{amsart}
-\usepackage[utf8]{inputenc}
-    
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+
+
 \usepackage{titlesec}
 \titleformat{\section}{\normalfont\bf\Large}{\relax }{0em}{}
 \titleformat{\subsection}{\normalfont\bf\large }{\relax}{0em}{}
@@ -50,34 +52,190 @@
 
 
 \begin{document}
-\centerline{\bf\Large From Topography to Geometry%
+\centerline{\bf\sc\Large FROM TOPOGRAPHY TO GEOMETRY%
   \footnoteE{English translation by Rostislav Matveev of the article:
     Patrick Popescu-Pampu,  \textit{De la topographie \`a la
       g\'eom\'trie I et II}, Images des
     Math\'ematiques (2017);\\
     \url{https://doi.org/10.60868/7xv4-9g98} and
     \url{https://doi.org/10.60868/tzg9-3c39} (Ed.)}}%
-\smallskip
+\smallskip\par
+\centerline{\sc\large Contribution of Maps to Mathematical Thinking}
+\bigskip\par
 
 \centerline{by Patrick Popescu-Pampu}
-\bigskip
 
-\centerline{\bf\large Contribution of Maps to Mathematical Thinking}
-\medskip
-% \begin{center}
-  % \begin{lpic}[draft,b(12ex),t(1ex),clean]{Pix/ramsey(0.65)}
-     % \lbl[t]{70,-5;\parbox{0.9\textwidth}{
-        % \begin{center}
-          % \sf Ordnung muss sein! (Order is inevitable.) This saying,
-          % attributed to Theodore Motzkin, aptly summarizes Ramsey
-          % theory, which aims to solve problems of the form: ``From what
-          % size on can a structure no longer avoid having a certain
-          % property?''%
-          % \footnotemarkA{}
-        % \end{center}
-      % }}
-  % \end{lpic}
-% \end{center}
+\bigskip\par
+
+\begin{center}
+  \sc\large
+  PART ONE:\\
+  From topographic maps to the structure of surfaces
+\end{center}
+\bigskip\par\noindent
+Did you know that Paris is a city of eight hills? Here is a map that
+lets you see it:
+
+\begin{center}
+  \begin{lpic}[draft,b(6ex),t(2ex),clean]{Pix/Paris-elevation(0.65)}
+     \lbl[t]{73,-5;\parbox{0.72\textwidth}{
+         \begin{center}\sf
+           The city of eight hills.
+         \end{center}}}
+  \end{lpic}
+\end{center}
+On the map above one can see the names of these hills, as well as
+their elevations. But one also observes a color gradient, with the
+darker shades corresponding to the higher levels. The boundary between
+two regions of different colors is a line of constant elevation. A map
+on which such lines are shown is called ``topographic'' --- from the
+Greek
+% τόπος
+$\tau o\pi o\zeta$
+(place) and
+%γραφία
+$\gamma\rho\alpha\phi\iota\alpha$ (to draw).
+
+Here is another one, in which the collection of constant-elevation
+lines is supplemented with information about roads, buildings, and
+municipalities:
+\begin{center}
+  \begin{lpic}[draft,b(4ex),t(1ex),clean]{Pix/Fg-Mons(0.25)}
+     \lbl[t]{180,-10;\parbox{0.75\textwidth}{
+         \begin{center}\sf
+           A topographic map supplemented with additional information.
+         \end{center}}}
+  \end{lpic}
+\end{center}
+
+How does one construct a map of this type? The theoretical principle
+is to represent the landscape first by a smooth surface, obtained by
+smoothing out overly pronounced indentations --- much as if a heavy
+snowfall had covered it. One then slices this surface by horizontal
+planes at different heights, taken successively at equal distances
+from one another, and then projects the resulting intersection curves
+onto a single horizontal plane. This process is illustrated in the
+following figure:
+
+\begin{center}
+  \begin{lpic}[draft,b(8ex),t(1ex),clean]{Pix/Construction-nbg(0.35)}
+     \lbl[t]{90,-10;\parbox{0.75\textwidth}{
+         \begin{center}\sf
+           Principle for constructing a topographic map, illustrated
+           using a smooth surface representing a landscape with two
+           hills.
+         \end{center}}}
+  \end{lpic}
+\end{center}
+Of course, since the Earth is not flat, the notion of a ``horizontal''
+plane is not well defined. In any case, the idea is that these
+intersection curves are close to lines of constant elevation, which is
+why their projections are called ``contour lines.'' Note that the
+intersection of the smooth surface representing the landscape with a
+horizontal plane generally consists of several separate pieces, or, as
+mathematicians call them, ``connected components.'' Here, a ``contour
+line'' refers to one of these connected components.
+
+In its simplest form, which does not use colors, a topographic map is
+such a collection of contour lines. Most of them are smooth,%
+\footnoteA{Intuitively, a ``smooth'' curve has, at each of its points,
+  a well-defined tangent line. In current mathematical usage, the term
+  ``smooth'' is in fact even more restrictive: one additionally
+  requires that the slopes of the tangents form a function, which is
+  itself smooth, that is whose graph is a new curve that itself has a
+  tangent at each point, and that these tangents again have the same
+  property, and so on ad infinitum. These subtleties will not matter
+  here.} %
+but some are reduced to points --- summits and pits --- and others
+intersect themselves.%
+\footnoteE{Still even more complicated behaviour is also possible ---
+  for example if the landscape contains a completely flat valley and
+  one of the slicing planes lies exactly at the valley's height. In
+  this case the ``counter line'' is not a line at all, but includes a
+  whole region of the map. (Ed.)} %
+In the previous figure, such self-intersection happens for the one
+obtained by taking the plane that passes through the saddle, that is,
+the second horizontal plane counting from the bottom.
+
+The aim of this two-part article is to explain that mathematical
+thinking about the structure of topographic maps has been remarkably
+fertile in important discoveries about the qualitative --- so-called
+topological --- shape of “spaces” of any dimension. We shall see, among
+other things, that this line of thought provides one of the main tools
+for exploring the topological structure of such spaces. I also intend
+to convey some of the reasons that led mathematicians to go beyond the
+three dimensions of everyday intuition, in order to explore
+qualitatively ``spaces'' even of infinite dimension.
+
+\section{A few reflections by Cayley}
+The story begins in 1859, when the British mathematician Arthur Cayley
+wrote an article%
+\footnoteA{ Arthur Cayley, \textit{On contour and slope lines,}
+  Philosophical Magazine 18 (1859), pp. 264–268.} %
+in which he wondered about the possible shapes of contour lines, and
+about their qualitative change as one varies the elevation:
+\begin{quotation}\sf
+  CITE
+\end{quotation}
+
+For example, in the preceding drawing there are two ``summits'' and
+one ``knot,'' but no ``immet.'' From now on, I will write ``bottom''
+rather than ``immet.''
+
+``Summits,'' ``knots,'' and ``bottoms'' are called the ``singular
+points'' of the topographic map. Near the other points, which
+mathematicians usually call ``generic points'' of the map, the contour
+lines look like a family of slightly distorted parallel lines:
+
+\begin{center}
+  \begin{lpic}[draft,b(8ex),t(1ex),clean]{Pix/Voisinage-nbg-en(0.45)}
+     \lbl[t]{90,-10;\parbox{0.75\textwidth}{
+         \begin{center}\sf
+          XXX \red{REDO}
+         \end{center}}}
+  \end{lpic}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

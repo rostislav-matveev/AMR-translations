@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo Ignore
+if [[ $1 = *.jpg ]]; then
+    name=$(basename $1 .jpg)
+    echo "$1 -> $name.png"
+    convert $1 $name.png
+elif [[ $1 = *.jpeg ]]; then
+    name=$(basename $1 .jpeg)
+    echo "$1 -> $name.png"
+    convert $1 $name.png
+elif [[ $1 = *.png ]]; then
+    name=$(basename $1 .png)
+fi
+
+echo "convert $name.png -fuzz ${2}% -transparent white $name-nbg.png "
+convert $name.png -fuzz ${2}% -transparent white $name-nbg.png
