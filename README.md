@@ -1,5 +1,6 @@
 # AMR-translations
 Translation of articles for the AMR.
+Published at https://amathr.org/images/
 
 ## Slava's log
 
