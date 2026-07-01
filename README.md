@@ -17,17 +17,6 @@ Published at https://amathr.org/images/
   - [ ] Final
   - [ ] Published
   
-+ **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 1 et 2**
-    + https://doi.org/10.60868/tg9t-gq67,
-    + https://doi.org/10.60868/q1m6-2n71
-  - [x] Contact the author
-  - [x] Translation
-  - [x] Edits/comments
-  - [x] Editor comments
-  - [x] Comments/approval by the author
-  - [x] Final
-  - [ ] Published
-  
 + **Les diagrammes de Feynman 1,2,3**
     + http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-1.html,
     + http://images-archive.math.cnrs.fr/Les-diagrammes-de-Feynman-2.html,
@@ -108,5 +97,16 @@ Published at https://amathr.org/images/
   - [ ] Final
   - [x] Published
 
++ **Du Theoreme de Ramsey a la Conjecture d'Erdös Hajnal 1 et 2**
+    + https://doi.org/10.60868/tg9t-gq67,
+    + https://doi.org/10.60868/q1m6-2n71
+  - [x] Contact the author
+  - [x] Translation
+  - [x] Edits/comments
+  - [x] Editor comments
+  - [x] Comments/approval by the author
+  - [x] Final
+  - [x] Published
+  
 
 ## The List
